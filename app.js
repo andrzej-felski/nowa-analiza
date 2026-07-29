@@ -1,3 +1,4 @@
+console.log("APP.JS DZIAŁA");
 let firmy=[];
 let konkurencja=[];
 let oferty=[];
