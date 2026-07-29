@@ -207,48 +207,52 @@ function szukaj(){
 }
 
 function pokazWynik(oferta){
-    if (!oferta) {
-        document.getElementById("wynik").innerHTML =
-        `
-        <div class="oferta">
-            Nie znaleziono oferty.
-        </div>
+    let htmlParametry = pokazParametryWyniku(oferta);
+    let harmonogram = pobierzHarmonogram(oferta);
+    let htmlCennik = "";
+    harmonogram.forEach(pozycja => {
+        htmlCennik += `
+            <tr>
+                <td>${pozycja.od}-${pozycja.do}</td>
+                <td>${pozycja.cena} zł</td>
+            </tr>
         `;
-        return;
-    }
-	let harmonogram = pobierzHarmonogram(oferta);
-	let htmlCennik = "";
-	harmonogram.forEach(pozycja => {
-		htmlCennik += `
-			<tr>
-				<td>${pozycja.od}-${pozycja.do}</td>
-				<td>${pozycja.cena} zł</td>
-			</tr>
-		`;
-	});
-    document.getElementById("wynik").innerHTML=
+    });
+    document.getElementById("wynik").innerHTML =
     `
     <div class="oferta">
-		<h2>${oferta.nazwa_pakietu}</h2>
-		Prędkość:
-		${oferta.predkosc_pobierania}/
-		${oferta.predkosc_wysylania} Mb/s
-		<br><br>
-		Dodatki:
-		${oferta.dodatki}
-		<br><br>
-		Uwagi:
-		${oferta.uwagi}
-		<h3>Cennik</h3>
-		<table class="cennik">
-			<tr>
-				<th>Okres</th>
-				<th>Cena</th>
-			</tr>
-			${htmlCennik}
-		</table>
+        <h2>${oferta.nazwa_pakietu}</h2>
+        ${htmlParametry}
+        <br>
+        Dodatki:
+        ${oferta.dodatki || "-"}
+        <br><br>
+        Uwagi:
+        ${oferta.uwagi || "-"}
+        <h3>Cennik</h3>
+        <table class="cennik">
+            <tr>
+                <th>Okres</th>
+                <th>Cena</th>
+            </tr>
+            ${htmlCennik}
+        </table>
     </div>
     `;
+}
+
+function pokazParametryWyniku(oferta){
+    let usluga = document.getElementById("usluga").value;
+    switch(usluga){
+        case "internet":
+            return `
+                Prędkość:
+                ${oferta.predkosc_pobierania} /
+                ${oferta.predkosc_wysylania} Mb/s
+            `;
+        default:
+            return "";
+    }
 }
 
 function pobierzHarmonogram(oferta) {
