@@ -1,15 +1,13 @@
-let firmy=[];
-let konkurencja=[];
-let oferty=[];
+const dane = {
+    firmy: [],
+    konkurencja: [],
+    uslugi: {}
+};
 
 async function start(){
-    console.log("Start aplikacji");
-    firmy = await wczytajCSV("firmy.csv");
-    console.log("Firmy:", firmy);
-    konkurencja = await wczytajCSV("konkurencja.csv");
-    console.log("Konkurencja:", konkurencja);
-    oferty = await wczytajCSV("internet.csv");
-    console.log("Oferty:", oferty);
+	dane.firmy = await wczytajCSV("firmy.csv");
+	dane.konkurencja = await wczytajCSV("konkurencja.csv");
+	dane.uslugi.internet = await wczytajCSV("internet.csv");
     pokazFirmy();
 }
 
@@ -29,9 +27,14 @@ async function wczytajCSV(plik){
     }).data;
 }
 
+function pobierzOferty() {
+    let usluga = document.getElementById("usluga").value;
+    return dane.uslugi[usluga] || [];
+}
+
 function pokazFirmy(){
     let select = document.getElementById("firma");
-    firmy
+    dane.firmy
     .filter(f => f.nasza_firma.toUpperCase()=="TAK")
     .forEach(f=>{
         select.innerHTML += `
@@ -50,7 +53,7 @@ document
     `;
     document.getElementById("okres").disabled = true;
     document.getElementById("pakiet").disabled = true;
-    document.getElementById("predkosc").disabled = true;
+    document.getElementById("parametr").disabled = true;
     if (!this.value) {
         usluga.disabled = true;
         return;
@@ -74,10 +77,10 @@ function pokazOkresy(){
     document.getElementById("okres");
     okres.innerHTML =
     '<option value="">Wybierz</option>';
-    let lista =
-    oferty.filter(o =>
-        o.id_firmy == firma
-    );
+	let lista =
+	pobierzOferty().filter(o =>
+		o.id_firmy == firma
+	);
     [...new Set(lista.map(o=>o.okres_umowy))]
     .forEach(x=>{
         okres.innerHTML += `
@@ -101,11 +104,11 @@ function pokazPakiety(){
     document.getElementById("pakiet");
     pakiet.innerHTML =
     '<option value="">Wybierz</option>';
-    let lista =
-    oferty.filter(o =>
-        o.id_firmy == firma &&
-        o.okres_umowy == okres
-    );
+	let lista =
+	pobierzOferty().filter(o =>
+		o.id_firmy == firma &&
+		o.okres_umowy == okres
+	);
     [...new Set(lista.map(o=>o.nazwa_pakietu))]
     .forEach(x=>{
         pakiet.innerHTML += `
@@ -118,38 +121,48 @@ function pokazPakiety(){
 
 document
 .getElementById("pakiet")
-.addEventListener("change", pokazPredkosci);
+.addEventListener("change", pokazParametry);
 
+function pokazParametry() {
+    let usluga = document.getElementById("usluga").value;
+    switch (usluga) {
+        case "internet":
+            pokazParametryInternet();
+            break;
+        default:
+            console.warn("Brak obsługi usługi:", usluga);
+    }
+}
 
-function pokazPredkosci(){
+function pokazParametryInternet(){
     let firma =
     document.getElementById("firma").value;
     let okres =
     document.getElementById("okres").value;
     let pakiet =
     document.getElementById("pakiet").value;
-    let predkosc =
-    document.getElementById("predkosc");
-    predkosc.innerHTML =
-    '<option value="">Wybierz</option>';
-    let lista =
-    oferty.filter(o =>
-        o.id_firmy == firma &&
-        o.okres_umowy == okres &&
-        o.nazwa_pakietu == pakiet
-    );
+	let parametr =
+	document.getElementById("parametr");
+	parametr.innerHTML =
+	'<option value="">Wybierz</option>';
+	let lista =
+	pobierzOferty().filter(o =>
+		o.id_firmy == firma &&
+		o.okres_umowy == okres &&
+		o.nazwa_pakietu == pakiet
+	);
     [...new Set(
         lista.map(o =>
             o.predkosc_pobierania+"/"+o.predkosc_wysylania
         )
     )]
     .forEach(x=>{
-        predkosc.innerHTML += `
+        parametr.innerHTML += `
         <option value="${x}">
             ${x} Mb/s
         </option>`;
     });
-    predkosc.disabled=false;
+    parametr.disabled = false;
 }
 
 document
@@ -161,11 +174,11 @@ function szukaj(){
     document.getElementById("firma").value;
     let pakiet =
     document.getElementById("pakiet").value;
-	let predkosc =
-	document.getElementById("predkosc").value;
-	let [download, upload] = predkosc.split("/");
+	let parametr =
+	document.getElementById("parametr").value;
+	let [download, upload] = parametr.split("/");
 	let wybrana =
-	oferty.find(o=>
+	pobierzOferty().find(o=>
 		o.id_firmy==firma &&
 		o.nazwa_pakietu==pakiet &&
 		o.predkosc_pobierania==download &&
@@ -175,21 +188,66 @@ function szukaj(){
 }
 
 function pokazWynik(oferta){
+    if (!oferta) {
+        document.getElementById("wynik").innerHTML =
+        `
+        <div class="oferta">
+            Nie znaleziono oferty.
+        </div>
+        `;
+        return;
+    }
+	let harmonogram = pobierzHarmonogram(oferta);
+	let htmlCennik = "";
+	harmonogram.forEach(pozycja => {
+		htmlCennik += `
+			<tr>
+				<td>${pozycja.od}-${pozycja.do}</td>
+				<td>${pozycja.cena} zł</td>
+			</tr>
+		`;
+	});
     document.getElementById("wynik").innerHTML=
     `
     <div class="oferta">
-    <h2>${oferta.nazwa_pakietu}</h2>
-    Prędkość:
-    ${oferta.predkosc_pobierania}/
-    ${oferta.predkosc_wysylania} Mb/s
-    <br><br>
-    Dodatki:
-    ${oferta.dodatki}
-    <br><br>
-    Uwagi:
-    ${oferta.uwagi}
+		<h2>${oferta.nazwa_pakietu}</h2>
+		Prędkość:
+		${oferta.predkosc_pobierania}/
+		${oferta.predkosc_wysylania} Mb/s
+		<br><br>
+		Dodatki:
+		${oferta.dodatki}
+		<br><br>
+		Uwagi:
+		${oferta.uwagi}
+		<h3>Cennik</h3>
+		<table class="cennik">
+			<tr>
+				<th>Okres</th>
+				<th>Cena</th>
+			</tr>
+			${htmlCennik}
+		</table>
     </div>
     `;
+}
+
+function pobierzHarmonogram(oferta) {
+    let harmonogram = [];
+    let i = 1;
+    while (true) {
+        let od = oferta["okres_od_" + i];
+        if (!od) {
+            break;
+        }
+        harmonogram.push({
+            od: Number(od),
+            do: Number(oferta["okres_do_" + i]),
+            cena: Number(oferta["cena_" + i])
+        });
+        i++;
+    }
+    return harmonogram;
 }
 
 start();
