@@ -1,9 +1,6 @@
 let firmy=[];
 let konkurencja=[];
 let oferty=[];
-let firmy=[];
-let konkurencja=[];
-let oferty=[];
 
 
 async function start(){
