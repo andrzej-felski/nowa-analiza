@@ -22,33 +22,21 @@ async function start(){
 
 async function wczytajCSV(plik){
 
-    let response = await fetch("dane/"+plik);
+    let response = await fetch("dane/" + plik);
+
     let tekst = await response.text();
-console.log("Zawartość CSV:", tekst);
-console.log("Pierwszy znak separatora:", tekst.includes(";"), tekst.includes(","));
 
-    let wiersze = tekst.split("\n");
-
-    let naglowki = wiersze[0]
-        .trim()
-        .split(";");
-
-
-    return wiersze.slice(1)
-        .filter(x=>x.trim())
-        .map(w=>{
-            
-            let dane=w.split(",");
-
-            let obiekt={};
-
-            naglowki.forEach((n,i)=>{
-                obiekt[n]=dane[i] || "";
-            });
-
-            return obiekt;
-
-        });
+    return Papa.parse(tekst, {
+        header: true,
+        delimiter: ";",
+        skipEmptyLines: true,
+        transformHeader: function(header){
+            return header.trim();
+        },
+        transform: function(value){
+            return value.trim();
+        }
+    }).data;
 
 }
 
