@@ -24,6 +24,8 @@ async function wczytajCSV(plik){
 
     let response = await fetch("dane/"+plik);
     let tekst = await response.text();
+console.log("Zawartość CSV:", tekst);
+console.log("Pierwszy znak separatora:", tekst.includes(";"), tekst.includes(","));
 
     let wiersze = tekst.split("\n");
 
