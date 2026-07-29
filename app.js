@@ -63,7 +63,9 @@ document
 .getElementById("firma")
 .addEventListener("change", filtruj);
 
-
+document
+.getElementById("pakiet")
+.addEventListener("change", pokazPredkosci);
 
 function filtruj(){
 
@@ -115,9 +117,54 @@ function pokazPakiety(lista){
 
     });
 
+
+    pokazPredkosci();
+
 }
 
+function pokazPredkosci(){
 
+    let firma =
+    document.getElementById("firma").value;
+
+    let pakiet =
+    document.getElementById("pakiet").value;
+
+
+    let lista =
+    oferty.filter(o =>
+        o.id_firmy == firma &&
+        o.nazwa_pakietu == pakiet
+    );
+
+
+    let predkosc =
+    document.getElementById("predkosc");
+
+
+    predkosc.innerHTML="";
+
+
+    // unikalne kombinacje pobieranie/wysyłanie
+
+    let kombinacje =
+    [...new Set(
+        lista.map(o =>
+            `${o.predkosc_pobierania}/${o.predkosc_wysylania}`
+        )
+    )];
+
+
+    kombinacje.forEach(x=>{
+
+        predkosc.innerHTML += `
+        <option value="${x}">
+        ${x} Mb/s
+        </option>`;
+
+    });
+
+}
 
 document
 .getElementById("szukaj")
@@ -135,11 +182,20 @@ function szukaj(){
     document.getElementById("pakiet").value;
 
 
-    let wybrana =
-    oferty.find(o=>
-        o.id_firmy==firma &&
-        o.nazwa_pakietu==pakiet
-    );
+	let predkosc =
+	document.getElementById("predkosc").value;
+
+
+	let [download, upload] = predkosc.split("/");
+
+
+	let wybrana =
+	oferty.find(o=>
+		o.id_firmy==firma &&
+		o.nazwa_pakietu==pakiet &&
+		o.predkosc_pobierania==download &&
+		o.predkosc_wysylania==upload
+	);
 
 
     pokazWynik(wybrana);
