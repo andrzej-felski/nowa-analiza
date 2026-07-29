@@ -8,25 +8,41 @@
 	<body>
 		<h1>Porównywarka ofert</h1>
 		<div class="panel">
-			<label>Firma</label>
-			<select id="firma">
-				<option value="">Wybierz</option>
-			</select>
-			<select id="usluga" disabled>
-				<option value="">Wybierz</option>
-			</select>
-			<select id="okres" disabled>
-				<option value="">Wybierz</option>
-			</select>
-			<select id="pakiet" disabled>
-				<option value="">Wybierz</option>
-			</select>
-			<select id="parametr" disabled>
-				<option value="">Wybierz</option>
-			</select>
+		<div class="belka-wyboru">
+			<div class="wybor" data-pole="firma">
+				<span>Firma</span>
+				<strong id="wybranaFirma">Wybierz</strong>
+			</div>
+			<div class="wybor" data-pole="usluga">
+				<span>Usługa</span>
+				<strong id="wybranaUsluga">Wybierz</strong>
+			</div>
+			<div class="wybor" data-pole="okres">
+				<span>Okres</span>
+				<strong id="wybranyOkres">Wybierz</strong>
+			</div>
+			<div class="wybor" data-pole="pakiet">
+				<span>Pakiet</span>
+				<strong id="wybranyPakiet">Wybierz</strong>
+			</div>
+			<div class="wybor" data-pole="parametr">
+				<span>Parametr</span>
+				<strong id="wybranyParametr">Wybierz</strong>
+			</div>
 			<button id="szukaj">
 				Szukaj
 			</button>
+		</div>
+		<div id="oknoWyboru" class="modal ukryte">
+			<div class="modal-tresc">
+				<h3 id="tytulWyboru">
+					Wybierz
+				</h3>
+				<div id="listaWyboru"></div>
+				<button id="potwierdzWybor">
+					Potwierdź
+				</button>
+			</div>
 		</div>
 		<div id="wynik"></div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
