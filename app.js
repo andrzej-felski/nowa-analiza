@@ -16,6 +16,14 @@ async function start(){
     dane.firmy = await wczytajCSV("firmy.csv");
     dane.konkurencja = await wczytajCSV("konkurencja.csv");
     dane.uslugi.internet = await wczytajCSV("internet.csv");
+    document
+    .querySelectorAll(".wybor")
+    .forEach(element => {
+        element.addEventListener("click", function(){
+            aktualnePole = this.dataset.pole;
+            otworzWybor(aktualnePole);
+        });
+    });
 }
 
 async function wczytajCSV(plik){
@@ -305,16 +313,6 @@ function pobierzOfertyKonkurencji(oferta){
     return poGrupieOkresu;
 }
 
-let aktualnePole = null;
-document
-.querySelectorAll(".wybor")
-.forEach(element => {
-    element.addEventListener("click", function(){
-        aktualnePole = this.dataset.pole;
-        otworzWybor(aktualnePole);
-    });
-});
-
 function otworzWybor(pole){
     let modal =
     document.getElementById("oknoWyboru");
@@ -338,8 +336,8 @@ function otworzWybor(pole){
             `;
         });
     }
-    document.getElementById("tytulWyboru").innerHTML =
-    "Wybierz firmę";
+	document.getElementById("tytulWyboru").innerHTML =
+	"Wybierz " + pole;
     modal.classList.remove("ukryte");
 }
 
