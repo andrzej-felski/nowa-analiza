@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background:#f4f4f4;
+}
+
+h1 {
+    color:#333;
+}
+
+
+.panel {
+    background:white;
+    padding:20px;
+    width:400px;
+    border-radius:8px;
+}
+
+
+label {
+    display:block;
+    margin-top:15px;
+}
+
+
+select, button {
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+
+
+button {
+    margin-top:25px;
+    background:#0066cc;
+    color:white;
+    border:0;
+    cursor:pointer;
+}
+
+
+.oferta {
+    background:white;
+    margin-top:20px;
+    padding:20px;
+    border-radius:8px;
+}

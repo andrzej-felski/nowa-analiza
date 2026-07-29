@@ -1,0 +1,593 @@
+﻿id_oferty;id_firmy;okres_umowy;nazwa_pakietu;predkosc_pobierania;predkosc_wysylania;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+1;CHOPIN;10;Strzał w 10;300;15;300;;cena z rabatem za e-fakturę;1;1;12.76;2;10;59.57
+2;CHOPIN;10;Strzał w 10;650;30;650;;cena z rabatem za e-fakturę;1;1;12.76;2;10;80.57
+3;CHOPIN;24;Strzał w 10;300;15;300;;cena z rabatem za e-fakturę;1;3;12.76;4;24;59.57
+4;CHOPIN;24;Strzał w 10;650;30;650;;cena z rabatem za e-fakturę;1;3;12.76;4;24;80.57
+5;CHOPIN;24;Oferta Osiedlowa;300;15;300;;cena z rabatem za e-fakturę;1;24;23.70;;;
+6;CHOPIN;24;Oferta Osiedlowa;650;30;650;;cena z rabatem za e-fakturę;1;24;33.70;;;
+7;CHOPIN;24;Oferta Osiedlowa;800;40;800;;cena z rabatem za e-fakturę;1;24;43.70;;;
+8;CHOPIN;12;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;12;69.57;;;
+9;CHOPIN;12;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
+10;CHOPIN;12;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
+11;CHOPIN;12;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
+12;CHOPIN;24;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
+13;CHOPIN;24;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
+14;CHOPIN;24;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
+15;CHOPIN;24;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
+16;CHOPIN;12;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+17;CHOPIN;12;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
+18;CHOPIN;12;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
+19;CHOPIN;12;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
+20;CHOPIN;24;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+21;CHOPIN;24;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
+22;CHOPIN;24;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
+23;CHOPIN;24;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;24;119.57;;;
+24;CHOPIN;12;STOP EXTRA NET;300;15;300;;cena z rabatem za e-fakturę;1;12;46.45;;;
+25;CHOPIN;12;STOP EXTRA NET;650;30;650;;cena z rabatem za e-fakturę;1;12;56.81;;;
+26;PELMAR;10;Strzał w 10;300;15;300;;cena z rabatem za e-fakturę;1;1;12.76;2;10;59.57
+27;PELMAR;10;Strzał w 10;650;30;650;;cena z rabatem za e-fakturę;1;1;12.76;2;10;80.57
+28;PELMAR;24;Strzał w 10;300;15;300;;cena z rabatem za e-fakturę;1;3;12.76;4;24;59.57
+29;PELMAR;24;Strzał w 10;650;30;650;;cena z rabatem za e-fakturę;1;3;12.76;4;24;80.57
+30;PELMAR;24;Oferta Osiedlowa;300;15;300;;cena z rabatem za e-fakturę;1;24;23.70;;;
+31;PELMAR;24;Oferta Osiedlowa;650;30;650;;cena z rabatem za e-fakturę;1;24;33.70;;;
+32;PELMAR;24;Oferta Osiedlowa;800;40;800;;cena z rabatem za e-fakturę;1;24;43.70;;;
+33;PELMAR;12;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;12;69.57;;;
+34;PELMAR;12;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
+35;PELMAR;12;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
+36;PELMAR;12;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
+37;PELMAR;24;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
+38;PELMAR;24;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
+39;PELMAR;24;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
+40;PELMAR;24;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
+41;PELMAR;12;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+42;PELMAR;12;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
+43;PELMAR;12;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
+44;PELMAR;12;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
+45;PELMAR;24;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+46;PELMAR;24;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
+47;PELMAR;24;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
+48;PELMAR;24;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;24;119.57;;;
+49;PELMAR;12;STOP EXTRA NET;300;15;300;;cena z rabatem za e-fakturę;1;12;46.45;;;
+50;PELMAR;12;STOP EXTRA NET;650;30;650;;cena z rabatem za e-fakturę;1;12;56.81;;;
+51;MC2;10;Strzał w 10;300;25;300;;cena z rabatem za e-fakturę;1;1;12.76;2;10;59.57
+52;MC2;10;Strzał w 10;650;50;650;;cena z rabatem za e-fakturę;1;1;12.76;2;10;80.57
+53;MC2;24;Strzał w 10;300;25;300;;cena z rabatem za e-fakturę;1;3;12.76;4;24;59.57
+54;MC2;24;Strzał w 10;650;50;650;;cena z rabatem za e-fakturę;1;3;12.76;4;24;80.57
+55;MC2;24;Oferta Osiedlowa;300;25;300;;cena z rabatem za e-fakturę;1;24;23.70;;;
+56;MC2;24;Oferta Osiedlowa;650;50;650;;cena z rabatem za e-fakturę;1;24;33.70;;;
+57;MC2;24;Oferta Osiedlowa;900;60;800;;cena z rabatem za e-fakturę;1;24;43.70;;;
+58;MC2;12;Mega Net;60;6;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+59;MC2;12;Mega Net;150;10;120;;cena z rabatem za e-fakturę;1;12;69.57;;;
+60;MC2;12;Mega Net;300;25;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
+61;MC2;12;Mega Net;650;50;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
+62;MC2;12;Mega Net;900;60;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
+63;MC2;24;Mega Net;60;6;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+64;MC2;24;Mega Net;150;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
+65;MC2;24;Mega Net;300;25;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
+66;MC2;24;Mega Net;650;50;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
+67;MC2;24;Mega Net;900;60;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
+68;MC2;12;Trzymaj z nami;60;6;120;;cena z rabatem za e-fakturę;1;12;54.57;;;
+69;MC2;12;Trzymaj z nami;150;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+70;MC2;12;Trzymaj z nami;300;25;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
+71;MC2;12;Trzymaj z nami;650;50;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
+72;MC2;12;Trzymaj z nami;900;60;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
+73;MC2;24;Trzymaj z nami;60;6;120;;cena z rabatem za e-fakturę;1;24;49.57;;;
+74;MC2;24;Trzymaj z nami;150;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+75;MC2;24;Trzymaj z nami;300;25;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
+76;MC2;24;Trzymaj z nami;650;50;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
+77;MC2;24;Trzymaj z nami;900;60;800;;cena z rabatem za e-fakturę;1;24;119.57;;;
+78;MC2;12;STOP EXTRA NET;300;25;300;;cena z rabatem za e-fakturę;1;12;46.45;;;
+79;MC2;12;STOP EXTRA NET;650;50;650;;cena z rabatem za e-fakturę;1;12;56.81;;;
+80;MC1_OLSZTYN;10;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;10;49.99
+81;MC1_OLSZTYN;10;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;10;59.99
+82;MC1_OLSZTYN;10;Strzał w 10;600;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;10;69.99
+83;MC1_OLSZTYN;10;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;10;79.99
+84;MC1_OLSZTYN;20;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;24;49.99
+85;MC1_OLSZTYN;20;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;24;59.99
+86;MC1_OLSZTYN;20;Strzał w 10;650;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;24;69.99
+87;MC1_OLSZTYN;20;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;24;79.99
+88;MC1_OLSZTYN;12;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;1;78.98;2;12;
+89;MC1_OLSZTYN;12;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;1;88.98;2;12;
+90;MC1_OLSZTYN;12;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;1;93.98;2;12;
+91;MC1_OLSZTYN;24;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;7;61.45;8;24;73.98
+92;MC1_OLSZTYN;24;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;7;71.45;8;24;83.98
+93;MC1_OLSZTYN;24;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;7;76.45;8;24;88.98
+94;MC1_OLSZTYN;999;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;2;0.00;3;999;78.98
+95;MC1_OLSZTYN;999;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;2;0.00;3;999;88.98
+96;MC1_OLSZTYN;999;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;2;0.00;3;999;93.98
+97;MC1_STARGARD;10;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;10;49.99
+98;MC1_STARGARD;10;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;10;59.99
+99;MC1_STARGARD;10;Strzał w 10;600;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;10;69.99
+100;MC1_STARGARD;10;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;10;79.99
+101;MC1_STARGARD;20;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;24;49.99
+102;MC1_STARGARD;20;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;24;59.99
+103;MC1_STARGARD;20;Strzał w 10;650;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;24;69.99
+104;MC1_STARGARD;20;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;24;79.99
+105;MC1_STARGARD;12;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;1;78.98;2;12;
+106;MC1_STARGARD;12;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;1;88.98;2;12;
+107;MC1_STARGARD;12;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;1;93.98;2;12;
+108;MC1_STARGARD;24;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;7;61.45;8;24;73.98
+109;MC1_STARGARD;24;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;7;71.45;8;24;83.98
+110;MC1_STARGARD;24;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;7;76.45;8;24;88.98
+111;MC1_STARGARD;999;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;2;0.00;3;999;78.98
+112;MC1_STARGARD;999;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;2;0.00;3;999;88.98
+113;MC1_STARGARD;999;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;2;0.00;3;999;93.98
+114;MC1_OSTRODA;10;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;10;49.99
+115;MC1_OSTRODA;10;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;10;59.99
+116;MC1_OSTRODA;10;Strzał w 10;600;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;10;69.99
+117;MC1_OSTRODA;10;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;10;79.99
+118;MC1_OSTRODA;20;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;24;49.99
+119;MC1_OSTRODA;20;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;24;59.99
+120;MC1_OSTRODA;20;Strzał w 10;650;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;24;69.99
+121;MC1_OSTRODA;20;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;24;79.99
+122;MC1_OSTRODA;12;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;1;78.98;2;12;
+123;MC1_OSTRODA;12;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;1;88.98;2;12;
+124;MC1_OSTRODA;12;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;1;93.98;2;12;
+125;MC1_OSTRODA;24;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;7;61.45;8;24;73.98
+126;MC1_OSTRODA;24;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;7;71.45;8;24;83.98
+127;MC1_OSTRODA;24;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;7;76.45;8;24;88.98
+128;MC1_OSTRODA;999;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;2;0.00;3;999;78.98
+129;MC1_OSTRODA;999;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;2;0.00;3;999;88.98
+130;MC1_OSTRODA;999;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;2;0.00;3;999;93.98
+131;MC1_LOWICZ;10;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;10;49.99
+132;MC1_LOWICZ;10;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;10;59.99
+133;MC1_LOWICZ;10;Strzał w 10;600;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;10;69.99
+134;MC1_LOWICZ;10;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;10;79.99
+135;MC1_LOWICZ;20;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;24;49.99
+136;MC1_LOWICZ;20;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;24;59.99
+137;MC1_LOWICZ;20;Strzał w 10;650;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;24;69.99
+138;MC1_LOWICZ;20;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;24;79.99
+139;MC1_LOWICZ;12;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;1;78.98;2;12;
+140;MC1_LOWICZ;12;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;1;88.98;2;12;
+141;MC1_LOWICZ;12;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;1;93.98;2;12;
+142;MC1_LOWICZ;24;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;7;61.45;8;24;73.98
+143;MC1_LOWICZ;24;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;7;71.45;8;24;83.98
+144;MC1_LOWICZ;24;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;7;76.45;8;24;88.98
+145;MC1_LOWICZ;999;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;2;0.00;3;999;78.98
+146;MC1_LOWICZ;999;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;2;0.00;3;999;88.98
+147;MC1_LOWICZ;999;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;2;0.00;3;999;93.98
+148;MC1_KWIDZYN;10;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;10;49.99
+149;MC1_KWIDZYN;10;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;10;59.99
+150;MC1_KWIDZYN;10;Strzał w 10;600;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;10;69.99
+151;MC1_KWIDZYN;10;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;10;79.99
+152;MC1_KWIDZYN;20;Strzał w 10;150;15;120;;cena z rabatem za e-fakturę;1;1;1.23;2;24;49.99
+153;MC1_KWIDZYN;20;Strzał w 10;300;30;300;;cena z rabatem za e-fakturę;1;1;1.23;2;24;59.99
+154;MC1_KWIDZYN;20;Strzał w 10;650;60;650;;cena z rabatem za e-fakturę;1;1;1.23;2;24;69.99
+155;MC1_KWIDZYN;20;Strzał w 10;900;90;800;;cena z rabatem za e-fakturę;1;1;1.23;2;24;79.99
+156;MC1_KWIDZYN;12;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;1;78.98;2;12;
+157;MC1_KWIDZYN;12;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;1;88.98;2;12;
+158;MC1_KWIDZYN;12;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;1;93.98;2;12;
+159;MC1_KWIDZYN;24;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;7;61.45;8;24;73.98
+160;MC1_KWIDZYN;24;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;7;71.45;8;24;83.98
+161;MC1_KWIDZYN;24;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;7;76.45;8;24;88.98
+162;MC1_KWIDZYN;999;Nowy Internet BIS;300;30;300;;cena z rabatem za e-fakturę;1;2;0.00;3;999;78.98
+163;MC1_KWIDZYN;999;Nowy Internet BIS;650;60;650;;cena z rabatem za e-fakturę;1;2;0.00;3;999;88.98
+164;MC1_KWIDZYN;999;Nowy Internet BIS;900;90;800;;cena z rabatem za e-fakturę;1;2;0.00;3;999;93.98
+165;JIM-SAT;999;NET;10;10;120;;cena z rabatem za e-fakturę;1;999;33.00;;;
+166;JIM-SAT;999;NET;50;50;120;;cena z rabatem za e-fakturę;1;999;43.00;;;
+167;JIM-SAT;999;NET;100;100;120;;cena z rabatem za e-fakturę;1;999;53.00;;;
+168;JIM-SAT;999;NET;300;300;300;;cena z rabatem za e-fakturę;1;999;43.00;;;
+169;JIM-SAT;999;NET;600;600;650;;cena z rabatem za e-fakturę;1;999;63.00;;;
+170;JIM-SAT;999;NET;900;900;800;;cena z rabatem za e-fakturę;1;999;73.00;;;
+171;ELTRONIK;24;HFC;500;100;650;;;1;24;59.90;;;
+172;ELTRONIK;24;GPON MFH;600;150;650;;;1;24;64.90;;;
+173;ELTRONIK;24;GPON MFH;700;150;650;;;1;24;74.90;;;
+174;ELTRONIK;24;GPON MFH;900;200;800;;;1;24;94.00;;;
+175;ELTRONIK;24;GPON MFH;1000;200;800;;;1;24;105.00;;;
+176;ELTRONIK;24;GPON SFH;600;150;650;;;1;24;80.00;;;
+177;ELTRONIK;24;GPON SFH;700;150;650;;;1;24;90.00;;;
+178;ELTRONIK;24;GPON SFH;900;200;800;;;1;24;104.00;;;
+179;ELTRONIK;24;GPON SFH;1000;200;800;;;1;24;115.00;;;
+180;ORANGE;24;Internet światłowodowy;300;50;300;;cena z rabatami;1;24;39.99;;;
+181;ORANGE;24;Internet światłowodowy;600;100;650;;cena z rabatami;1;3;0.00;4;24;80.00
+182;ORANGE;24;Internet światłowodowy;900;300;800;;cena z rabatami;1;6;0.00;7;24;90.00
+183;ORANGE;24;Internet światłowodowy;1000;300;800;;cena z rabatami;1;6;0.00;7;24;90.00
+184;ORANGE;24;Internet światłowodowy;2000;600;800;;cena z rabatami;1;6;0.00;7;24;100.00
+185;ORANGE;24;Internet światłowodowy;8000;1000;800;;cena z rabatami;1;6;0.00;7;24;165.00
+186;ORANGE;999;Internet światłowodowy;300;50;300;;cena z rabatami;1;1;0.00;2;999;80.00
+187;ORANGE;999;Internet światłowodowy;600;100;650;;cena z rabatami;1;1;0.00;2;999;90.00
+188;ORANGE;999;Internet światłowodowy;900;300;800;;cena z rabatami;1;1;0.00;2;999;100.00
+189;ORANGE;999;Internet światłowodowy;1000;300;800;;cena z rabatami;1;1;0.00;2;999;100.00
+190;ORANGE;999;Internet światłowodowy;2000;600;800;;cena z rabatami;1;1;0.00;2;999;110.00
+191;ORANGE;999;Internet światłowodowy;8000;1000;800;;cena z rabatami;1;1;0.00;2;999;175.00
+192;T-MOBILE;24;Internet światłowodowy;300;50;300;;cena z rabatami;1;24;35.00;;;
+193;T-MOBILE;24;Internet światłowodowy;900;300;800;;cena z rabatami;1;24;55.00;;;
+194;PLAY;12;Internet światłowodowy;300;100;300;;cena z rabatami;1;12;65.00;;;
+195;PLAY;12;Internet światłowodowy;600;150;650;;cena z rabatami;1;12;75.00;;;
+196;PLAY;12;Internet światłowodowy;1000;300;800;;cena z rabatami;1;12;85.00;;;
+197;PLAY;12;Internet światłowodowy;8000;2000;800;;cena z rabatami;1;12;120.00;;;
+198;PLAY;24;Internet światłowodowy;300;100;300;;cena z rabatami;1;24;40.00;;;
+199;PLAY;24;Internet światłowodowy;600;150;650;;cena z rabatami;1;24;65.00;;;
+200;PLAY;24;Internet światłowodowy;1000;300;800;;cena z rabatami;1;24;70.00;;;
+201;PLAY;24;Internet światłowodowy;8000;2000;800;;cena z rabatami;1;24;85.00;;;
+202;PLAY;999;Internet światłowodowy;300;100;300;;cena z rabatami;1;999;75.00;;;
+203;PLAY;999;Internet światłowodowy;600;150;650;;cena z rabatami;1;999;85.00;;;
+204;PLAY;999;Internet światłowodowy;1000;300;800;;cena z rabatami;1;999;95.00;;;
+205;PLAY;999;Internet światłowodowy;8000;2000;800;;cena z rabatami;1;999;130.00;;;
+206;PLUS;24;Internet światłowodowy;300;30;300;;cena z rabatami;1;24;40.00;;;
+207;PLUS;24;Internet światłowodowy;600;50;650;;cena z rabatami;1;24;60.00;;;
+208;PLUS;24;Internet światłowodowy;1000;150;800;;cena z rabatami;1;24;90.00;;;
+209;NETIA;24;Internet światłowodowy;150;50;120;;cena z rabatami;1;1;0.00;2;24;40.00
+210;NETIA;24;Internet światłowodowy;300;50;300;;cena z rabatami;1;24;30.00;;;
+211;NETIA;24;Internet światłowodowy;600;100;650;;cena z rabatami;1;3;0.00;4;24;55.00
+212;NETIA;24;Internet światłowodowy;1000;300;800;;cena z rabatami;1;6;0.00;7;24;65.00
+213;NETIA;24;Internet światłowodowy;2000;1000;800;;cena z rabatami;1;6;0.00;7;24;80.00
+214;NETIA;999;Internet światłowodowy;300;50;300;;cena z rabatami;1;999;65.00;;;
+215;NETIA;999;Internet światłowodowy;600;100;650;;cena z rabatami;1;999;75.00;;;
+216;NETIA;999;Internet światłowodowy;1000;300;800;;cena z rabatami;1;999;90.00;;;
+217;VECTRA;23;Internet światłowodowy;300;40;300;HBO Max;cena z rabatami;1;2;0.00;3;23;59.99
+218;VECTRA;23;Internet światłowodowy;600;60;650;HBO Max, Eleven GO;cena z rabatami;1;4;0.00;5;23;74.99
+219;VECTRA;23;Internet światłowodowy;1000;90;800;HBO Max, Eleven GO;cena z rabatami;1;4;0.00;5;23;89.99
+220;VECTRA;23;Internet światłowodowy;300;40;300;Disney+;cena z rabatami;1;3;14.99;4;23;89.98
+221;VECTRA;999;Internet światłowodowy;300;40;300;HBO Max, Eleven GO;cena z rabatami;1;6;49.99;7;999;54.99
+222;VECTRA;999;Internet światłowodowy;600;60;650;HBO Max, Eleven GO;cena z rabatami;1;6;64.99;7;999;59.99
+223;VECTRA;999;Internet światłowodowy;1000;90;800;;cena z rabatami;1;999;84.99;;;
+224;VECTRA;999;Internet światłowodowy;300;40;300;HBO Max;cena z rabatami;1;999;59.99;;;
+225;VECTRA;999;Internet światłowodowy;600;60;650;HBO Max, Eleven GO;cena z rabatami;1;999;74.99;;;
+226;VECTRA;999;Internet światłowodowy;1000;90;800;37 kanałów TV, HBO, Eleven Sports;cena z rabatami;1;999;89.99;;;
+227;INEA;12;Internet światłowodowy;300;50;300;;cena z rabatami;1;6;0.00;7;12;69.00
+228;INEA;12;Internet światłowodowy;600;100;650;;cena z rabatami;1;6;0.00;7;12;79.00
+229;INEA;12;Internet światłowodowy;1000;1000;800;;cena z rabatami;1;6;0.00;7;12;89.00
+230;INEA;24;Internet światłowodowy;1000;1000;800;;cena z rabatami;1;24;71.00;;;
+231;INEA;999;Internet światłowodowy;1000;1000;800;;cena z rabatami;1;5;0.00;6;999;89.00
+232;RFC;24;Internet światłowodowy;300;100;300;;cena z rabatami;1;24;74.99;;;
+233;RFC;24;Internet światłowodowy;500;100;650;;cena z rabatami;1;24;85.99;;;
+234;RFC;24;Internet światłowodowy;700;100;650;;cena z rabatami;1;24;89.99;;;
+235;RFC;24;Internet światłowodowy;1000;300;800;;cena z rabatami;1;24;99.99;;;
+236;JMDI;12;Blok;800;200;800;;cena z rabatami;1;2;1.00;3;12;64.90
+237;JMDI;12;Dom;800;200;800;;cena z rabatami;1;12;84.90;;;
+238;JMDI;24;Blok;400;100;300;;cena z rabatami;1;24;34.90;;;
+239;JMDI;24;Blok;600;150;350;;cena z rabatami;1;2;1.00;3;24;44.90
+240;JMDI;24;Blok;800;200;800;;cena z rabatami;1;3;1.00;4;24;54.90
+241;JMDI;24;Blok;1000;300;800;;cena z rabatami;1;5;1.00;6;24;64.90
+242;JMDI;24;Dom;400;100;300;;cena z rabatami;1;1;1.00;2;24;54.90
+243;JMDI;24;Dom;600;150;650;;cena z rabatami;1;3;1.00;4;24;64.90
+244;JMDI;24;Dom;800;200;800;;cena z rabatami;1;4;1.00;5;24;74.90
+245;JMDI;24;Dom;1000;300;800;;cena z rabatami;1;6;1.00;7;24;84.90
+246;JMDI;999;Blok;800;200;800;;cena z rabatami;1;999;74.90;;;
+247;JMDI;999;Blok;1000;300;800;;cena z rabatami;1;999;84.90;;;
+248;JPK;12;Blok;400;100;300;;;1;12;58.00;;;
+249;JPK;12;Blok;600;200;650;;;1;12;62.00;;;
+250;JPK;12;Blok;950;300;800;;;1;12;67.00;;;
+251;JPK;12;Blok;2000;2000;800;;;1;12;89.00;;;
+252;JPK;12;Dom;400;100;300;;;1;12;89.99;;;
+253;JPK;12;Dom;600;200;650;;;1;12;109.99;;;
+254;JPK;12;Dom;900;300;800;;;1;12;139.99;;;
+255;JPK;12;Dom;2000;2000;800;;;1;12;303.00;;;
+256;JPK;24;Blok;400;100;300;;;1;24;52.00;;;
+257;JPK;24;Blok;600;200;650;;;1;24;26.00;;;
+258;JPK;24;Blok;950;300;800;;;1;24;61.00;;;
+259;JPK;24;Blok;2000;2000;800;;;1;24;83.00;;;
+260;JPK;24;Dom;400;100;300;;;1;24;74.99;;;
+261;JPK;24;Dom;600;200;650;;;1;24;94.99;;;
+262;JPK;24;Dom;900;300;800;;;1;24;124.99;;;
+263;JPK;24;Dom;2000;2000;800;;;1;24;283.00;;;
+264;GECKONET;24;Internet światłowodowy;100;20;120;;;1;1;20.00;2;24;59.00
+265;GECKONET;24;Internet światłowodowy;300;30;300;;;1;1;20.00;2;24;69.00
+266;GECKONET;24;Internet światłowodowy;600;60;650;;;1;1;20.00;2;24;89.00
+267;GECKONET;24;Internet światłowodowy;1000;100;800;;;1;1;20.00;2;24;109.00
+268;NORTIS;24;Internet światłowodowy;500;20;650;;;1;24;62.00;;;
+269;NORTIS;24;Internet światłowodowy;750;50;800;;;1;24;69.00;;;
+270;NORTIS;24;Internet światłowodowy;1000;600;800;;;1;24;89.00;;;
+271;NORTIS;24;NEXERA;300;20;300;;;1;24;79.90;;;
+272;NORTIS;24;NEXERA;400;50;300;;;1;24;89.90;;;
+273;NORTIS;24;NEXERA;700;600;650;;;1;24;99.90;;;
+274;NORTIS;999;Internet światłowodowy;500;20;650;;;1;999;82.00;;;
+275;NORTIS;999;Internet światłowodowy;750;50;800;;;1;999;89.00;;;
+276;NORTIS;999;Internet światłowodowy;1000;600;800;;;1;999;109.00;;;
+277;NORTIS;999;NEXERA;500;20;650;;;1;999;99.90;;;
+278;NORTIS;999;NEXERA;750;50;800;;;1;999;109.90;;;
+279;NORTIS;999;NEXERA;1000;600;800;;;1;999;119.90;;;
+280;PLASTCOM;24;copperDynamic;400;100;300;;;1;24;49.90;;;
+281;PLASTCOM;24;copperDynamic;550;100;650;;;1;24;54.90;;;
+282;PLASTCOM;24;copperDynamic;750;100;800;;;1;24;64.90;;;
+283;PLASTCOM;24;copperDynamic;850;100;800;;;1;24;84.90;;;
+284;PLASTCOM;24;copperDynamic;950;100;800;;;1;24;94.90;;;
+285;PLASTCOM;24;fiberDynamic;800;100;800;;;1;24;55.00;;;
+286;PLASTCOM;24;fiberDynamic;1000;100;800;;;1;24;65.00;;;
+287;PLASTCOM;24;fiberDynamic;2000;100;800;;;1;24;95.00;;;
+288;PLASTCOM;24;fiberDynamic;4000;100;800;;;1;24;125.00;;;
+289;PLASTCOM;24;FiberBSA;500;100;650;;;1;24;74.90;;;
+290;PLASTCOM;24;FiberBSA;600;100;650;;;1;24;79.90;;;
+291;PLASTCOM;24;FiberBSA;750;100;800;;;1;24;84.90;;;
+292;PLASTCOM;24;FiberBSA;900;100;800;;;1;24;89.90;;;
+293;PLASTCOM;24;FiberBSA;1000;100;800;;;1;24;94.90;;;
+294;TYGRYS;12;Internet FTTB;500;50;650;;;1;12;59.00;;;
+295;TYGRYS;12;Internet FTTB;500;100;650;;;1;12;69.00;;;
+296;TYGRYS;12;Internet FTTB;500;200;650;;;1;12;79.00;;;
+297;TYGRYS;12;Internet FTTB;500;400;650;;;1;12;59.00;;;
+298;TYGRYS;24;Internet FTTB;500;50;650;;;1;6;24.50;7;24;49.00
+299;TYGRYS;24;Internet FTTB;500;100;650;;;1;6;29.50;7;24;59.00
+300;TYGRYS;24;Internet FTTB;500;200;650;;;1;6;34.50;7;24;69.00
+301;TYGRYS;24;Internet FTTB;500;400;650;;;1;6;39.50;7;24;79.00
+302;TYGRYS;999;Internet FTTB;500;50;650;;;1;999;69.00;;;
+303;TYGRYS;999;Internet FTTB;500;100;650;;;1;999;79.00;;;
+304;TYGRYS;999;Internet FTTB;500;200;650;;;1;999;89.00;;;
+305;TYGRYS;999;Internet FTTB;500;400;650;;;1;999;99.00;;;
+306;TYGRYS;12;Internet FTTB;700;50;650;;;1;12;69.00;;;
+307;TYGRYS;12;Internet FTTB;700;100;650;;;1;12;79.00;;;
+308;TYGRYS;12;Internet FTTB;700;200;650;;;1;12;89.00;;;
+309;TYGRYS;12;Internet FTTB;700;400;650;;;1;12;99.00;;;
+310;TYGRYS;24;Internet FTTB;700;50;650;;;1;6;29.50;7;24;59.00
+311;TYGRYS;24;Internet FTTB;700;100;650;;;1;6;34.50;7;24;69.00
+312;TYGRYS;24;Internet FTTB;700;200;650;;;1;6;39.50;7;24;79.00
+313;TYGRYS;24;Internet FTTB;700;400;650;;;1;6;44.50;7;24;89.00
+314;TYGRYS;999;Internet FTTB;700;50;650;;;1;999;79.00;;;
+315;TYGRYS;999;Internet FTTB;700;100;650;;;1;999;89.00;;;
+316;TYGRYS;999;Internet FTTB;700;200;650;;;1;999;99.00;;;
+317;TYGRYS;999;Internet FTTB;700;400;650;;;1;999;109.00;;;
+318;TYGRYS;12;Internet FTTB;1000;50;800;;;1;12;79.00;;;
+319;TYGRYS;12;Internet FTTB;1000;100;800;;;1;12;89.00;;;
+320;TYGRYS;12;Internet FTTB;1000;200;800;;;1;12;99.00;;;
+321;TYGRYS;12;Internet FTTB;1000;400;800;;;1;12;109.00;;;
+322;TYGRYS;24;Internet FTTB;1000;50;800;;;1;6;34.50;7;24;69.00
+323;TYGRYS;24;Internet FTTB;1000;100;800;;;1;6;39.50;7;24;79.00
+324;TYGRYS;24;Internet FTTB;1000;200;800;;;1;6;44.50;7;24;89.00
+325;TYGRYS;24;Internet FTTB;1000;400;800;;;1;6;49.50;7;24;99.00
+326;TYGRYS;999;Internet FTTB;1000;50;800;;;1;999;89.00;;;
+327;TYGRYS;999;Internet FTTB;1000;100;800;;;1;999;99.00;;;
+328;TYGRYS;999;Internet FTTB;1000;200;800;;;1;999;109.00;;;
+329;TYGRYS;999;Internet FTTB;1000;400;800;;;1;999;119.00;;;
+330;TYGRYS;12;Internet FTTB;2000;50;800;;;1;12;129.00;;;
+331;TYGRYS;12;Internet FTTB;2000;100;800;;;1;12;139.00;;;
+332;TYGRYS;12;Internet FTTB;2000;200;800;;;1;12;149.00;;;
+333;TYGRYS;12;Internet FTTB;2000;400;800;;;1;12;159.00;;;
+334;TYGRYS;24;Internet FTTB;2000;50;800;;;1;6;59.50;7;24;119.00
+335;TYGRYS;24;Internet FTTB;2000;100;800;;;1;6;64.50;7;24;129.00
+336;TYGRYS;24;Internet FTTB;2000;200;800;;;1;6;69.50;7;24;139.00
+337;TYGRYS;24;Internet FTTB;2000;400;800;;;1;6;74.50;7;24;149.00
+338;TYGRYS;999;Internet FTTB;2000;50;800;;;1;999;139.00;;;
+339;TYGRYS;999;Internet FTTB;2000;100;800;;;1;999;149.00;;;
+340;TYGRYS;999;Internet FTTB;2000;200;800;;;1;999;159.00;;;
+341;TYGRYS;999;Internet FTTB;2000;400;800;;;1;999;169.00;;;
+342;LIMES;23;Symetryczny;80;80;120;;;1;23;45.00;;;
+343;LIMES;23;Symetryczny;240;240;300;;;1;23;55.00;;;
+344;LIMES;23;Symetryczny;400;400;300;;;1;23;65.00;;;
+345;LIMES;23;Internet światłowodowy;600;200;650;;;1;23;75.00;;;
+346;TELKAB;23;Internet światłowodowy;150;50;120;;;1;23;55.00;;;
+347;TELKAB;23;Internet światłowodowy;300;100;300;;;1;23;69.00;;;
+348;TELKAB;23;Internet światłowodowy;600;150;650;;;1;23;79.00;;;
+349;TELKAB;23;Internet światłowodowy;900;200;800;;;1;23;89.00;;;
+350;VOLTA;12;Internet światłowodowy;200;30;120;;;1;12;90.00;;;
+351;VOLTA;12;Internet światłowodowy;300;40;300;;;1;12;109.00;;;
+352;VOLTA;12;Internet światłowodowy;500;50;650;;;1;12;139.00;;;
+353;VOLTA;24;HFC;200;30;120;;;1;24;80.00;;;
+354;VOLTA;24;HFC;300;40;300;;;1;24;99.00;;;
+355;VOLTA;24;HFC;500;50;650;;;1;24;129.00;;;
+356;VOLTA;999;LAN/HFC;200;30;120;;;1;999;110.00;;;
+357;VOLTA;999;LAN/HFC;300;40;300;;;1;999;129.00;;;
+358;VOLTA;999;LAN/HFC;500;50;650;;;1;999;159.00;;;
+359;VOLTA;12;Internet światłowodowy;200;30;120;;;1;12;49.00;;;
+360;VOLTA;12;Internet światłowodowy;300;40;300;;;1;12;59.00;;;
+361;VOLTA;12;Internet światłowodowy;500;50;650;;;1;12;69.00;;;
+362;VOLTA;24;HFC;200;30;120;;;1;24;39.00;;;
+363;VOLTA;24;HFC;300;40;300;;;1;24;49.00;;;
+364;VOLTA;24;HFC;500;50;650;;;1;24;59.00;;;
+365;VOLTA;999;LAN/HFC;200;30;120;;;1;999;200.00;;;
+366;VOLTA;999;LAN/HFC;300;40;300;;;1;999;69.00;;;
+367;VOLTA;999;LAN/HFC;500;50;650;;;1;999;79.00;;;
+368;VOLTA;12;Internet światłowodowy;200;30;120;;;1;12;49.00;;;
+369;VOLTA;12;Internet światłowodowy;300;40;300;;;1;12;49.00;;;
+370;VOLTA;12;Internet światłowodowy;500;50;650;;;1;12;49.00;;;
+371;VOLTA;24;HFC;200;30;120;;;1;24;39.00;;;
+372;VOLTA;24;HFC;300;40;300;;;1;24;39.00;;;
+373;VOLTA;24;HFC;500;50;650;;;1;24;39.00;;;
+374;VOLTA;999;LAN/HFC;200;30;120;;;1;999;200.00;;;
+375;VOLTA;999;LAN/HFC;300;40;300;;;1;999;200.00;;;
+376;VOLTA;999;LAN/HFC;500;50;650;;;1;999;200.00;;;
+377;ABAKS;12;Blok;200;100;120;;;1;12;60.00;;;
+378;ABAKS;12;Blok;300;150;300;;;1;12;84.00;;;
+379;ABAKS;12;Blok;600;300;650;;;1;12;99.00;;;
+380;ABAKS;12;Blok;800;400;800;;;1;12;115.00;;;
+381;ABAKS;12;Dom;200;100;120;;;1;12;79.00;;;
+382;ABAKS;12;Dom;300;150;300;;;1;12;89.00;;;
+383;ABAKS;12;Dom;600;300;650;;;1;12;109.00;;;
+384;ABAKS;12;Dom;800;400;800;;;1;12;119.00;;;
+385;ABAKS;24;Blok;200;100;120;;;1;24;45.00;;;
+386;ABAKS;24;Blok;300;150;300;;;1;24;69.00;;;
+387;ABAKS;24;Blok;600;300;650;;;1;24;85.00;;;
+388;ABAKS;24;Blok;800;400;800;;;1;24;99.00;;;
+389;ABAKS;24;Dom;200;100;120;;;1;24;67.00;;;
+390;ABAKS;24;Dom;300;150;300;;;1;24;79.00;;;
+391;ABAKS;24;Dom;600;300;650;;;1;24;99.00;;;
+392;ABAKS;24;Dom;800;400;800;;;1;24;109.00;;;
+393;LOONAR;24;NET;300;150;300;;;1;24;55.00;;;
+394;LOONAR;24;NET;600;300;650;;;1;24;70.00;;;
+395;LOONAR;24;NET;1000;500;800;;;1;24;85.00;;;
+396;LOONAR;999;NET;65;25;120;;;1;999;155.00;;;
+397;LOONAR;999;NET;100;30;120;;;1;999;170.00;;;
+398;LOONAR;999;NET;160;50;120;;;1;999;185.00;;;
+399;TRIPLEMEDIA;24;Internet światłowodowy;300;150;300;;cena z rabatami;1;24;59.00;;;
+400;TRIPLEMEDIA;24;Internet światłowodowy;600;300;650;;cena z rabatami;1;24;69.00;;;
+401;TRIPLEMEDIA;24;Internet światłowodowy;1000;500;800;;cena z rabatami;1;24;79.00;;;
+402;TRIPLEMEDIA;999;Internet światłowodowy;300;150;300;;cena z rabatami;1;999;169.00;;;
+403;TRIPLEMEDIA;999;Internet światłowodowy;600;300;650;;cena z rabatami;1;999;179.00;;;
+404;TRIPLEMEDIA;999;Internet światłowodowy;1000;500;800;;cena z rabatami;1;999;189.00;;;
+405;SINUSNET;12;SinusFiber - Blok;300;150;300;;;1;12;69.00;;;
+406;SINUSNET;12;SinusFiber - Blok;600;300;650;;;1;12;79.00;;;
+407;SINUSNET;12;SinusFiber - Blok;1000;500;800;;;1;12;89.00;;;
+408;SINUSNET;12;SinusFiber - Dom;300;150;300;;;1;12;81.00;;;
+409;SINUSNET;12;SinusFiber - Dom;600;300;650;;;1;12;91.00;;;
+410;SINUSNET;12;SinusFiber - Dom;1000;500;800;;;1;12;101.00;;;
+411;SINUSNET;24;SinusFiber - Blok;300;150;300;;;1;24;59.00;;;
+412;SINUSNET;24;SinusFiber - Blok;600;300;650;;;1;24;69.00;;;
+413;SINUSNET;24;SinusFiber - Blok;1000;500;800;;;1;24;79.00;;;
+414;SINUSNET;24;SinusFiber - Dom;300;150;300;;;1;24;71.00;;;
+415;SINUSNET;24;SinusFiber - Dom;600;300;650;;;1;24;81.00;;;
+416;SINUSNET;24;SinusFiber - Dom;1000;500;800;;;1;24;91.00;;;
+417;SINUSNET;999;SinusFiber - Blok;300;150;300;;;1;999;138.00;;;
+418;SINUSNET;999;SinusFiber - Blok;600;300;650;;;1;999;158.00;;;
+419;SINUSNET;999;SinusFiber - Blok;1000;500;800;;;1;999;178.00;;;
+420;SINUSNET;999;SinusFiber - Dom;300;150;300;;;1;999;162.00;;;
+421;SINUSNET;999;SinusFiber - Dom;600;300;650;;;1;999;182.00;;;
+422;SINUSNET;999;SinusFiber - Dom;1000;500;800;;;1;999;202.00;;;
+423;TSUNAMI;12;Tsunami MINI;300;150;300;;;1;12;60.00;;;
+424;TSUNAMI;12;Tsunami PLUS;600;300;650;;;1;12;80.00;;;
+425;TSUNAMI;12;Tsunami MAX;1000;500;800;;;1;12;100.00;;;
+426;TSUNAMI;12;Tsunami POWER;2000;1000;800;;;1;12;200.00;;;
+427;TSUNAMI;12;Tsunami POWER+;4000;2000;800;;;1;12;300.00;;;
+428;TSUNAMI;24;Tsunami MINI;450;225;300;;;1;24;60.00;;;
+429;TSUNAMI;24;Tsunami PLUS;900;450;800;;;1;24;80.00;;;
+430;TSUNAMI;24;Tsunami MAX;1500;750;800;;;1;24;100.00;;;
+431;TSUNAMI;24;Tsunami POWER;3000;1500;800;;;1;24;200.00;;;
+432;TSUNAMI;24;Tsunami POWER+;6000;3000;800;;;1;24;300.00;;;
+433;TSUNAMI;999;Tsunami MINI;150;75;120;;;1;999;60.00;;;
+434;TSUNAMI;999;Tsunami PLUS;300;150;300;;;1;999;80.00;;;
+435;TSUNAMI;999;Tsunami MAX;500;250;650;;;1;999;100.00;;;
+436;TSUNAMI;999;Tsunami POWER;1000;500;800;;;1;999;200.00;;;
+437;TSUNAMI;999;Tsunami POWER+;2000;1000;800;;;1;999;300.00;;;
+438;TSUNAMI;12;Symetryczny Tsunami MINI;200;100;120;;;1;12;190.00;;;
+439;TSUNAMI;12;Symetryczny Tsunami PLUS;400;200;300;;;1;12;250.00;;;
+440;TSUNAMI;12;Symetryczny Tsunami MAX;600;300;650;;;1;12;280.00;;;
+441;TSUNAMI;12;Symetryczny Tsunami POWER;4000;2000;800;;;1;12;450.00;;;
+442;TSUNAMI;12;Symetryczny Tsunami POWER+;6000;3000;800;;;1;12;550.00;;;
+443;TSUNAMI;24;Symetryczny Tsunami MINI;250;125;300;;;1;24;190.00;;;
+444;TSUNAMI;24;Symetryczny Tsunami PLUS;500;250;650;;;1;24;250.00;;;
+445;TSUNAMI;24;Symetryczny Tsunami MAX;800;400;800;;;1;24;280.00;;;
+446;TSUNAMI;24;Symetryczny Tsunami POWER;5000;2500;800;;;1;24;450.00;;;
+447;TSUNAMI;24;Symetryczny Tsunami POWER+;8000;4000;800;;;1;24;550.00;;;
+448;TSUNAMI;999;Symetryczny Tsunami MINI;100;50;120;;;1;999;190.00;;;
+449;TSUNAMI;999;Symetryczny Tsunami PLUS;200;100;120;;;1;999;250.00;;;
+450;TSUNAMI;999;Symetryczny Tsunami MAX;300;150;300;;;1;999;280.00;;;
+451;TSUNAMI;999;Symetryczny Tsunami POWER;2000;1000;800;;;1;999;450.00;;;
+452;TSUNAMI;999;Symetryczny Tsunami POWER+;3000;1500;800;;;1;999;550.00;;;
+453;MATCOM;24;Internet światłowodowy;150;30;120;;;1;24;49.00;;;
+454;MATCOM;24;Internet światłowodowy;300;60;300;;;1;24;69.00;;;
+455;MATCOM;24;Internet światłowodowy;600;60;650;;;1;24;89.00;;;
+456;INTELLY;12;Internet światłowodowy;300;30;300;;;1;12;99.90;;;
+457;INTELLY;12;Internet światłowodowy;450;45;300;;;1;12;114.90;;;
+458;INTELLY;12;Internet światłowodowy;600;60;650;;;1;12;139.90;;;
+459;INTELLY;24;Internet światłowodowy;300;30;300;;;1;24;89.90;;;
+460;INTELLY;24;Internet światłowodowy;450;45;300;;;1;24;104.90;;;
+461;INTELLY;24;Internet światłowodowy;600;60;650;;;1;24;129.90;;;
+462;INTELLY;999;Internet światłowodowy;300;30;300;;;1;999;99.90;;;
+463;INTELLY;999;Internet światłowodowy;450;45;300;;;1;999;114.90;;;
+464;INTELLY;999;Internet światłowodowy;600;60;650;;;1;999;139.90;;;
+465;IVENDO;24;Blok;30;3;120;;;1;24;29.00;;;
+466;IVENDO;24;Blok;40;4;120;;;1;24;35.00;;;
+467;IVENDO;24;Blok;60;6;120;;;1;24;40.00;;;
+468;IVENDO;24;Blok;80;8;120;;;1;24;45.00;;;
+469;IVENDO;24;Mieszkanie;100;10;120;;;1;24;35.00;;;
+470;IVENDO;24;Mieszkanie;200;20;120;;;1;24;45.00;;;
+471;IVENDO;24;Mieszkanie;300;30;300;;;1;24;55.00;;;
+472;IVENDO;24;Mieszkanie;600;60;650;;;1;24;70.00;;;
+473;IVENDO;24;Dom;60;6;120;;;1;24;50.00;;;
+474;IVENDO;24;Dom;100;10;120;;;1;24;60.00;;;
+475;IVENDO;24;Dom;200;20;120;;;1;24;70.00;;;
+476;IVENDO;24;Dom;300;30;300;;;1;24;80.00;;;
+477;IVENDO;24;Dom;600;60;650;;;1;24;100.00;;;
+478;IWKD;24;Internet światłowodowy;300;150;300;;;1;24;69.90;;;
+479;IWKD;24;Internet światłowodowy;600;300;650;;;1;24;99.90;;;
+480;IWKD;24;Internet światłowodowy;1000;500;800;;;1;24;119.90;;;
+481;BUDIMPEX;12;Internet światłowodowy;300;300;300;;;1;12;65.00;;;
+482;BUDIMPEX;12;Internet światłowodowy;600;600;650;;;1;12;75.00;;;
+483;BUDIMPEX;12;Internet światłowodowy;900;900;800;;;1;12;95.00;;;
+484;BUDIMPEX;24;Internet światłowodowy;300;300;300;;;1;24;50.00;;;
+485;BUDIMPEX;24;Internet światłowodowy;600;600;650;;;1;24;60.00;;;
+486;BUDIMPEX;24;Internet światłowodowy;900;900;800;;;1;24;80.00;;;
+487;BUDIMPEX;999;Internet światłowodowy;300;300;300;;;1;999;95.00;;;
+488;BUDIMPEX;999;Internet światłowodowy;600;600;650;;;1;999;105.00;;;
+489;BUDIMPEX;999;Internet światłowodowy;900;900;800;;;1;999;125.00;;;
+490;MPCNET;12;Internet światłowodowy;300;30;300;;;1;12;59.99;;;
+491;MPCNET;12;Internet światłowodowy;600;50;650;;;1;12;74.99;;;
+492;MPCNET;12;Internet światłowodowy;1000;100;800;;;1;12;79.99;;;
+493;MPCNET;12;NEXERA;300;150;300;;;1;12;84.99;;;
+494;MPCNET;12;NEXERA;600;300;650;;;1;12;89.99;;;
+495;MPCNET;12;NEXERA;1000;500;800;;;1;12;104.99;;;
+496;MPCNET;24;Internet światłowodowy;300;30;300;;;1;24;49.99;;;
+497;MPCNET;24;Internet światłowodowy;600;50;650;;;1;24;64.99;;;
+498;MPCNET;24;Internet światłowodowy;1000;100;800;;;1;24;69.99;;;
+499;MPCNET;24;NEXERA;300;150;300;;;1;24;74.99;;;
+500;MPCNET;24;NEXERA;600;300;650;;;1;24;79.99;;;
+501;MPCNET;24;NEXERA;1000;500;800;;;1;24;94.99;;;
+502;TIMPLUS;12;Internet światłowodowy;300;30;300;;;1;12;70.00;;;
+503;TIMPLUS;12;Internet światłowodowy;600;60;650;;;1;12;85.00;;;
+504;TIMPLUS;12;Internet światłowodowy;1000;100;1000;;;1;12;95.00;;;
+505;VLMEDIA;24;Internet światłowodowy;100;10;120;;;1;24;39.00;;;
+506;VLMEDIA;24;Internet światłowodowy;300;30;300;;;1;24;49.00;;;
+507;VLMEDIA;24;Internet światłowodowy;600;60;650;;;1;24;59.00;;;
+508;VLMEDIA;24;Internet światłowodowy;1000;100;800;;;1;24;89.00;;;
+509;WAVE;24;Internet światłowodowy;300;30;300;;;1;24;49.00;;;
+510;WAVE;24;Internet światłowodowy;600;60;650;;;1;24;59.00;;;
+511;WAVE;24;Internet światłowodowy;900;90;800;;;1;24;79.00;;;
+512;MBIT;24;Blok;100;100;120;;;1;24;49.00;;;
+513;MBIT;24;Blok;300;300;300;;;1;24;59.00;;;
+514;MBIT;24;Blok;600;600;650;;;1;24;69.00;;;
+515;MBIT;24;Blok;900;900;800;;;1;24;99.00;;;
+516;MBIT;24;Dom;100;100;120;;;1;24;99.00;;;
+517;MBIT;24;Dom;300;300;300;;;1;24;109.00;;;
+518;MBIT;24;Dom;600;600;650;;;1;24;129.00;;;
+519;MBIT;24;Dom;900;900;800;;;1;24;149.00;;;
+520;HISPEED;24;Internet światłowodowy;300;30;300;;;1;24;50.00;;;
+521;HISPEED;24;Internet światłowodowy;600;60;650;;;1;24;70.00;;;
+522;HISPEED;24;Internet światłowodowy;1000;100;800;;;1;24;85.00;;;
+523;PRO_INTERNET;24;FIBER SYMMETRICAL;100;100;120;;;1;24;109.00;;;
+524;PRO_INTERNET;24;FIBER SYMMETRICAL;500;500;650;;;1;24;119.00;;;
+525;PRO_INTERNET;24;FIBER SYMMETRICAL;700;700;650;;;1;24;139.00;;;
+526;PRO_INTERNET;24;FIBER SYMMETRICAL;900;900;800;;;1;24;159.00;;;
+527;PRO_INTERNET;24;FIBER SYMMETRICAL;2000;2000;800;;;1;24;169.00;;;
+528;PRO_INTERNET;24;FIBER SYMMETRICAL;4000;4000;800;;;1;24;189.00;;;
+529;PRO_INTERNET;24;FIBER SYMMETRICAL;6000;6000;800;;;1;24;209.00;;;
+530;PROVECTOR;12;Internet światłowodowy;100;30;120;;;1;12;29.99;;;
+531;PROVECTOR;12;Internet światłowodowy;300;50;300;;;1;12;49.99;;;
+532;PROVECTOR;12;Internet światłowodowy;300;100;300;;;1;12;59.99;;;
+533;PROVECTOR;12;Internet światłowodowy;600;100;650;;;1;12;69.99;;;
+534;PROVECTOR;12;Internet światłowodowy;900;300;800;;;1;12;89.99;;;
+535;PROVECTOR;24;Internet światłowodowy;100;30;120;;;1;24;29.99;;;
+536;PROVECTOR;24;Internet światłowodowy;300;50;300;;;1;24;49.99;;;
+537;PROVECTOR;24;Internet światłowodowy;300;100;300;;;1;24;59.99;;;
+538;PROVECTOR;24;Internet światłowodowy;600;100;650;;;1;24;69.99;;;
+539;PROVECTOR;24;Internet światłowodowy;900;300;800;;;1;24;89.99;;;
+540;PROVECTOR;999;Internet światłowodowy;100;30;120;;;1;999;29.99;;;
+541;PROVECTOR;999;Internet światłowodowy;300;50;300;;;1;999;49.99;;;
+542;PROVECTOR;999;Internet światłowodowy;300;100;300;;;1;999;59.99;;;
+543;PROVECTOR;999;Internet światłowodowy;600;100;650;;;1;999;69.99;;;
+544;PROVECTOR;999;Internet światłowodowy;900;300;800;;;1;999;89.99;;;
+545;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;MINI;100;10;120;;;1;999;45.00;;;
+546;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;MAXI;300;30;300;;;1;999;55.00;;;
+547;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;OPTIMIM;500;50;650;;;1;999;65.00;;;
+548;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;MINI z inna usługą;100;10;120;;;1;999;29.00;;;
+549;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;MAXI z inną usługą;300;30;300;;;1;999;50.00;;;
+550;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;OPTIMIM z inną usługą;500;50;650;;;1;999;60.00;;;
+551;CITYLINK;24;Blok;100;10;120;;;1;24;45.00;;;
+552;CITYLINK;24;Blok;400;40;300;;;1;24;50.00;;;
+553;CITYLINK;24;Blok;700;70;650;;;1;24;60.00;;;
+554;CITYLINK;24;Blok;1000;100;800;;;1;24;70.00;;;
+555;CITYLINK;24;Dom;100;10;120;;;1;24;60.00;;;
+556;CITYLINK;24;Dom;400;40;300;;;1;24;75.00;;;
+557;CITYLINK;24;Dom;700;70;650;;;1;24;85.00;;;
+558;CITYLINK;24;Dom;1000;100;800;;;1;24;100.00;;;
+559;AIR-NET;24;Internet światłowodowy;300;30;300;Telewizja internetowa - 78 kanałów;;1;24;79.00;;;
+560;AIR-NET;24;Internet światłowodowy;600;60;650;Telewizja internetowa - 78 kanałów;;1;24;95.00;;;
+561;AIR-NET;24;Internet światłowodowy;900;90;800;Telewizja internetowa - 78 kanałów;;1;24;105.00;;;
+562;SWIATLOWOD_INWESTYCJE;999;Blok;300;50;300;;oferta hurtowa, ceny netto;1;999;37.48;;;
+563;SWIATLOWOD_INWESTYCJE;999;Blok;600;100;650;;oferta hurtowa, ceny netto;1;999;40.20;;;
+564;SWIATLOWOD_INWESTYCJE;999;Blok;1000;300;800;;oferta hurtowa, ceny netto;1;999;45.26;;;
+565;SWIATLOWOD_INWESTYCJE;999;Dom;300;50;300;;oferta hurtowa, ceny netto;1;999;50.62;;;
+566;SWIATLOWOD_INWESTYCJE;999;Dom;600;100;650;;oferta hurtowa, ceny netto;1;999;53.34;;;
+567;SWIATLOWOD_INWESTYCJE;999;Dom;1000;300;800;;oferta hurtowa, ceny netto;1;999;58.40;;;
+568;SWIATLOWOD_INWESTYCJE;999;Symetryczny;20;20;120;;oferta hurtowa, ceny netto;1;999;56.73;;;
+569;SWIATLOWOD_INWESTYCJE;999;Symetryczny;50;50;120;;oferta hurtowa, ceny netto;1;999;66.63;;;
+570;SWIATLOWOD_INWESTYCJE;999;Symetryczny;100;100;120;;oferta hurtowa, ceny netto;1;999;83.21;;;
+571;SWIATLOWOD_INWESTYCJE;999;Symetryczny;150;150;120;;oferta hurtowa, ceny netto;1;999;99.76;;;
+572;SWIATLOWOD_INWESTYCJE;999;Symetryczny;200;200;120;;oferta hurtowa, ceny netto;1;999;116.33;;;
+573;NEXERA;999;Internet światłowodowy;300;150;300;;oferta hurtowa, ceny netto;1;999;44.84;;;
+574;NEXERA;999;Internet światłowodowy;400;200;300;;oferta hurtowa, ceny netto;1;999;45.72;;;
+575;NEXERA;999;Internet światłowodowy;500;250;650;;oferta hurtowa, ceny netto;1;999;46.59;;;
+576;NEXERA;999;Internet światłowodowy;600;300;650;;oferta hurtowa, ceny netto;1;999;47.47;;;
+577;NEXERA;999;Internet światłowodowy;700;350;650;;oferta hurtowa, ceny netto;1;999;48.05;;;
+578;NEXERA;999;Internet światłowodowy;800;400;800;;oferta hurtowa, ceny netto;1;999;49.75;;;
+579;NEXERA;999;Internet światłowodowy;900;450;800;;oferta hurtowa, ceny netto;1;999;50.29;;;
+580;NEXERA;999;Internet światłowodowy;1000;500;800;;oferta hurtowa, ceny netto;1;999;52.03;;;
+581;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;300;300;300;;oferta hurtowa, ceny netto;1;999;55.59;;;
+582;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;600;600;650;;oferta hurtowa, ceny netto;1;999;64.23;;;
+583;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;1000;1000;800;;oferta hurtowa, ceny netto;1;999;74.12;;;
+584;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;2000;2000;800;;oferta hurtowa, ceny netto;1;999;74.12;;;
+585;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;5000;5000;800;;oferta hurtowa, ceny netto;1;999;74.12;;;
+586;POLSKI_SWIATLOWOD_OTWARTY;999;Blok;8000;8000;800;;oferta hurtowa, ceny netto;1;999;74.12;;;
+587;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;300;300;300;;oferta hurtowa, ceny netto;1;999;43.24;;;
+588;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;600;600;650;;oferta hurtowa, ceny netto;1;999;51.88;;;
+589;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;1000;1000;800;;oferta hurtowa, ceny netto;1;999;61.75;;;
+590;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;2000;2000;800;;oferta hurtowa, ceny netto;1;999;61.75;;;
+591;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;5000;5000;800;;oferta hurtowa, ceny netto;1;999;61.75;;;
+592;POLSKI_SWIATLOWOD_OTWARTY;999;Dom;8000;8000;800;;oferta hurtowa, ceny netto;1;999;61.75;;;
