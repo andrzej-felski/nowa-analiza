@@ -204,6 +204,10 @@ function szukaj(){
 		o.predkosc_wysylania==upload
 	);
     pokazWynik(wybrana);
+	console.log(
+    "Konkurencja:",
+    pobierzOfertyKonkurencji(wybrana)
+);
 }
 
 function pokazWynik(oferta){
@@ -271,6 +275,23 @@ function pobierzHarmonogram(oferta) {
         i++;
     }
     return harmonogram;
+}
+
+function pobierzKonkurencje(idFirmy){
+    return dane.konkurencja
+        .filter(k => k.id_firmy == idFirmy)
+        .map(k => k.id_konkurenta);
+}
+
+function pobierzOfertyKonkurencji(oferta){
+    let konkurenci = pobierzKonkurencje(oferta.id_firmy);
+    return pobierzOferty().filter(o =>
+        konkurenci.includes(o.id_firmy)
+        &&
+        o.grupa_porownawcza == oferta.grupa_porownawcza
+        &&
+        o.grupa_okresu == oferta.grupa_okresu
+    );
 }
 
 start();
