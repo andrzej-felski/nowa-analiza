@@ -12,6 +12,8 @@ const wybor = {
     parametr: null
 };
 
+let aktualnePole = null;
+
 async function start(){
     dane.firmy = await wczytajCSV("firmy.csv");
     dane.konkurencja = await wczytajCSV("konkurencja.csv");
@@ -43,8 +45,7 @@ async function wczytajCSV(plik){
 }
 
 function pobierzOferty() {
-    let usluga = document.getElementById("usluga").value;
-    return dane.uslugi[usluga] || [];
+    return dane.uslugi[wybor.usluga] || [];
 }
 
 function pokazFirmy(){
@@ -60,171 +61,27 @@ function pokazFirmy(){
 }
 
 document
-.getElementById("firma")
-.addEventListener("change", function () {
-    let usluga = document.getElementById("usluga");
-    usluga.innerHTML = `
-        <option value="">Wybierz</option>
-    `;
-    document.getElementById("okres").disabled = true;
-    document.getElementById("pakiet").disabled = true;
-    document.getElementById("parametr").disabled = true;
-    if (!this.value) {
-        usluga.disabled = true;
-        return;
-    }
-    usluga.disabled = false;
-    usluga.innerHTML += `
-        <option value="internet">
-            Internet światłowodowy
-        </option>
-    `;
-});
-
-document
-.getElementById("usluga")
-.addEventListener("change", pokazOkresy);
-
-function pokazOkresy(){
-    let firma =
-    document.getElementById("firma").value;
-    let okres =
-    document.getElementById("okres");
-    okres.innerHTML =
-    '<option value="">Wybierz</option>';
-	let lista =
-	pobierzOferty().filter(o =>
-		o.id_firmy == firma
-	);
-	[...new Set(lista.map(o=>Number(o.okres_umowy)))]
-	.sort((a,b)=>a-b)
-	.forEach(x=>{
-        okres.innerHTML += `
-        <option value="${x}">
-            ${x==999 ? "Bezterminowa" : x+" "+odmianaMiesiecy(x)}
-        </option>`;
-    });
-    okres.disabled=false;
-}
-
-function odmianaMiesiecy(liczba){
-    liczba = Number(liczba);
-    if (liczba === 1) {
-        return "miesiąc";
-    }
-    if (
-        liczba % 10 >= 2 &&
-        liczba % 10 <= 4 &&
-        !(liczba >= 12 && liczba <= 14)
-    ) {
-        return "miesiące";
-    }
-    return "miesięcy";
-}
-
-document
-.getElementById("okres")
-.addEventListener("change", pokazPakiety);
-
-function pokazPakiety(){
-    let firma =
-    document.getElementById("firma").value;
-    let okres =
-    document.getElementById("okres").value;
-    let pakiet =
-    document.getElementById("pakiet");
-    pakiet.innerHTML =
-    '<option value="">Wybierz</option>';
-	let lista =
-	pobierzOferty().filter(o =>
-		o.id_firmy == firma &&
-		o.okres_umowy == okres
-	);
-    [...new Set(lista.map(o=>o.nazwa_pakietu))]
-    .forEach(x=>{
-        pakiet.innerHTML += `
-        <option value="${x}">
-            ${x}
-        </option>`;
-    });
-    pakiet.disabled=false;
-}
-
-document
-.getElementById("pakiet")
-.addEventListener("change", pokazParametry);
-
-function pokazParametry() {
-    let usluga = document.getElementById("usluga").value;
-    switch (usluga) {
-        case "internet":
-            pokazParametryInternet();
-            break;
-        default:
-            console.warn("Brak obsługi usługi:", usluga);
-    }
-}
-
-function pokazParametryInternet(){
-    let firma =
-    document.getElementById("firma").value;
-    let okres =
-    document.getElementById("okres").value;
-    let pakiet =
-    document.getElementById("pakiet").value;
-	let parametr =
-	document.getElementById("parametr");
-	parametr.innerHTML =
-	'<option value="">Wybierz</option>';
-	let lista =
-	pobierzOferty().filter(o =>
-		o.id_firmy == firma &&
-		o.okres_umowy == okres &&
-		o.nazwa_pakietu == pakiet
-	);
-	[...new Set(
-		lista.map(o =>
-			o.predkosc_pobierania+"/"+o.predkosc_wysylania
-		)
-	)]
-	.sort((a,b)=>{
-		return Number(a.split("/")[0]) - Number(b.split("/")[0]);
-	})
-	.forEach(x=>{
-	parametr.innerHTML += `
-		<option value="${x}">
-			${x.replace("/", " / ")} Mb/s
-		</option>`;
-    });
-    parametr.disabled = false;
-}
-
-document
 .getElementById("szukaj")
 .addEventListener("click", szukaj);
 
 function szukaj(){
-    let firma =
-    document.getElementById("firma").value;
-    let pakiet =
-    document.getElementById("pakiet").value;
-	let parametr =
-	document.getElementById("parametr").value;
-	let [download, upload] = parametr.split("/");
-	let okres =
-	document.getElementById("okres").value;
-	let wybrana =
-	pobierzOferty().find(o=>
-		o.id_firmy==firma &&
-		o.okres_umowy==okres &&
-		o.nazwa_pakietu==pakiet &&
-		o.predkosc_pobierania==download &&
-		o.predkosc_wysylania==upload
-	);
-	pokazWynik(
-		wybrana,
-		pobierzOfertyKonkurencji(wybrana)
-	);
+    let firma = wybor.firma;
+    let pakiet = wybor.pakiet;
+    let parametr = wybor.parametr;
+    let [download, upload] = parametr.split("/");
+    let okres = wybor.okres;
+    let wybrana =
+    pobierzOferty().find(o =>
+        o.id_firmy == firma &&
+        o.okres_umowy == okres &&
+        o.nazwa_pakietu == pakiet &&
+        o.predkosc_pobierania == download &&
+        o.predkosc_wysylania == upload
+    );
+    pokazWynik(
+        wybrana,
+        pobierzOfertyKonkurencji(wybrana)
+    );
 }
 
 function pokazWynik(oferta, konkurenci){
