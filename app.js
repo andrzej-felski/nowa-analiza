@@ -43,15 +43,24 @@ function pokazFirmy(){
 
 document
 .getElementById("firma")
-.addEventListener("change", function(){
-    let usluga =
-    document.getElementById("usluga");
-    if(this.value){
-        usluga.disabled=false;
+.addEventListener("change", function () {
+    let usluga = document.getElementById("usluga");
+    usluga.innerHTML = `
+        <option value="">Wybierz</option>
+    `;
+    document.getElementById("okres").disabled = true;
+    document.getElementById("pakiet").disabled = true;
+    document.getElementById("predkosc").disabled = true;
+    if (!this.value) {
+        usluga.disabled = true;
+        return;
     }
-    else{
-        usluga.disabled=true;
-    }
+    usluga.disabled = false;
+    usluga.innerHTML += `
+        <option value="internet">
+            Internet światłowodowy
+        </option>
+    `;
 });
 
 document
@@ -141,65 +150,6 @@ function pokazPredkosci(){
         </option>`;
     });
     predkosc.disabled=false;
-}
-
-function filtruj(){
-    let firma =
-    document.getElementById("firma").value;
-    let lista =
-    oferty.filter(o=>
-        o.id_firmy==firma
-    );
-    let okres =
-    document.getElementById("okres");
-    okres.innerHTML="";
-    [...new Set(lista.map(o=>o.okres_umowy))]
-    .forEach(x=>{
-        okres.innerHTML+=`
-        <option>${x}</option>`;
-    });
-    pokazPakiety(lista);
-}
-
-
-
-function pokazPakiety(lista){
-    let pakiet =
-    document.getElementById("pakiet");
-    pakiet.innerHTML="";
-    [...new Set(lista.map(o=>o.nazwa_pakietu))]
-    .forEach(x=>{
-        pakiet.innerHTML+=`
-        <option>${x}</option>`;
-    });
-    pokazPredkosci();
-}
-
-function pokazPredkosci(){
-    let firma =
-    document.getElementById("firma").value;
-    let pakiet =
-    document.getElementById("pakiet").value;
-    let lista =
-    oferty.filter(o =>
-        o.id_firmy == firma &&
-        o.nazwa_pakietu == pakiet
-    );
-    let predkosc =
-    document.getElementById("predkosc");
-    predkosc.innerHTML="";
-    let kombinacje =
-    [...new Set(
-        lista.map(o =>
-            `${o.predkosc_pobierania}/${o.predkosc_wysylania}`
-        )
-    )];
-    kombinacje.forEach(x=>{
-        predkosc.innerHTML += `
-        <option value="${x}">
-        ${x} Mb/s
-        </option>`;
-    });
 }
 
 document
