@@ -86,10 +86,25 @@ function pokazOkresy(){
 	.forEach(x=>{
         okres.innerHTML += `
         <option value="${x}">
-            ${x==999 ? "Bezterminowa" : x+" miesięcy"}
+            ${x==999 ? "Bezterminowa" : x+" "+odmianaMiesiecy(x)}
         </option>`;
     });
     okres.disabled=false;
+}
+
+function odmianaMiesiecy(liczba){
+    liczba = Number(liczba);
+    if (liczba === 1) {
+        return "miesiąc";
+    }
+    if (
+        liczba % 10 >= 2 &&
+        liczba % 10 <= 4 &&
+        !(liczba >= 12 && liczba <= 14)
+    ) {
+        return "miesiące";
+    }
+    return "miesięcy";
 }
 
 document
