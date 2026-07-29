@@ -1,4 +1,3 @@
-console.log("APP.JS DZIAŁA");
 let firmy=[];
 let konkurencja=[];
 let oferty=[];
@@ -48,19 +47,6 @@ async function wczytajCSV(plik){
             return obiekt;
 
         });
-
-}
-
-
-
-async function start(){
-
-    firmy = await wczytajCSV("firmy.csv");
-    konkurencja = await wczytajCSV("konkurencja.csv");
-    oferty = await wczytajCSV("internet.csv");
-
-
-    pokazFirmy();
 
 }
 
