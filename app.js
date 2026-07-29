@@ -196,9 +196,12 @@ function szukaj(){
 	let parametr =
 	document.getElementById("parametr").value;
 	let [download, upload] = parametr.split("/");
+	let okres =
+	document.getElementById("okres").value;
 	let wybrana =
 	pobierzOferty().find(o=>
 		o.id_firmy==firma &&
+		o.okres_umowy==okres &&
 		o.nazwa_pakietu==pakiet &&
 		o.predkosc_pobierania==download &&
 		o.predkosc_wysylania==upload
