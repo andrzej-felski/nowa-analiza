@@ -127,10 +127,10 @@ function pokazPakiety(){
 	);
     [...new Set(lista.map(o=>o.nazwa_pakietu))]
     .forEach(x=>{
-        pakiet.innerHTML += `
-        <option value="${x}">
-            ${x}
-        </option>`;
+		parametr.innerHTML += `
+		<option value="${x}">
+			${x.replace("/", " / ")} Mb/s
+		</option>`;
     });
     pakiet.disabled=false;
 }
