@@ -127,10 +127,10 @@ function pokazPakiety(){
 	);
     [...new Set(lista.map(o=>o.nazwa_pakietu))]
     .forEach(x=>{
-		parametr.innerHTML += `
-		<option value="${x}">
-			${x.replace("/", " / ")} Mb/s
-		</option>`;
+        pakiet.innerHTML += `
+        <option value="${x}">
+            ${x}
+        </option>`;
     });
     pakiet.disabled=false;
 }
@@ -176,10 +176,10 @@ function pokazParametryInternet(){
 		return Number(a.split("/")[0]) - Number(b.split("/")[0]);
 	})
 	.forEach(x=>{
-        parametr.innerHTML += `
-        <option value="${x}">
-            ${x} Mb/s
-        </option>`;
+	parametr.innerHTML += `
+		<option value="${x}">
+			${x.replace("/", " / ")} Mb/s
+		</option>`;
     });
     parametr.disabled = false;
 }
