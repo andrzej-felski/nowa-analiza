@@ -203,46 +203,39 @@ function szukaj(){
 		o.predkosc_pobierania==download &&
 		o.predkosc_wysylania==upload
 	);
-    pokazWynik(wybrana);
-	console.log(
-    "Konkurencja:",
-    pobierzOfertyKonkurencji(wybrana)
-);
+	pokazWynik(
+		wybrana,
+		pobierzOfertyKonkurencji(wybrana)
+	);
 }
 
-function pokazWynik(oferta){
-    let htmlParametry = pokazParametryWyniku(oferta);
-    let harmonogram = pobierzHarmonogram(oferta);
-    let htmlCennik = "";
-    harmonogram.forEach(pozycja => {
-        htmlCennik += `
-            <tr>
-                <td>${pozycja.od}-${pozycja.do}</td>
-                <td>${pozycja.cena} zł</td>
-            </tr>
-        `;
-    });
-    document.getElementById("wynik").innerHTML =
-    `
-    <div class="oferta">
-        <h2>${oferta.nazwa_pakietu}</h2>
-        ${htmlParametry}
-        <br>
-        Dodatki:
-        ${oferta.dodatki || "-"}
-        <br><br>
-        Uwagi:
-        ${oferta.uwagi || "-"}
-        <h3>Cennik</h3>
-        <table class="cennik">
-            <tr>
-                <th>Okres</th>
-                <th>Cena</th>
-            </tr>
-            ${htmlCennik}
-        </table>
-    </div>
-    `;
+function pokazWynik(oferta, konkurenci){
+	let htmlKonkurencja = "";
+	konkurenci.forEach(k=>{
+		htmlKonkurencja += `
+		<div class="oferta konkurencja">
+			<h3>
+			${k.id_firmy}
+			</h3>
+			Prędkość:
+			${k.predkosc_pobierania} /
+			${k.predkosc_wysylania} Mb/s
+			<br><br>
+			${k.dodatki || ""}
+		</div>
+		`;
+	});
+	document.getElementById("wynik").innerHTML =
+	`
+	<div class="oferta">
+		<h2>${oferta.nazwa_pakietu}</h2>
+		Prędkość:
+		${oferta.predkosc_pobierania} /
+		${oferta.predkosc_wysylania} Mb/s
+	</div>
+	<h2>Konkurencja</h2>
+	${htmlKonkurencja}
+	`;
 }
 
 function pokazParametryWyniku(oferta){
@@ -285,13 +278,21 @@ function pobierzKonkurencje(idFirmy){
 
 function pobierzOfertyKonkurencji(oferta){
     let konkurenci = pobierzKonkurencje(oferta.id_firmy);
-    return pobierzOferty().filter(o =>
+    console.log("Wybrana oferta:", oferta);
+    console.log("Konkurenci:", konkurenci);
+    let wszystkie = dane.uslugi.internet.filter(o =>
         konkurenci.includes(o.id_firmy)
-        &&
+    );
+    console.log("Wszystkie oferty konkurencji:", wszystkie);
+    let poGrupiePredkosci = wszystkie.filter(o =>
         o.grupa_porownawcza == oferta.grupa_porownawcza
-        &&
+    );
+    console.log("Po grupie prędkości:", poGrupiePredkosci);
+    let poGrupieOkresu = poGrupiePredkosci.filter(o =>
         o.grupa_okresu == oferta.grupa_okresu
     );
+    console.log("Po grupie okresu:", poGrupieOkresu);
+    return poGrupieOkresu;
 }
 
 start();
