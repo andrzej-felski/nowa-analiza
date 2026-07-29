@@ -1,7 +1,27 @@
 let firmy=[];
 let konkurencja=[];
 let oferty=[];
+let firmy=[];
+let konkurencja=[];
+let oferty=[];
 
+
+async function start(){
+
+    console.log("Start aplikacji");
+
+    firmy = await wczytajCSV("firmy.csv");
+    console.log("Firmy:", firmy);
+
+    konkurencja = await wczytajCSV("konkurencja.csv");
+    console.log("Konkurencja:", konkurencja);
+
+    oferty = await wczytajCSV("internet.csv");
+    console.log("Oferty:", oferty);
+
+    pokazFirmy();
+
+}
 
 async function wczytajCSV(plik){
 
