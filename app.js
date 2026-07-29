@@ -4,11 +4,18 @@ const dane = {
     uslugi: {}
 };
 
+const wybor = {
+    firma: null,
+    usluga: null,
+    okres: null,
+    pakiet: null,
+    parametr: null
+};
+
 async function start(){
-	dane.firmy = await wczytajCSV("firmy.csv");
-	dane.konkurencja = await wczytajCSV("konkurencja.csv");
-	dane.uslugi.internet = await wczytajCSV("internet.csv");
-    pokazFirmy();
+    dane.firmy = await wczytajCSV("firmy.csv");
+    dane.konkurencja = await wczytajCSV("konkurencja.csv");
+    dane.uslugi.internet = await wczytajCSV("internet.csv");
 }
 
 async function wczytajCSV(plik){
@@ -297,5 +304,70 @@ function pobierzOfertyKonkurencji(oferta){
     console.log("Po grupie okresu:", poGrupieOkresu);
     return poGrupieOkresu;
 }
+
+let aktualnePole = null;
+document
+.querySelectorAll(".wybor")
+.forEach(element => {
+    element.addEventListener("click", function(){
+        aktualnePole = this.dataset.pole;
+        otworzWybor(aktualnePole);
+    });
+});
+
+function otworzWybor(pole){
+    let modal =
+    document.getElementById("oknoWyboru");
+    let lista =
+    document.getElementById("listaWyboru");
+    lista.innerHTML="";
+    if(pole=="firma"){
+        dane.firmy
+        .filter(f=>f.nasza_firma.toUpperCase()=="TAK")
+        .forEach(f=>{
+            lista.innerHTML += `
+            <label>
+                <input 
+                type="radio"
+                name="wybor"
+                value="${f.id_firmy}">
+               
+                ${f.nazwa_firmy}
+            </label>
+            <br>
+            `;
+        });
+    }
+    document.getElementById("tytulWyboru").innerHTML =
+    "Wybierz firmę";
+    modal.classList.remove("ukryte");
+}
+
+document
+.getElementById("potwierdzWybor")
+.addEventListener("click", function(){
+    let zaznaczone =
+    document.querySelector(
+        'input[name="wybor"]:checked'
+    );
+    if(!zaznaczone){
+        return;
+    }
+    wybor[aktualnePole] =
+    zaznaczone.value;
+    if(aktualnePole=="firma"){
+        let firma =
+        dane.firmy.find(
+            f=>f.id_firmy==zaznaczone.value
+        );
+        document
+        .getElementById("wybranaFirma")
+        .innerHTML =
+        firma.nazwa_firmy;
+    }
+    document
+    .getElementById("oknoWyboru")
+    .classList.add("ukryte");
+});
 
 start();
