@@ -81,8 +81,9 @@ function pokazOkresy(){
 	pobierzOferty().filter(o =>
 		o.id_firmy == firma
 	);
-    [...new Set(lista.map(o=>o.okres_umowy))]
-    .forEach(x=>{
+	[...new Set(lista.map(o=>Number(o.okres_umowy)))]
+	.sort((a,b)=>a-b)
+	.forEach(x=>{
         okres.innerHTML += `
         <option value="${x}">
             ${x==999 ? "Bezterminowa" : x+" miesięcy"}
@@ -151,12 +152,15 @@ function pokazParametryInternet(){
 		o.okres_umowy == okres &&
 		o.nazwa_pakietu == pakiet
 	);
-    [...new Set(
-        lista.map(o =>
-            o.predkosc_pobierania+"/"+o.predkosc_wysylania
-        )
-    )]
-    .forEach(x=>{
+	[...new Set(
+		lista.map(o =>
+			o.predkosc_pobierania+"/"+o.predkosc_wysylania
+		)
+	)]
+	.sort((a,b)=>{
+		return Number(a.split("/")[0]) - Number(b.split("/")[0]);
+	})
+	.forEach(x=>{
         parametr.innerHTML += `
         <option value="${x}">
             ${x} Mb/s
