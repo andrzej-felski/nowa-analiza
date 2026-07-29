@@ -153,7 +153,7 @@ function pokazParametryInternet(){
 	);
     [...new Set(
         lista.map(o =>
-            o.predkosc_pobierania+"/"+o.predkosc_wysylania
+            o.predkosc_pobierania+" /"+o.predkosc_wysylania
         )
     )]
     .forEach(x=>{
