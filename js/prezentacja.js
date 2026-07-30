@@ -165,14 +165,18 @@ function pokazInformacje(oferta){
     let html = "";
     if (oferta.dodatki && oferta.dodatki.trim() !== "") {
         html += `
-            <h4>Dodatki</h4>
-            <p>${oferta.dodatki}</p>
+            <p>
+				<strong>Dodatki</strong>
+				${oferta.dodatki}
+			</p>
         `;
     }
     if (oferta.uwagi && oferta.uwagi.trim() !== "") {
         html += `
-            <h4>Uwagi</h4>
-            <p>${oferta.uwagi}</p>
+            <p>
+				<strong>Uwagi</strong>
+				${oferta.uwagi}
+			</p>
         `;
     }
     return html;
