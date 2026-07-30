@@ -147,7 +147,7 @@ button {
     transition:.2s;
 }
 
-.wybor:hover,
+.wybor:not(.nieaktywne):hover,
 .opcja-wyboru:hover {
     border-color:#0066cc;
     background:#f0f7ff;
@@ -165,6 +165,11 @@ button {
 
 .opcja-wyboru span {
     font-size:16px;
+}
+
+#listaWyboru {
+    max-height:400px;
+    overflow-y:auto;
 }
 
 .akordeon {
