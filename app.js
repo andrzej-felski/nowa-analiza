@@ -239,6 +239,14 @@ function pobierzNazweFirmy(idFirmy) {
     return firma ? firma.nazwa_firmy : idFirmy;
 }
 
+const nazwyPol = {
+    firma: "firmę",
+    usluga: "usługę",
+    okres: "okres",
+    pakiet: "pakiet",
+    parametr: "parametr"
+};
+
 function otworzWybor(pole){
     let modal = document.getElementById("oknoWyboru");
     let lista = document.getElementById("listaWyboru");
@@ -256,8 +264,8 @@ function otworzWybor(pole){
         `;
 
     });
-    document.getElementById("tytulWyboru").textContent =
-        "Wybierz " + pole;
+	document.getElementById("tytulWyboru").textContent =
+		"Wybierz " + nazwyPol[pole];
     modal.classList.remove("ukryte");
 }
 
