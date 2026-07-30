@@ -166,7 +166,7 @@ function pokazInformacje(oferta){
     if (oferta.dodatki && oferta.dodatki.trim() !== "") {
         html += `
             <p>
-				<strong>Dodatki</strong>
+				<strong>Dodatki:</strong>
 				${oferta.dodatki}
 			</p>
         `;
@@ -174,7 +174,7 @@ function pokazInformacje(oferta){
     if (oferta.uwagi && oferta.uwagi.trim() !== "") {
         html += `
             <p>
-				<strong>Uwagi</strong>
+				<strong>Uwagi:</strong>
 				${oferta.uwagi}
 			</p>
         `;
