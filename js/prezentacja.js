@@ -21,7 +21,7 @@ function pokazParametryWyniku(oferta){
         case "internet":
             return `
                 Prędkość:
-                ${oferta.predkosc_pobierania} /
+                ${oferta.predkosc_pobierania}  /
                 ${oferta.predkosc_wysylania} Mb/s
             `;
         default:
