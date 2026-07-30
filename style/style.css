@@ -304,3 +304,11 @@ button:hover {
 .akordeon-naglowek.konkurencja-tansza {
     background:#FFDADA;
 }
+
+.brak-konkurencji {
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    font-size: 18px;
+    opacity: 0.8;
+}
