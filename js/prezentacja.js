@@ -39,17 +39,31 @@ function pokazDlugoscUmowy(oferta){
 }
 
 function pokazWynik(oferta, konkurenci){
+    let sredniaNaszej =
+        policzSredniaCene(oferta);
+    konkurenci.sort((a,b)=>
+        policzSredniaCene(a) -
+        policzSredniaCene(b)
+    );
     let html = "";
-    html += generujAkordeon(oferta);
+    html += generujAkordeon(
+        oferta,
+        sredniaNaszej,
+        true
+    );
     html += `
         <h2>Konkurencja</h2>
     `;
     konkurenci.forEach(k=>{
-        html += generujAkordeon(k);
+        html += generujAkordeon(
+            k,
+            sredniaNaszej,
+            false
+        );
     });
     document.getElementById("wynik")
         .innerHTML = html;
-	aktywujAkordeony();
+    aktywujAkordeony();
 }
 
 function pobierzNazweFirmy(idFirmy) {
@@ -75,29 +89,69 @@ function policzSredniaCene(oferta){
     return suma / miesiace;
 }
 
-function generujNaglowek(oferta){
+function generujNaglowek(oferta, sredniaBazowa, nasza){
     let srednia =
-        policzSredniaCene(oferta)
-        .toFixed(2);
-	return `
-		<div class="akordeon-naglowek">
-			<strong>
-				${pobierzNazweFirmy(oferta.id_firmy)}
-			</strong>
-			<span>
-				${oferta.nazwa_oferty}
-			</span>
-			<span>
-				${oferta.predkosc_pobierania} /
-				${oferta.predkosc_wysylania}
-				Mb/s
-			</span>
-			<span>
-				${srednia} zł/mies.
-			</span>
-			<span class="strzalka">▼</span>
-		</div>
-	`;
+        policzSredniaCene(oferta);
+    let roznica = "";
+    let klasa = "";
+    if(!nasza){
+        let wartosc =
+            srednia - sredniaBazowa;
+		if(wartosc > 0){
+			klasa = "dobrze";
+			roznica =
+				`Drożej o ${wartosc.toFixed(2)} zł/mies.`;
+		}
+		if(wartosc < 0){
+			klasa = "zle";
+			roznica =
+				`Taniej o ${Math.abs(wartosc).toFixed(2)} zł/mies.`;
+		}
+        if(wartosc === 0){
+            roznica = "Taka sama cena";
+        }
+    }
+    return `
+        <div class="akordeon-naglowek ${klasa}">
+            <strong>
+                ${pobierzNazweFirmy(oferta.id_firmy)}
+            </strong>
+            <span>
+                ${oferta.nazwa_oferty}
+            </span>
+            ${pokazParametrNaglowka(oferta)}
+            <span>
+                Średnia cena:
+                ${srednia.toFixed(2)} zł/mies.
+            </span>
+            ${roznica ? 
+                `<span>${roznica}</span>`
+                : ""
+            }
+            <span class="strzalka">▼</span>
+        </div>
+    `;
+}
+
+function pokazParametrNaglowka(oferta){
+    switch (wybor.usluga) {
+        case "internet":
+            return `
+                <span>
+                    ${oferta.predkosc_pobierania} /
+                    ${oferta.predkosc_wysylania}
+                    Mb/s
+                </span>
+            `;
+        case "telewizja":
+            return `
+                <span>
+                    ${oferta.liczba_kanalow} kanałów
+                </span>
+            `;
+        default:
+            return "";
+    }
 }
 
 function generujTresc(oferta){
@@ -142,13 +196,17 @@ function generujTresc(oferta){
     `;
 }
 
-function generujAkordeon(oferta){
-	return `
-	<div class="akordeon">
-		${generujNaglowek(oferta)}
-		${generujTresc(oferta)}
-	</div>
-	`;
+function generujAkordeon(oferta, sredniaBazowa, nasza){
+    return `
+    <div class="akordeon">
+        ${generujNaglowek(
+            oferta,
+            sredniaBazowa,
+            nasza
+        )}
+        ${generujTresc(oferta)}
+    </div>
+    `;
 }
 
 function aktywujAkordeony(){
