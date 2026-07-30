@@ -157,9 +157,13 @@ button:hover {
     margin-right:10px;
 }
 
+.opcja-wyboru input[type="radio"]:checked {
+    accent-color:#557C99;
+}
+
 .opcja-wyboru:has(input:checked) {
-    border-color:#0066cc;
-    background:#e8f2ff;
+    border-color:#557C99;
+    background:#EBF2F7;
     box-shadow:0 0 0 2px rgba(0,102,204,.15);
 }
 
