@@ -123,10 +123,7 @@ function generujNaglowek(oferta, sredniaBazowa, nasza){
             ${pokazParametrNaglowka(oferta)}
         </div>
         <div class="naglowek-prawa">
-			Średnia cena:
-            <strong>
-                ${srednia.toFixed(2)} zł/mies.
-            </strong>
+			Średnia cena:  <strong> ${srednia.toFixed(2)} zł/mies. </strong>
             ${
                 roznica
                 ? `<span>${roznica}</span>`
