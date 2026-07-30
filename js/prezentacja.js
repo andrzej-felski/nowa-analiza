@@ -108,17 +108,11 @@ function generujTresc(oferta){
     });
     return `
     <div class="akordeon-tresc">
+		<h4>Opłaty</h4>
         <table>
             ${tabela}
         </table>
-        <h4>Dodatki</h4>
-        <p>
-            ${oferta.dodatki || ""}
-        </p>
-        <h4>Uwagi</h4>
-        <p>
-            ${oferta.uwagi || ""}
-        </p>
+		${pokazInformacje(oferta)}
     </div>
     `;
 }
@@ -141,4 +135,21 @@ function aktywujAkordeony(){
                 .classList.toggle("otwarty");
         });
     });
+}
+
+function pokazInformacje(oferta){
+    let html = "";
+    if (oferta.dodatki && oferta.dodatki.trim() !== "") {
+        html += `
+            <h4>Dodatki</h4>
+            <p>${oferta.dodatki}</p>
+        `;
+    }
+    if (oferta.uwagi && oferta.uwagi.trim() !== "") {
+        html += `
+            <h4>Uwagi</h4>
+            <p>${oferta.uwagi}</p>
+        `;
+    }
+    return html;
 }
