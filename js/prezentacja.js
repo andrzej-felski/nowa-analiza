@@ -313,13 +313,21 @@ function generujTabelePorownania(nasza, konkurencja){
                 konkurencja,
                 zakres.od
             );
-        let znak = "";
-        if(cenaKonkurencji > cenaNasza){
-            znak = ">";
-        }
-        if(cenaKonkurencji < cenaNasza){
-            znak = "<";
-        }
+		let znak = "";
+		if (
+			cenaKonkurencji !== null &&
+			cenaNasza !== null
+		) {
+			if(cenaKonkurencji > cenaNasza){
+				znak = ">";
+			}
+			if(cenaKonkurencji < cenaNasza){
+				znak = "<";
+			}
+			if(cenaKonkurencji === cenaNasza){
+				znak = "=";
+			}
+		}
         html += `
         <tr>
             <td>
@@ -346,6 +354,37 @@ function generujTabelePorownania(nasza, konkurencja){
         </tr>
         `;
     });
+	let sredniaNasza = policzSredniaCene(nasza);
+	let sredniaKonkurencji = policzSredniaCene(konkurencja);
+	let roznicaSrednia = "";
+	if (sredniaKonkurencji > sredniaNasza) {
+		roznicaSrednia = ">";
+	}
+	if (sredniaKonkurencji < sredniaNasza) {
+		roznicaSrednia = "<";
+	}
+	html += `
+	<tr class="wiersz-srednia">
+		<td>
+			Średnia cena
+		</td>
+		<td class="${
+			sredniaKonkurencji > sredniaNasza
+			? "drozsza"
+			: sredniaKonkurencji < sredniaNasza
+			? "tansza"
+			: ""
+		}">
+			${pokazCene(sredniaKonkurencji)}
+		</td>
+		<td class="znak">
+			${roznicaSrednia}
+		</td>
+		<td>
+			${pokazCene(sredniaNasza)}
+		</td>
+	</tr>
+	`;
     return `
         <table class="porownanie">
             <thead>
