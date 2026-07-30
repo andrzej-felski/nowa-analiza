@@ -8,8 +8,8 @@ const wybor = {
     firma: null,
     usluga: null,
     okres: null,
-    pakiet: null,
-    parametr: null
+    oferta: null,
+    pakiet: null
 };
 
 let aktualnePole = null;
@@ -97,29 +97,34 @@ function pobierzOpcje(pole) {
 				value: okres,
 				text: pokazOkres(okres)
 			}));
-        case "pakiet":
-            return [...new Set(
-                pobierzOferty()
-                    .filter(o =>
-                        o.id_firmy == wybor.firma &&
-                        o.okres_umowy == wybor.okres
-                    )
-                    .map(o => o.nazwa_pakietu)
-            )].map(pakiet => ({
-                value: pakiet,
-                text: pakiet
-            }));
-        case "parametr":
-            return pobierzOferty()
-                .filter(o =>
-                    o.id_firmy == wybor.firma &&
-                    o.okres_umowy == wybor.okres &&
-                    o.nazwa_pakietu == wybor.pakiet
-                )
-                .map(o => ({
-                    value: `${o.predkosc_pobierania}/${o.predkosc_wysylania}`,
-                    text: `${o.predkosc_pobierania} / ${o.predkosc_wysylania} Mb/s`
-                }));
+		case "oferta":
+			return [...new Set(
+				pobierzOferty()
+					.filter(o =>
+						o.id_firmy == wybor.firma &&
+						o.okres_umowy == wybor.okres
+					)
+					.map(o => o.nazwa_oferty)
+			)].map(oferta => ({
+				value: oferta,
+				text: oferta
+			}));
+		case "pakiet":
+			return [...new Set(
+				pobierzOferty()
+					.filter(o =>
+						o.id_firmy == wybor.firma &&
+						o.okres_umowy == wybor.okres &&
+						o.nazwa_oferty == wybor.oferta
+					)
+					.map(o =>
+						`${o.predkosc_pobierania}/${o.predkosc_wysylania}`
+					)
+			)]
+			.map(pakiet => ({
+				value: pakiet,
+				text: pakiet.replace("/", " / ") + " Mb/s"
+			}));
         default:
             return [];
     }
@@ -181,28 +186,28 @@ document
 .addEventListener("click", szukaj);
 
 function szukaj(){
-    if (
-        !wybor.firma ||
-        !wybor.usluga ||
-        !wybor.okres ||
-        !wybor.pakiet ||
-        !wybor.parametr
-    ){
+	if (
+		!wybor.firma ||
+		!wybor.usluga ||
+		!wybor.okres ||
+		!wybor.oferta ||
+		!wybor.pakiet
+	){
         alert("Wybierz wszystkie pola");
         return;
     }
     let firma = wybor.firma;
-    let pakiet = wybor.pakiet;
-    let parametr = wybor.parametr;
-    let [download, upload] = parametr.split("/");
+	let oferta = wybor.oferta;
+	let pakiet = wybor.pakiet;
+	let [download, upload] = pakiet.split("/");
     let okres = wybor.okres;
     let wybrana =
     pobierzOferty().find(o =>
         o.id_firmy == firma &&
         o.okres_umowy == okres &&
-        o.nazwa_pakietu == pakiet &&
-        o.predkosc_pobierania == download &&
-        o.predkosc_wysylania == upload
+		o.nazwa_oferty == oferta &&
+		o.predkosc_pobierania == download &&
+		o.predkosc_wysylania == upload
     );
     pokazWynik(
         wybrana,
@@ -216,7 +221,7 @@ function pokazWynik(oferta, konkurenci){
 	htmlKonkurencja += `
 		<div class="oferta konkurencja">
 			<h3>${pobierzNazweFirmy(k.id_firmy)}</h3>
-			<h2>${k.nazwa_pakietu}</h2>
+			<h2>${k.nazwa_oferty}</h2>
 			${pokazParametryWyniku(k)}
 			<br><br>
 			${k.dodatki || ""}
@@ -226,7 +231,7 @@ function pokazWynik(oferta, konkurenci){
 	document.getElementById("wynik").innerHTML =
 	`
 	<div class="oferta">
-		<h2>${oferta.nazwa_pakietu}</h2>
+		<h2>${oferta.nazwa_oferty}</h2>
 		${pokazParametryWyniku(oferta)}
 	</div>
 	<h2>Konkurencja</h2>
@@ -243,8 +248,8 @@ const nazwyPol = {
     firma: "firmę",
     usluga: "usługę",
     okres: "okres",
-    pakiet: "pakiet",
-    parametr: "parametr"
+    oferta: "ofertę",
+    pakiet: "pakiet"
 };
 
 function otworzWybor(pole){
@@ -271,8 +276,8 @@ const pola = {
     firma: "wybranaFirma",
     usluga: "wybranaUsluga",
     okres: "wybranyOkres",
-    pakiet: "wybranyPakiet",
-    parametr: "wybranyParametr"
+    oferta: "wybranaOferta",
+    pakiet: "wybranyPakiet"
 };
 
 document
@@ -289,22 +294,23 @@ document
 	if (aktualnePole == "firma") {
 		wybor.usluga = null;
 		wybor.okres = null;
+		wybor.oferta = null;
 		wybor.pakiet = null;
-		wybor.parametr = null;
 		wyczyscPole("wybranaUsluga");
 		wyczyscPole("wybranyOkres");
+		wyczyscPole("wybranaOferta");
 		wyczyscPole("wybranyPakiet");
-		wyczyscPole("wybranyParametr");
 	}
 	else if (aktualnePole == "okres") {
+		wybor.oferta = null;
 		wybor.pakiet = null;
-		wybor.parametr = null;
+		wyczyscPole("wybranaOferta");
 		wyczyscPole("wybranyPakiet");
-		wyczyscPole("wybranyParametr");
 	}
-	else if (aktualnePole == "pakiet") {
-		wybor.parametr = null;
-		wyczyscPole("wybranyParametr");
+
+	else if (aktualnePole == "oferta") {
+		wybor.pakiet = null;
+		wyczyscPole("wybranyPakiet");
 	}
 	document.getElementById(
 		pola[aktualnePole]
@@ -330,10 +336,11 @@ function aktualizujDostepnoscPol() {
 			if (pole == "okres" && !wybor.usluga) {
 				aktywne = false;
 			}
-			if (pole == "pakiet" && !wybor.okres) {
+			if (pole == "oferta" && !wybor.okres) {
 				aktywne = false;
 			}
-			if (pole == "parametr" && !wybor.pakiet) {
+
+			if (pole == "pakiet" && !wybor.oferta) {
 				aktywne = false;
 			}
 			element.classList.toggle(
