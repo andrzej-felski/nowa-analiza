@@ -3,8 +3,7 @@ body {
     margin: 30px;
     background:#262626;
 	max-width:1140px;
-	display: flex;
-	justify-content: center;
+	margin: 0 auto;
 }
 
 h1 {
