@@ -41,10 +41,10 @@ function pokazDlugoscUmowy(oferta){
 function pokazWynik(oferta, konkurenci){
     let sredniaNaszej =
         policzSredniaCene(oferta);
-    konkurenci.sort((a,b)=>
-        policzSredniaCene(a) -
-        policzSredniaCene(b)
-    );
+	konkurenci = [...konkurenci].sort((a,b)=>
+		policzSredniaCene(a) -
+		policzSredniaCene(b)
+	);
     let html = "";
 	html += generujAkordeon(
 		oferta,
@@ -333,15 +333,15 @@ function generujTabelePorownania(nasza, konkurencja){
                 ? "tansza"
                 : ""
             }">
-                ${cenaNasza.toFixed(2)} zł
+                ${pokazCene(cenaNasza)}
+				${znak}
             </td>
-
             <td class="${
                 cenaKonkurencji < cenaNasza
                 ? "tansza"
                 : ""
             }">
-                ${cenaKonkurencji.toFixed(2)} zł
+                ${pokazCene(cenaKonkurencji)}
             </td>
         </tr>
         `;
@@ -360,4 +360,10 @@ function generujTabelePorownania(nasza, konkurencja){
             </tbody>
         </table>
     `;
+}
+
+function pokazCene(cena){
+    return cena !== null
+        ? cena.toFixed(2) + " zł"
+        : "-";
 }
