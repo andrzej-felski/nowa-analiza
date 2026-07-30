@@ -109,6 +109,7 @@ button:hover {
     padding:25px;
     width:400px;
 	position: relative;
+	border-radius:8px;
 }
 
 .zamknij {
@@ -290,7 +291,7 @@ button:hover {
 }
 
 .akordeon-naglowek.konkurencja-drozsza {
-    background:#FAFFFA;
+    background:#F0FFF0;
 }
 
 .akordeon-naglowek.konkurencja-tansza {
