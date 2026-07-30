@@ -279,6 +279,24 @@ const pola = {
     pakiet: "wybranyPakiet"
 };
 
+const kolejnoscPol = [
+    "firma",
+    "usluga",
+    "okres",
+    "oferta",
+    "pakiet"
+];
+
+function wyczyscPolaPo(pole) {
+    let indeks = kolejnoscPol.indexOf(pole);
+    kolejnoscPol
+        .slice(indeks + 1)
+        .forEach(nastepnePole => {
+            wybor[nastepnePole] = null;
+            wyczyscPole(pola[nastepnePole]);
+        });
+}
+
 document
 .getElementById("potwierdzWybor")
 .addEventListener("click", function(){
@@ -289,38 +307,21 @@ document
     if(!zaznaczone){
         return;
     }
-	wybor[aktualnePole] = zaznaczone.value;
-	if (aktualnePole == "firma") {
-		wybor.usluga = null;
-		wybor.okres = null;
-		wybor.oferta = null;
-		wybor.pakiet = null;
-		wyczyscPole("wybranaUsluga");
-		wyczyscPole("wybranyOkres");
-		wyczyscPole("wybranaOferta");
-		wyczyscPole("wybranyPakiet");
-	}
-	else if (aktualnePole == "okres") {
-		wybor.oferta = null;
-		wybor.pakiet = null;
-		wyczyscPole("wybranaOferta");
-		wyczyscPole("wybranyPakiet");
-	}
-
-	else if (aktualnePole == "oferta") {
-		wybor.pakiet = null;
-		wyczyscPole("wybranyPakiet");
-	}
-	document.getElementById(
-		pola[aktualnePole]
-	).textContent =
-		zaznaczone.parentElement.textContent.trim();
-	zamknijModal();
-	aktualizujDostepnoscPol();
+    wybor[aktualnePole] = zaznaczone.value;
+    wyczyscPolaPo(aktualnePole);
+    document.getElementById(
+        pola[aktualnePole]
+    ).textContent =
+        zaznaczone.parentElement.textContent.trim();
+    zamknijModal();
+    aktualizujDostepnoscPol();
 });
 
 function wyczyscPole(id) {
-    document.getElementById(id).textContent = "Wybierz";
+    let element = document.getElementById(id);
+    if (element) {
+        element.textContent = "Wybierz";
+    }
 }
 
 function aktualizujDostepnoscPol() {
