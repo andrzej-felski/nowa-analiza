@@ -95,7 +95,7 @@ function generujNaglowek(oferta){
 			<span>
 				${srednia} zł/mies.
 			</span>
-			<span class="strzalka">⌄</span>
+			<span class="strzalka">▼</span>
 		</div>
 	`;
 }
