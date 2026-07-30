@@ -52,6 +52,24 @@ function pobierzOferty() {
     return dane.uslugi[wybor.usluga] || [];
 }
 
+function pokazOkres(okres) {
+    okres = Number(okres);
+    if (okres === 999) {
+        return "Bezterminowa";
+    }
+    if (okres === 1) {
+        return "1 miesiąc";
+    }
+    if (
+        okres % 10 >= 2 &&
+        okres % 10 <= 4 &&
+        (okres % 100 < 10 || okres % 100 >= 20)
+    ) {
+        return okres + " miesiące";
+    }
+    return okres + " miesięcy";
+}
+
 function pobierzOpcje(pole) {
     switch (pole) {
         case "firma":
@@ -68,15 +86,17 @@ function pobierzOpcje(pole) {
                     text: "Internet"
                 }
             ];
-        case "okres":
-            return [...new Set(
-                pobierzOferty()
-                    .filter(o => o.id_firmy == wybor.firma)
-                    .map(o => o.okres_umowy)
-            )].map(okres => ({
-                value: okres,
-                text: okres + " miesięcy"
-            }));
+		case "okres":
+			return [...new Set(
+				pobierzOferty()
+					.filter(o => o.id_firmy == wybor.firma)
+					.map(o => o.okres_umowy)
+			)]
+			.sort((a, b) => Number(a) - Number(b))
+			.map(okres => ({
+				value: okres,
+				text: pokazOkres(okres)
+			}));
         case "pakiet":
             return [...new Set(
                 pobierzOferty()
@@ -161,6 +181,16 @@ document
 .addEventListener("click", szukaj);
 
 function szukaj(){
+    if (
+        !wybor.firma ||
+        !wybor.usluga ||
+        !wybor.okres ||
+        !wybor.pakiet ||
+        !wybor.parametr
+    ){
+        alert("Wybierz wszystkie pola");
+        return;
+    }
     let firma = wybor.firma;
     let pakiet = wybor.pakiet;
     let parametr = wybor.parametr;
@@ -251,9 +281,11 @@ document
     }
 	wybor[aktualnePole] = zaznaczone.value;
 	if (aktualnePole == "firma") {
+		wybor.usluga = null;
 		wybor.okres = null;
 		wybor.pakiet = null;
 		wybor.parametr = null;
+		wyczyscPole("wybranaUsluga");
 		wyczyscPole("wybranyOkres");
 		wyczyscPole("wybranyPakiet");
 		wyczyscPole("wybranyParametr");
@@ -261,20 +293,18 @@ document
 	else if (aktualnePole == "okres") {
 		wybor.pakiet = null;
 		wybor.parametr = null;
-		document.getElementById("wybranyPakiet").textContent = "";
-		document.getElementById("wybranyParametr").textContent = "";
+		wyczyscPole("wybranyPakiet");
+		wyczyscPole("wybranyParametr");
 	}
 	else if (aktualnePole == "pakiet") {
 		wybor.parametr = null;
-		document.getElementById("wybranyParametr").textContent = "";
+		wyczyscPole("wybranyParametr");
 	}
 	document.getElementById(
 		pola[aktualnePole]
 	).textContent =
 		zaznaczone.parentElement.textContent.trim();
-    document
-    .getElementById("oknoWyboru")
-    .classList.add("ukryte");
+	zamknijModal();
 	aktualizujDostepnoscPol();
 });
 
@@ -286,22 +316,49 @@ function aktualizujDostepnoscPol() {
     document
         .querySelectorAll(".wybor")
         .forEach(element => {
-            let pole = element.dataset.pole;
-            let aktywne = true;
-            if (pole == "okres" && !wybor.firma) {
-                aktywne = false;
-            }
-            if (pole == "pakiet" && !wybor.okres) {
-                aktywne = false;
-            }
-            if (pole == "parametr" && !wybor.pakiet) {
-                aktywne = false;
-            }
-            element.classList.toggle(
-                "nieaktywne",
-                !aktywne
-            );
+			let pole = element.dataset.pole;
+			let aktywne = true;
+			if (pole == "usluga" && !wybor.firma) {
+				aktywne = false;
+			}
+			if (pole == "okres" && !wybor.usluga) {
+				aktywne = false;
+			}
+			if (pole == "pakiet" && !wybor.okres) {
+				aktywne = false;
+			}
+			if (pole == "parametr" && !wybor.pakiet) {
+				aktywne = false;
+			}
+			element.classList.toggle(
+				"nieaktywne",
+				!aktywne
+			);
         });
 }
+
+function zamknijModal() {
+    document
+        .getElementById("oknoWyboru")
+        .classList.add("ukryte");
+}
+
+document
+	.getElementById("zamknijModal")
+	.addEventListener("click", zamknijModal);
+	
+document
+.getElementById("oknoWyboru")
+.addEventListener("click", function(e) {
+    if (e.target === this) {
+        zamknijModal();
+    }
+});
+	
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+        zamknijModal();
+    }
+});
 
 start();
