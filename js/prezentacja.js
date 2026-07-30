@@ -90,29 +90,28 @@ function policzSredniaCene(oferta){
 }
 
 function generujNaglowek(oferta, sredniaBazowa, nasza){
-    let srednia =
-        policzSredniaCene(oferta);
+    let srednia = policzSredniaCene(oferta);
     let roznica = "";
     let klasa = "";
     if(!nasza){
-        let wartosc =
-            srednia - sredniaBazowa;
-		if(wartosc > 0){
-			klasa = "dobrze";
-			roznica =
-				`Drożej o ${wartosc.toFixed(2)} zł/mies.`;
-		}
-		if(wartosc < 0){
-			klasa = "zle";
-			roznica =
-				`Taniej o ${Math.abs(wartosc).toFixed(2)} zł/mies.`;
-		}
+        let wartosc = srednia - sredniaBazowa;
+        if(wartosc > 0){
+            klasa = "konkurencja-drozsza";
+            roznica =
+                `Drożej o ${wartosc.toFixed(2)} zł/mies.`;
+        }
+        if(wartosc < 0){
+            klasa = "konkurencja-tansza";
+            roznica =
+                `Taniej o ${Math.abs(wartosc).toFixed(2)} zł/mies.`;
+        }
         if(wartosc === 0){
             roznica = "Taka sama cena";
         }
     }
     return `
-        <div class="akordeon-naglowek ${klasa}">
+    <div class="akordeon-naglowek ${klasa}">
+        <div class="naglowek-lewa">
             <strong>
                 ${pobierzNazweFirmy(oferta.id_firmy)}
             </strong>
@@ -120,16 +119,19 @@ function generujNaglowek(oferta, sredniaBazowa, nasza){
                 ${oferta.nazwa_oferty}
             </span>
             ${pokazParametrNaglowka(oferta)}
-            <span>
-                Średnia cena:
+        </div>
+        <div class="naglowek-prawa">
+            <strong>
                 ${srednia.toFixed(2)} zł/mies.
-            </span>
-            ${roznica ? 
-                `<span>${roznica}</span>`
+            </strong>
+            ${
+                roznica
+                ? `<span>${roznica}</span>`
                 : ""
             }
             <span class="strzalka">▼</span>
         </div>
+    </div>
     `;
 }
 
