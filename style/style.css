@@ -201,14 +201,10 @@ button {
 
 .tresc-lewa {
     flex:1;
-	justify-content:center;
-	text-align:center;
 }
 
 .tresc-prawa {
     flex:1;
-	justify-content:center;
-	text-align:center;
 }
 
 .tresc-prawa table {
