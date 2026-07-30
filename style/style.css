@@ -135,6 +135,10 @@ button:hover {
     display:none;
 }
 
+#tytulWyboru {
+    text-align: center;
+}
+
 .opcja-wyboru {
     display:flex;
     align-items:center;
