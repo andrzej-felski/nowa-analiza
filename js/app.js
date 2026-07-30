@@ -134,7 +134,7 @@ function pobierzOpcje(pole) {
 					)
 					.map(pobierzKluczPakietu)
 					)
-			)]
+			]
 			.map(pakiet => ({
 				value: pakiet,
 				text: pokazNazwePakietu(pakiet)
