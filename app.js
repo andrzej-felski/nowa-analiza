@@ -252,17 +252,15 @@ function otworzWybor(pole){
     let lista = document.getElementById("listaWyboru");
     lista.innerHTML = "";
     pobierzOpcje(pole).forEach(opcja => {
-        lista.innerHTML += `
-            <label>
-                <input
-                    type="radio"
-                    name="wybor"
-                    value="${opcja.value}">
-                ${opcja.text}
-            </label>
-            <br>
-        `;
-
+	lista.innerHTML += `
+		<label class="opcja-wyboru">
+			<input
+				type="radio"
+				name="wybor"
+				value="${opcja.value}">
+			<span>${opcja.text}</span>
+		</label>
+	`;
     });
 	document.getElementById("tytulWyboru").textContent =
 		"Wybierz " + nazwyPol[pole];
