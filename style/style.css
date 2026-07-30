@@ -192,7 +192,7 @@ button {
 
 .strzalka {
     margin-left:auto;
-    font-size:24px;
+    font-size:16px;
     transition:.3s;
 }
 
@@ -244,10 +244,10 @@ button {
     text-align:center;
 }
 
-.drozsza {
+.dobrze {
     background:#dff5df;
 }
 
-.tansza {
+.zle {
     background:#ffdede;
 }
