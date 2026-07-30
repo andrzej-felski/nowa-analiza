@@ -21,11 +21,15 @@ async function start(){
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
-        element.addEventListener("click", function(){
-            aktualnePole = this.dataset.pole;
-            otworzWybor(aktualnePole);
-        });
+		element.addEventListener("click", function(){
+			if (this.classList.contains("nieaktywne")) {
+				return;
+			}
+			aktualnePole = this.dataset.pole;
+			otworzWybor(aktualnePole);
+		});
     });
+	aktualizujDostepnoscPol();
 }
 
 async function wczytajCSV(plik){
@@ -250,9 +254,9 @@ document
 		wybor.okres = null;
 		wybor.pakiet = null;
 		wybor.parametr = null;
-		document.getElementById("wybranyOkres").textContent = "";
-		document.getElementById("wybranyPakiet").textContent = "";
-		document.getElementById("wybranyParametr").textContent = "";
+		wyczyscPole("wybranyOkres");
+		wyczyscPole("wybranyPakiet");
+		wyczyscPole("wybranyParametr");
 	}
 	else if (aktualnePole == "okres") {
 		wybor.pakiet = null;
@@ -271,6 +275,33 @@ document
     document
     .getElementById("oknoWyboru")
     .classList.add("ukryte");
+	aktualizujDostepnoscPol();
 });
+
+function wyczyscPole(id) {
+    document.getElementById(id).textContent = "Wybierz";
+}
+
+function aktualizujDostepnoscPol() {
+    document
+        .querySelectorAll(".wybor")
+        .forEach(element => {
+            let pole = element.dataset.pole;
+            let aktywne = true;
+            if (pole == "okres" && !wybor.firma) {
+                aktywne = false;
+            }
+            if (pole == "pakiet" && !wybor.okres) {
+                aktywne = false;
+            }
+            if (pole == "parametr" && !wybor.pakiet) {
+                aktywne = false;
+            }
+            element.classList.toggle(
+                "nieaktywne",
+                !aktywne
+            );
+        });
+}
 
 start();
