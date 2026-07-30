@@ -100,7 +100,12 @@ function pobierzOpcje(pole) {
 					value: "internet_mobilny",
 					text: "Internet mobilny"
 				}
-			];
+			]
+			.filter(usluga =>
+				dane.uslugi[usluga.value].some(o =>
+					o.id_firmy == wybor.firma
+				)
+			);
 		case "okres":
 			return [...new Set(
 				pobierzOferty()
@@ -252,22 +257,27 @@ const nazwyPol = {
 };
 
 function otworzWybor(pole){
+    let opcje = pobierzOpcje(pole);
+    if(opcje.length === 0){
+        alert("Brak dostępnych opcji");
+        return;
+    }
     let modal = document.getElementById("oknoWyboru");
     let lista = document.getElementById("listaWyboru");
     lista.innerHTML = "";
-    pobierzOpcje(pole).forEach(opcja => {
-	lista.innerHTML += `
-		<label class="opcja-wyboru">
-			<input
-				type="radio"
-				name="wybor"
-				value="${opcja.value}">
-			<span>${opcja.text}</span>
-		</label>
-	`;
+    opcje.forEach(opcja => {
+        lista.innerHTML += `
+            <label class="opcja-wyboru">
+                <input
+                    type="radio"
+                    name="wybor"
+                    value="${opcja.value}">
+                <span>${opcja.text}</span>
+            </label>
+        `;
     });
-	document.getElementById("tytulWyboru").textContent =
-		"Wybierz " + nazwyPol[pole];
+    document.getElementById("tytulWyboru").textContent =
+        "Wybierz " + nazwyPol[pole];
     modal.classList.remove("ukryte");
 }
 
