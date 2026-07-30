@@ -16,17 +16,26 @@ function pobierzHarmonogram(oferta) {
     return wynik;
 }
 
-function pokazParametryWyniku(oferta){
+function pokazParametryOferty(oferta){
     switch (wybor.usluga) {
         case "internet":
             return `
-                Prędkość:
-                ${oferta.predkosc_pobierania} /
-                ${oferta.predkosc_wysylania} Mb/s
+                <p>
+                    <strong>Prędkość pobierania:</strong>
+                    ${oferta.predkosc_pobierania} Mb/s
+                </p>
+                <p>
+                    <strong>Prędkość wysyłania:</strong>
+                    ${oferta.predkosc_wysylania} Mb/s
+                </p>
             `;
         default:
             return "";
     }
+}
+
+function pokazDlugoscUmowy(oferta){
+    return pokazOkres(oferta.okres_umowy);
 }
 
 function pokazWynik(oferta, konkurenci){
@@ -91,28 +100,43 @@ function generujNaglowek(oferta){
 }
 
 function generujTresc(oferta){
-    let harmonogram =
-        pobierzHarmonogram(oferta);
+    let harmonogram = pobierzHarmonogram(oferta);
     let tabela = "";
     harmonogram.forEach(o=>{
         tabela += `
-        <tr>
-			<td>
-				${pokazZakresOkresow(o.od, o.do)}
-			</td>
-            <td>
-            ${o.cena} zł
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    ${pokazZakresOkresow(o.od, o.do)}
+                </td>
+                <td>
+                    ${o.cena.toFixed(2)} zł
+                </td>
+            </tr>
         `;
     });
     return `
     <div class="akordeon-tresc">
-		<h4>Opłaty</h4>
-        <table>
-            ${tabela}
-        </table>
-		${pokazInformacje(oferta)}
+        <div class="tresc-lewa">
+            <h4>Informacje</h4>
+            <p>
+                <strong>Umowa:</strong>
+                ${pokazOkres(oferta.okres_umowy)}
+            </p>
+            <p>
+                <strong>Usługa:</strong>
+                ${wybor.usluga == "internet" 
+                    ? "Internet światłowodowy" 
+                    : wybor.usluga}
+            </p>
+            ${pokazParametryOferty(oferta)}
+            ${pokazInformacje(oferta)}
+        </div>
+        <div class="tresc-prawa">
+            <h4>Opłaty</h4>
+            <table>
+                ${tabela}
+            </table>
+        </div>
     </div>
     `;
 }
