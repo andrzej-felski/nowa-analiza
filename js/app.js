@@ -71,6 +71,9 @@ function pokazOkres(okres) {
 }
 
 function pokazZakresOkresow(od, doOkresu){
+    if (doOkresu === 999) {
+        return `od ${od} miesiąca`;
+    }
     if (od === doOkresu) {
         return `${od} miesiąc`;
     }
