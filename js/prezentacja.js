@@ -53,7 +53,7 @@ function pokazDlugoscUmowy(oferta){
 }
 
 function pokazWynik(oferta, konkurenci){
-    let sredniaNaszej =
+    let sredniaNasza =
         policzSredniaCene(oferta);
 	konkurenci = [...konkurenci].sort((a,b)=>
 		policzSredniaCene(a) -
@@ -62,7 +62,7 @@ function pokazWynik(oferta, konkurenci){
     let html = "";
 	html += generujAkordeon(
 		oferta,
-		sredniaNaszej,
+		sredniaNasza,
 		true,
 		oferta
 	);
