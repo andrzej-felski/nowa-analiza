@@ -48,16 +48,108 @@ function pobierzOferty() {
     return dane.uslugi[wybor.usluga] || [];
 }
 
-function pokazFirmy(){
-    let select = document.getElementById("firma");
-    dane.firmy
-    .filter(f => f.nasza_firma.toUpperCase()=="TAK")
-    .forEach(f=>{
-        select.innerHTML += `
-        <option value="${f.id_firmy}">
-            ${f.nazwa_firmy}
-        </option>`;
-    });
+function pobierzOpcje(pole) {
+    switch (pole) {
+        case "firma":
+            return dane.firmy
+                .filter(f => f.nasza_firma.toUpperCase() == "TAK")
+                .map(f => ({
+                    value: f.id_firmy,
+                    text: f.nazwa_firmy
+                }));
+        case "usluga":
+            return [
+                {
+                    value: "internet",
+                    text: "Internet"
+                }
+            ];
+        case "okres":
+            return [...new Set(
+                pobierzOferty()
+                    .filter(o => o.id_firmy == wybor.firma)
+                    .map(o => o.okres_umowy)
+            )].map(okres => ({
+                value: okres,
+                text: okres + " miesięcy"
+            }));
+        case "pakiet":
+            return [...new Set(
+                pobierzOferty()
+                    .filter(o =>
+                        o.id_firmy == wybor.firma &&
+                        o.okres_umowy == wybor.okres
+                    )
+                    .map(o => o.nazwa_pakietu)
+            )].map(pakiet => ({
+                value: pakiet,
+                text: pakiet
+            }));
+        case "parametr":
+            return pobierzOferty()
+                .filter(o =>
+                    o.id_firmy == wybor.firma &&
+                    o.okres_umowy == wybor.okres &&
+                    o.nazwa_pakietu == wybor.pakiet
+                )
+                .map(o => ({
+                    value: `${o.predkosc_pobierania}/${o.predkosc_wysylania}`,
+                    text: `${o.predkosc_pobierania} / ${o.predkosc_wysylania} Mb/s`
+                }));
+        default:
+            return [];
+    }
+}
+
+function pobierzKonkurencje(idFirmy){
+    return dane.konkurencja
+        .filter(k => k.id_firmy == idFirmy)
+        .map(k => k.id_konkurenta);
+}
+
+function pobierzOfertyKonkurencji(oferta){
+    let konkurenci = pobierzKonkurencje(oferta.id_firmy);
+   let wszystkie = pobierzOferty().filter(o =>
+        konkurenci.includes(o.id_firmy)
+    );
+    let poGrupiePredkosci = wszystkie.filter(o =>
+        o.grupa_porownawcza == oferta.grupa_porownawcza
+    );
+    let poGrupieOkresu = poGrupiePredkosci.filter(o =>
+        o.grupa_okresu == oferta.grupa_okresu
+    );
+    return poGrupieOkresu;
+}
+
+function pobierzHarmonogram(oferta) {
+    let harmonogram = [];
+    let i = 1;
+    while (true) {
+        let od = oferta["okres_od_" + i];
+        if (!od) {
+            break;
+        }
+        harmonogram.push({
+            od: Number(od),
+            do: Number(oferta["okres_do_" + i]),
+            cena: Number(oferta["cena_" + i])
+        });
+        i++;
+    }
+    return harmonogram;
+}
+
+function pokazParametryWyniku(oferta){
+    switch (wybor.usluga) {
+        case "internet":
+            return `
+                Prędkość:
+                ${oferta.predkosc_pobierania} /
+                ${oferta.predkosc_wysylania} Mb/s
+            `;
+        default:
+            return "";
+    }
 }
 
 document
@@ -87,116 +179,61 @@ function szukaj(){
 function pokazWynik(oferta, konkurenci){
 	let htmlKonkurencja = "";
 	konkurenci.forEach(k=>{
-		htmlKonkurencja += `
+	htmlKonkurencja += `
 		<div class="oferta konkurencja">
-			<h3>
-			${k.id_firmy}
-			</h3>
-			Prędkość:
-			${k.predkosc_pobierania} /
-			${k.predkosc_wysylania} Mb/s
+			<h3>${pobierzNazweFirmy(k.id_firmy)}</h3>
+			<h2>${k.nazwa_pakietu}</h2>
+			${pokazParametryWyniku(k)}
 			<br><br>
 			${k.dodatki || ""}
 		</div>
-		`;
+	`;
 	});
 	document.getElementById("wynik").innerHTML =
 	`
 	<div class="oferta">
 		<h2>${oferta.nazwa_pakietu}</h2>
-		Prędkość:
-		${oferta.predkosc_pobierania} /
-		${oferta.predkosc_wysylania} Mb/s
+		${pokazParametryWyniku(oferta)}
 	</div>
 	<h2>Konkurencja</h2>
 	${htmlKonkurencja}
 	`;
 }
 
-function pokazParametryWyniku(oferta){
-    let usluga = document.getElementById("usluga").value;
-    switch(usluga){
-        case "internet":
-            return `
-                Prędkość:
-                ${oferta.predkosc_pobierania} /
-                ${oferta.predkosc_wysylania} Mb/s
-            `;
-        default:
-            return "";
-    }
-}
-
-function pobierzHarmonogram(oferta) {
-    let harmonogram = [];
-    let i = 1;
-    while (true) {
-        let od = oferta["okres_od_" + i];
-        if (!od) {
-            break;
-        }
-        harmonogram.push({
-            od: Number(od),
-            do: Number(oferta["okres_do_" + i]),
-            cena: Number(oferta["cena_" + i])
-        });
-        i++;
-    }
-    return harmonogram;
-}
-
-function pobierzKonkurencje(idFirmy){
-    return dane.konkurencja
-        .filter(k => k.id_firmy == idFirmy)
-        .map(k => k.id_konkurenta);
-}
-
-function pobierzOfertyKonkurencji(oferta){
-    let konkurenci = pobierzKonkurencje(oferta.id_firmy);
-    console.log("Wybrana oferta:", oferta);
-    console.log("Konkurenci:", konkurenci);
-    let wszystkie = dane.uslugi.internet.filter(o =>
-        konkurenci.includes(o.id_firmy)
-    );
-    console.log("Wszystkie oferty konkurencji:", wszystkie);
-    let poGrupiePredkosci = wszystkie.filter(o =>
-        o.grupa_porownawcza == oferta.grupa_porownawcza
-    );
-    console.log("Po grupie prędkości:", poGrupiePredkosci);
-    let poGrupieOkresu = poGrupiePredkosci.filter(o =>
-        o.grupa_okresu == oferta.grupa_okresu
-    );
-    console.log("Po grupie okresu:", poGrupieOkresu);
-    return poGrupieOkresu;
+function pobierzNazweFirmy(idFirmy) {
+    let firma = dane.firmy.find(f => f.id_firmy == idFirmy);
+    return firma ? firma.nazwa_firmy : idFirmy;
 }
 
 function otworzWybor(pole){
-    let modal =
-    document.getElementById("oknoWyboru");
-    let lista =
-    document.getElementById("listaWyboru");
-    lista.innerHTML="";
-    if(pole=="firma"){
-        dane.firmy
-        .filter(f=>f.nasza_firma.toUpperCase()=="TAK")
-        .forEach(f=>{
-            lista.innerHTML += `
+    let modal = document.getElementById("oknoWyboru");
+    let lista = document.getElementById("listaWyboru");
+    lista.innerHTML = "";
+    pobierzOpcje(pole).forEach(opcja => {
+        lista.innerHTML += `
             <label>
-                <input 
-                type="radio"
-                name="wybor"
-                value="${f.id_firmy}">
-               
-                ${f.nazwa_firmy}
+                <input
+                    type="radio"
+                    name="wybor"
+                    value="${opcja.value}">
+                ${opcja.text}
             </label>
             <br>
-            `;
-        });
-    }
-	document.getElementById("tytulWyboru").innerHTML =
-	"Wybierz " + pole;
+        `;
+
+    });
+    document.getElementById("tytulWyboru").textContent =
+        "Wybierz " + pole;
     modal.classList.remove("ukryte");
 }
+
+const pola = {
+    firma: "wybranaFirma",
+    usluga: "wybranaUsluga",
+    okres: "wybranyOkres",
+    pakiet: "wybranyPakiet",
+    parametr: "wybranyParametr"
+};
 
 document
 .getElementById("potwierdzWybor")
@@ -208,18 +245,29 @@ document
     if(!zaznaczone){
         return;
     }
-    wybor[aktualnePole] =
-    zaznaczone.value;
-    if(aktualnePole=="firma"){
-        let firma =
-        dane.firmy.find(
-            f=>f.id_firmy==zaznaczone.value
-        );
-        document
-        .getElementById("wybranaFirma")
-        .innerHTML =
-        firma.nazwa_firmy;
-    }
+	wybor[aktualnePole] = zaznaczone.value;
+	if (aktualnePole == "firma") {
+		wybor.okres = null;
+		wybor.pakiet = null;
+		wybor.parametr = null;
+		document.getElementById("wybranyOkres").textContent = "";
+		document.getElementById("wybranyPakiet").textContent = "";
+		document.getElementById("wybranyParametr").textContent = "";
+	}
+	else if (aktualnePole == "okres") {
+		wybor.pakiet = null;
+		wybor.parametr = null;
+		document.getElementById("wybranyPakiet").textContent = "";
+		document.getElementById("wybranyParametr").textContent = "";
+	}
+	else if (aktualnePole == "pakiet") {
+		wybor.parametr = null;
+		document.getElementById("wybranyParametr").textContent = "";
+	}
+	document.getElementById(
+		pola[aktualnePole]
+	).textContent =
+		zaznaczone.parentElement.textContent.trim();
     document
     .getElementById("oknoWyboru")
     .classList.add("ukryte");
