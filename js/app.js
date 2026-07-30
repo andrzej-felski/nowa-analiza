@@ -74,7 +74,7 @@ function pokazZakresOkresow(od, doo){
     if (od === doo) {
         return pokazOkres(od);
     }
-    return `${od}-${doo} miesięc`;
+    return `${od}-${doo} miesiąc`;
 }
 
 function pobierzOpcje(pole) {
