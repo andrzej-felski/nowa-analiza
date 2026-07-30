@@ -40,6 +40,7 @@ function pokazWynik(oferta, konkurenci){
     });
     document.getElementById("wynik")
         .innerHTML = html;
+	aktywujAkordeony();
 }
 
 function pobierzNazweFirmy(idFirmy) {
@@ -130,4 +131,15 @@ function generujAkordeon(oferta){
 		${generujTresc(oferta)}
 	</div>
 	`;
+}
+
+function aktywujAkordeony(){
+    document
+    .querySelectorAll(".akordeon-naglowek")
+    .forEach(naglowek => {
+        naglowek.addEventListener("click", function(){
+            this.parentElement
+                .classList.toggle("otwarty");
+        });
+    });
 }
