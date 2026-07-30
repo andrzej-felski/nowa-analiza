@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 30px;
-    background:#f4f4f4;
+    background:#262626;
 }
 
 h1 {
@@ -43,7 +43,7 @@ button {
 }
 
 .oferta {
-    background:white;
+    background:#E0F3FF;
     margin-top:20px;
     padding:20px;
     border-radius:8px;
@@ -57,7 +57,6 @@ button {
     padding:15px;
     position:sticky;
     top:0;
-    border-bottom:1px solid #ccc;
     justify-content:center;
 }
 
