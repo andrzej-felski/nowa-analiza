@@ -254,10 +254,10 @@ button {
     text-align:center;
 }
 
-.dobrze {
+.akordeon-naglowek.konkurencja-drozsza {
     background:#dff5df;
 }
 
-.zle {
+.akordeon-naglowek.konkurencja-tansza {
     background:#ffdede;
 }
