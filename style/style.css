@@ -191,20 +191,28 @@ button {
 }
 
 .akordeon.otwarty .akordeon-tresc {
-    display:block;
-	background:white;
+    display:flex;
+    gap:40px;
+    padding:20px;
 }
 
-.akordeon-tresc table {
-    margin: 20px auto;
-    border-collapse: collapse;
+.tresc-lewa {
+    flex:1;
 }
 
-.akordeon-tresc th,
-.akordeon-tresc td {
-    border: 1px solid #ccc;
-    padding: 8px 15px;
-    text-align: center;
+.tresc-prawa {
+    flex:1;
+}
+
+.tresc-prawa table {
+    margin:0 auto;
+    border-collapse:collapse;
+}
+
+.tresc-prawa td {
+    border:1px solid #ccc;
+    padding:8px 20px;
+    text-align:center;
 }
 
 .drozsza {
