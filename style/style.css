@@ -150,7 +150,7 @@ button:hover {
 .wybor:not(.nieaktywne):hover,
 .opcja-wyboru:hover {
     border-color:#557C99;
-    background:#d6eeff;
+    background:#EBF2F7;
 }
 
 .opcja-wyboru input {
