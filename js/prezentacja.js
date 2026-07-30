@@ -75,29 +75,25 @@ function policzSredniaCene(oferta){
     return suma / miesiace;
 }
 
-function generujNaglowek(oferta){
-    let srednia =
-        policzSredniaCene(oferta)
-        .toFixed(2);
-    return `
-        <div class="akordeon-naglowek">
-            <strong>
-                ${pobierzNazweFirmy(oferta.id_firmy)}
-            </strong>
-            <span>
-                ${oferta.nazwa_oferty}
-            </span>
-            <span>
-                ${oferta.predkosc_pobierania} /
-                ${oferta.predkosc_wysylania}
-                Mb/s
-            </span>
-            <span>
-                ${srednia} zł/mies.
-            </span>
-        </div>
-    `;
-}
+return `
+    <div class="akordeon-naglowek">
+        <strong>
+            ${pobierzNazweFirmy(oferta.id_firmy)}
+        </strong>
+        <span>
+            ${oferta.nazwa_oferty}
+        </span>
+        <span>
+            ${oferta.predkosc_pobierania} /
+            ${oferta.predkosc_wysylania}
+            Mb/s
+        </span>
+        <span>
+            ${srednia} zł/mies.
+        </span>
+        <span class="strzalka">⌄</span>
+    </div>
+`;
 
 function generujTresc(oferta){
     let harmonogram = pobierzHarmonogram(oferta);
