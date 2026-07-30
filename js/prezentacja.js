@@ -21,7 +21,7 @@ function pokazParametryWyniku(oferta){
         case "internet":
             return `
                 Prędkość:
-                ${oferta.predkosc_pobierania}  /
+                ${oferta.predkosc_pobierania} /
                 ${oferta.predkosc_wysylania} Mb/s
             `;
         default:
@@ -79,7 +79,7 @@ function generujNaglowek(oferta){
                 ${oferta.nazwa_oferty}
             </span>
             <span>
-                ${oferta.predkosc_pobierania}/
+                ${oferta.predkosc_pobierania} /
                 ${oferta.predkosc_wysylania}
                 Mb/s
             </span>
@@ -97,10 +97,9 @@ function generujTresc(oferta){
     harmonogram.forEach(o=>{
         tabela += `
         <tr>
-            <td>
-            ${o.od}-${o.do}
-            miesiąc
-            </td>
+			<td>
+				${pokazZakresOkresow(o.od, o.do)}
+			</td>
             <td>
             ${o.cena} zł
             </td>
