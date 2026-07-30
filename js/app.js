@@ -70,11 +70,11 @@ function pokazOkres(okres) {
     return okres + " miesięcy";
 }
 
-function pokazZakresOkresow(od, do){
-    if (od === do) {
+function pokazZakresOkresow(od, doOkresu){
+    if (od === doOkresu) {
         return `${od} miesiąc`;
     }
-    return `${od}-${do} miesiąc`;
+    return `${od}-${doOkresu} miesiąc`;
 }
 
 function pobierzOpcje(pole) {
