@@ -69,14 +69,22 @@ function pokazWynik(oferta, konkurenci){
     html += `
         <h2 style="text-align:center;color:#fff;">Konkurencja</h2>
     `;
-	konkurenci.forEach(k=>{
-		html += generujAkordeon(
-			k,
-			sredniaNaszej,
-			false,
-			oferta
-		);
-	});
+	if (konkurenci.length > 0) {
+		konkurenci.forEach(k=>{
+			html += generujAkordeon(
+				k,
+				sredniaNasza,
+				false,
+				oferta
+			);
+		});
+	} else {
+		html += `
+			<div class="brak-konkurencji">
+				Brak podobnych ofert konkurencji
+			</div>
+		`;
+	}
     document.getElementById("wynik")
         .innerHTML = html;
     aktywujAkordeony();
