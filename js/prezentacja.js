@@ -29,9 +29,23 @@ function pokazParametryOferty(oferta){
                     ${oferta.predkosc_wysylania} Mb/s
                 </p>
             `;
+		case "internet_mobilny":
+			return `
+				<p>
+					<strong>Pakiet danych:</strong>
+					${pokazPakietGB(oferta)}
+				</p>
+			`;
         default:
             return "";
     }
+}
+
+function pokazPakietGB(oferta){
+    if (Number(oferta.pakiet_gb) === 9999) {
+        return "Bez limitu";
+    }
+    return `${oferta.pakiet_gb} GB`;
 }
 
 function pokazDlugoscUmowy(oferta){
@@ -148,12 +162,12 @@ function pokazParametrNaglowka(oferta){
                     Mb/s
                 </span>
             `;
-        case "telewizja":
-            return `
-                <span>
-                    ${oferta.liczba_kanalow} kanałów
-                </span>
-            `;
+		case "internet_mobilny":
+			return `
+				<span>
+					${pokazPakietGB(oferta)}
+				</span>
+			`;
         default:
             return "";
     }
