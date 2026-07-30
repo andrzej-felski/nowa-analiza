@@ -194,19 +194,19 @@ button {
 
 .akordeon.otwarty .akordeon-tresc {
     display:flex;
-    gap:40px;
-    padding:20px;
 	background:white;
 }
 
 .tresc-lewa {
     flex:1;
 	border-right:solid 1px black;
+	padding:20px;
 }
 
 .tresc-prawa {
     flex:1;
 	border-left:solid 1px black;
+    padding:20px;
 }
 
 .tresc-prawa table {
