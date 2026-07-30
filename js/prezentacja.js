@@ -196,12 +196,10 @@ function generujTresc(oferta, nasza, ofertaBazowa){
                 <strong>Umowa:</strong>
                 ${pokazOkres(oferta.okres_umowy)}
             </p>
-            <p>
-                <strong>Usługa:</strong>
-                ${wybor.usluga == "internet" 
-                    ? "Internet światłowodowy" 
-                    : wybor.usluga}
-            </p>
+			<p>
+				<strong>Usługa:</strong>
+				${pokazNazweUslugi(wybor.usluga)}
+			</p>
             ${pokazParametryOferty(oferta)}
             ${pokazInformacje(oferta)}
         </div>
@@ -224,6 +222,17 @@ function generujTresc(oferta, nasza, ofertaBazowa){
         </div>
     </div>
     `;
+}
+
+function pokazNazweUslugi(usluga){
+    switch(usluga){
+        case "internet":
+            return "Internet światłowodowy";
+        case "internet_mobilny":
+            return "Internet mobilny";
+        default:
+            return usluga;
+    }
 }
 
 function generujAkordeon(oferta, sredniaBazowa, nasza, ofertaBazowa){
