@@ -244,14 +244,36 @@ button {
     align-items: center;
 }
 
-.tresc-prawa table {
-    border-collapse:collapse;
+.porownanie {
+    width:100%;
+    table-layout:fixed;
 }
 
-.tresc-prawa td {
-    border:1px solid #ccc;
-    padding:8px 20px;
-    text-align:center;
+.porownanie th,
+.porownanie td {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.porownanie th:nth-child(1),
+.porownanie td:nth-child(1) {
+    width:25%;
+}
+
+.porownanie th:nth-child(2),
+.porownanie td:nth-child(2) {
+    width:30%;
+}
+
+.porownanie th:nth-child(3),
+.porownanie td:nth-child(3) {
+    width:10%;
+}
+
+.porownanie th:nth-child(4),
+.porownanie td:nth-child(4) {
+    width:35%;
 }
 
 .akordeon-naglowek.konkurencja-drozsza {
