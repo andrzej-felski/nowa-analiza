@@ -29,21 +29,18 @@ select {
     margin-top:5px;
 }
 
-#szukaj {
+button {
+    background:#557C99;
+    color:white;
     display:block;
     width:auto;
     margin:10px auto;
     padding:12px 50px;
-}
-
-button {
-    margin-top:25px;
-    background:#557C99;
-    color:white;
     border:0;
 	border-radius:8px;
     cursor:pointer;
 	margin: 0 auto;
+	transition:.2s;
 }
 
 button:hover {
