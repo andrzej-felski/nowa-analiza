@@ -106,7 +106,10 @@ button {
 }
 
 .modal-tresc {
-    position: relative;
+    background:white;
+    padding:25px;
+    width:400px;
+	position: relative;
 }
 
 .zamknij {
