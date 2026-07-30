@@ -253,26 +253,25 @@ button:hover {
 
 .tresc-prawa table {
     border-collapse: collapse;
-    margin: 0 auto;
 }
 
-.tresc-prawa table th,
-.tresc-prawa table td {
-    border: 1px solid #ccc;
-    padding: 8px 20px;
-    text-align: center;
+.tresc-prawa td {
+    border:1px solid #ccc;
+    padding:8px 20px;
+    text-align:center;
 }
 
 .porownanie {
-    width: 100%;
-    table-layout: fixed;
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
 }
 
 .porownanie th,
 .porownanie td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
 }
 
 .porownanie th {
