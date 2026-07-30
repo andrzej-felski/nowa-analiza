@@ -1,0 +1,130 @@
+﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;pakiet_gb;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+1;CHOPIN;12;12;Mobil NET;10;10;;cena z rabatem za e-fakturę;1;12;42.48;;;
+2;CHOPIN;12;12;Mobil NET;30;30;;cena z rabatem za e-fakturę;1;12;52.48;;;
+3;CHOPIN;12;12;Mobil NET;100;100;Pakiet NOC 100 GB;cena z rabatem za e-fakturę;1;12;72.48;;;
+4;CHOPIN;12;12;Mobil NET;200;200;Pakiet NOC 200 GB;cena z rabatem za e-fakturę;1;12;92.48;;;
+5;CHOPIN;12;12;Mobil NET;500;500;;cena z rabatem za e-fakturę;1;12;132.48;;;
+6;CHOPIN;24;24;Mobil NET;10;10;;cena z rabatem za e-fakturę;1;24;32.48;;;
+7;CHOPIN;24;24;Mobil NET;30;30;;cena z rabatem za e-fakturę;1;24;42.48;;;
+8;CHOPIN;24;24;Mobil NET;100;100;Pakiet NOC 100 GB;cena z rabatem za e-fakturę;1;24;62.48;;;
+9;CHOPIN;24;24;Mobil NET;200;200;Pakiet NOC 200 GB;cena z rabatem za e-fakturę;1;24;82.48;;;
+10;CHOPIN;24;24;Mobil NET;500;500;;cena z rabatem za e-fakturę;1;24;122.48;;;
+11;MC2;24;24;FEST Mobil;10;10;;cena z rabatem za e-fakturę;1;24;32.48;;;
+12;MC2;24;24;FEST Mobil;30;30;;cena z rabatem za e-fakturę;1;24;42.48;;;
+13;MC2;24;24;FEST Mobil;100;100;Pakiet NOC 100 GB;cena z rabatem za e-fakturę;1;24;62.48;;;
+14;MC2;24;24;FEST Mobil;200;200;Pakiet NOC 200 GB;cena z rabatem za e-fakturę;1;24;82.48;;;
+15;MC2;24;24;FEST Mobil;500;500;;cena z rabatem za e-fakturę;1;24;122.48;;;
+16;MC1_OLSZTYN;12;12;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;12;24.98
+17;MC1_OLSZTYN;12;12;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;12;54.98
+18;MC1_OLSZTYN;24;24;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;24;24.98
+19;MC1_OLSZTYN;24;24;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;24;54.98
+20;MC1_OLSZTYN;999;999;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;999;24.98;;;
+21;MC1_OLSZTYN;999;999;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;999;54.98;;;
+22;MC1_STARGARD;12;12;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;12;24.98
+23;MC1_STARGARD;12;12;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;12;54.98
+24;MC1_STARGARD;24;24;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;24;24.98
+25;MC1_STARGARD;24;24;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;24;54.98
+26;MC1_STARGARD;999;999;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;999;24.98;;;
+27;MC1_STARGARD;999;999;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;999;54.98;;;
+28;MC1_OSTRODA;12;12;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;12;24.98
+29;MC1_OSTRODA;12;12;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;12;54.98
+30;MC1_OSTRODA;24;24;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;24;24.98
+31;MC1_OSTRODA;24;24;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;24;54.98
+32;MC1_OSTRODA;999;999;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;999;24.98;;;
+33;MC1_OSTRODA;999;999;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;999;54.98;;;
+34;MC1_LOWICZ;12;12;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;12;24.98
+35;MC1_LOWICZ;12;12;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;12;54.98
+36;MC1_LOWICZ;24;24;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;24;24.98
+37;MC1_LOWICZ;24;24;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;24;54.98
+38;MC1_LOWICZ;999;999;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;999;24.98;;;
+39;MC1_LOWICZ;999;999;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;999;54.98;;;
+40;MC1_KWIDZYN;12;12;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;12;24.98
+41;MC1_KWIDZYN;12;12;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;12;54.98
+42;MC1_KWIDZYN;24;24;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;1;4.99;2;24;24.98
+43;MC1_KWIDZYN;24;24;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;1;4.99;2;24;54.98
+44;MC1_KWIDZYN;999;999;Internet Mobilny;20;30;;cena z rabatem za e-fakturę;1;999;24.98;;;
+45;MC1_KWIDZYN;999;999;Internet Mobilny;100;100;;cena z rabatem za e-fakturę;1;999;54.98;;;
+46;JIM-SAT;999;999;Dynamiczne IP;10;10;;cena z rabatem za e-fakturę;1;999;13.99;;;
+47;JIM-SAT;999;999;Dynamiczne IP;100;100;dodatkowe 200 GB w nocy;cena z rabatem za e-fakturę;1;999;34.99;;;
+48;JIM-SAT;999;999;Dynamiczne IP;200;200;dodatkowe 200 GB w nocy;cena z rabatem za e-fakturę;1;999;64.99;;;
+49;JIM-SAT;999;999;Dynamiczne IP;500;500;;cena z rabatem za e-fakturę;1;999;99.99;;;
+50;JIM-SAT;999;999;Stałe IP;10;10;;cena z rabatem za e-fakturę;1;999;21.99;;;
+51;JIM-SAT;999;999;Stałe IP;30;30;;cena z rabatem za e-fakturę;1;999;37.99;;;
+52;JIM-SAT;999;999;Stałe IP;100;100;dodatkowe 200 GB w nocy;cena z rabatem za e-fakturę;1;999;42.99;;;
+53;JIM-SAT;999;999;Stałe IP;200;200;dodatkowe 200 GB w nocy;cena z rabatem za e-fakturę;1;999;71.99;;;
+54;ORANGE;24;24;Internet mobilny;500;500;47 kanałów TV;cena z rabatami;1;24;55.00;;;
+55;ORANGE;24;24;Internet mobilny;500;500;179 kanałów TV, Amazon Prime;cena z rabatami;1;24;100.00;;;
+56;ORANGE;24;24;Internet mobilny;500;500;47 kanałów TV, Abonament komórkowy (500 GB);cena z rabatami;1;24;85.00;;;
+57;ORANGE;24;24;Internet mobilny;9999;500;47 kanałów TV, Abonament komórkowy (500 GB);cena z rabatami;1;24;110.00;;;
+58;ORANGE;24;24;Internet mobilny;500;500;179 kanałów TV, Amazon Prime,  Abonament komórkowy (500 GB);cena z rabatami;1;24;130.00;;;
+59;ORANGE;24;24;Internet mobilny;9999;500;179 kanałów TV, Amazon Prime,  Abonament komórkowy (500 GB);cena z rabatami;1;24;155.00;;;
+60;T-MOBILE;12;12;Internet mobilny;9999;500;;cena z rabatami;1;12;80.00;;;
+61;T-MOBILE;24;24;Internet mobilny;9999;500;;cena z rabatami;1;24;80.00;;;
+62;PLAY;24;24;Internet mobilny;150;100;;cena z rabatami;1;24;30.00;;;
+63;PLAY;24;24;Internet mobilny;500;500;;cena z rabatami;1;24;50.00;;;
+64;PLAY;24;24;Internet mobilny;9999;500;;cena z rabatami;1;24;90.00;;;
+65;PLUS;24;24;Internet mobilny;50;30;;cena z rabatami;1;24;40.00;;;
+66;PLUS;24;24;Internet mobilny;600;500;;cena z rabatami;1;24;60.00;;;
+67;PLUS;24;24;Internet mobilny;9999;500;;cena z rabatami;1;24;90.00;;;
+68;NETIA;24;24;Internet mobilny;50;30;;cena z rabatami;1;24;40.00;;;
+69;NETIA;24;24;Internet mobilny;600;500;;cena z rabatami;1;24;60.00;;;
+70;NETIA;24;24;Internet mobilny;9999;500;;cena z rabatami;1;24;90.00;;;
+71;NETIA;24;24;Internet mobilny;50;30;Router;cena z rabatami;1;24;50.00;;;
+72;NETIA;24;24;Internet mobilny;600;500;Router;cena z rabatami;1;24;90.00;;;
+73;NETIA;24;24;Internet mobilny;9999;500;Router;cena z rabatami;1;24;120.00;;;
+74;NETIA;999;999;Internet mobilny;50;30;;cena z rabatami;1;999;50.00;;;
+75;NETIA;999;999;Internet mobilny;600;500;;cena z rabatami;1;999;70.00;;;
+76;NETIA;999;999;Internet mobilny;9999;500;;cena z rabatami;1;999;100.00;;;
+77;VECTRA;23;24;Internet mobilny;100;100;;cena z rabatami;1;1;0.00;2;23;40.00
+78;VECTRA;23;24;Internet mobilny;500;500;;cena z rabatami;1;1;0.00;2;23;70.00
+79;VECTRA;23;24;Internet mobilny;9999;500;;cena z rabatami;1;1;0.00;2;23;100.00
+80;VECTRA;999;999;Internet mobilny;100;100;;cena z rabatami;1;999;40.00;;;
+81;VECTRA;999;999;Internet mobilny;500;500;;cena z rabatami;1;999;70.00;;;
+82;VECTRA;999;999;Internet mobilny;9999;500;;cena z rabatami;1;6;80.00;7;999;100.00
+83;INEA;999;999;Internet mobilny;50;30;;cena z rabatami;1;999;35.00;;;
+84;INEA;999;999;Internet mobilny;100;100;;cena z rabatami;1;999;45.00;;;
+85;INEA;999;999;Internet mobilny;200;200;;cena z rabatami;1;999;55.00;;;
+86;JPK;24;24;Internet mobilny;25;30;;;1;24;19.99;;;
+87;JPK;24;24;Internet mobilny;50;30;;;1;24;31.99;;;
+88;JPK;24;24;Internet mobilny;100;100;;;1;24;39.99;;;
+89;JPK;24;24;Internet mobilny;200;200;;;1;24;49.99;;;
+90;JPK;24;24;Internet mobilny;300;200;;;1;24;54.99;;;
+91;JPK;24;24;Internet mobilny;500;500;;;1;24;69.99;;;
+92;JPK;24;24;Internet mobilny;1000;500;;;1;24;94.99;;;
+93;NORTIS;999;999;Internet mobilny;15;10;;;1;999;59.90;;;
+94;NORTIS;999;999;Internet mobilny;100;100;;;1;999;74.90;;;
+95;TYGRYS;24;24;LTE OPTIMA;15;10;;;1;24;21.90;;;
+96;TYGRYS;24;24;LTE ULTRA;100;100;dodatkowe 200 GB w nocy;;1;24;44.90;;;
+97;SINUSNET;24;24;Sinus MobileNET;25;30;;;1;24;25.00;;;
+98;SINUSNET;24;24;Sinus MobileNET;50;30;;;1;24;40.00;;;
+99;SINUSNET;24;24;Sinus MobileNET;100;100;;;1;24;50.00;;;
+100;SINUSNET;24;24;Sinus MobileNET;200;200;;;1;24;60.00;;;
+101;SINUSNET;24;24;Sinus MobileNET;300;200;;;1;24;70.00;;;
+102;SINUSNET;24;24;Sinus MobileNET;500;500;;;1;24;80.00;;;
+103;SINUSNET;24;24;Sinus MobileNET;1000;500;;;1;24;99.00;;;
+104;IWKD;24;24;LTE OPTIMA;15;10;;;1;24;26.90;;;
+105;IWKD;24;24;LTE ULTRA;100;100;;;1;24;49.90;;;
+106;MPCNET;999;999;Micro LTE;1;10;;;1;999;7.00;;;
+107;MPCNET;999;999;Micro LTE;2;10;;;1;999;9.00;;;
+108;MPCNET;999;999;LTE;4;10;;;1;999;10.00;;;
+109;MPCNET;999;999;LTE;10;10;;;1;999;20.00;;;
+110;MPCNET;999;999;Mega LTE;25;30;;;1;999;25.00;;;
+111;MPCNET;999;999;Mega LTE;50;30;;;1;999;39.00;;;
+112;MPCNET;999;999;Mega LTE;100;100;;;1;999;55.00;;;
+113;MPCNET;999;999;Mega LTE;200;200;;;1;999;65.00;;;
+114;MPCNET;999;999;Mega LTE;300;200;;;1;999;75.00;;;
+115;MPCNET;999;999;Mega LTE;500;500;;;1;999;85.00;;;
+116;MPCNET;999;999;Mega LTE;1000;500;;;1;999;119.00;;;
+117;PRO_INTERNET;24;24;Internet mobilny;2;10;;cena dla klientów posiadających internet stacjonarny;1;24;9.90;;;
+118;PRO_INTERNET;24;24;Internet mobilny;5;10;;cena dla klientów posiadających internet stacjonarny;1;24;14.90;;;
+119;PRO_INTERNET;24;24;Internet mobilny;10;10;;cena dla klientów posiadających internet stacjonarny;1;24;19.90;;;
+120;PRO_INTERNET;24;24;Internet mobilny;25;30;;cena dla klientów posiadających internet stacjonarny;1;24;29.90;;;
+121;CITYLINK;999;999;LTE OPTIMA;15;10;;;1;999;22.00;;;
+122;CITYLINK;999;999;LTE OPTIMA;100;100;;;1;999;45.00;;;
+123;AIR-NET;24;24;LTE OPTIMA 5G;200;200;;;1;24;59.00;;;
+124;AIR-NET;24;24;LTE OPTIMA 5G;500;500;;;1;24;74.90;;;
+125;STARLINK;999;999;W DOMU 100 Mb/s;9999;500;;;1;999;135.00;;;
+126;STARLINK;999;999;W DOMU 200 Mb/s;9999;500;;;1;999;190.00;;;
+127;STARLINK;999;999;W DOMU MAX;9999;500;;bez ograniczeń prędkości;1;999;265.00;;;
+128;STARLINK;999;999;W DRODZE;100;100;;po przekroczeniu limitu wolniejsza prędkość;1;999;185.00;;;
+129;STARLINK;999;999;W DRODZE;9999;500;;;1;999;460.00;;;
