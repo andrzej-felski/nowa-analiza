@@ -134,6 +134,37 @@ button {
     display:none;
 }
 
+.opcja-wyboru {
+    display:flex;
+    align-items:center;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:12px 15px;
+    margin:10px 0;
+    cursor:pointer;
+    background:white;
+    transition:.2s;
+}
+
+.opcja-wyboru:hover {
+    border-color:#0066cc;
+    background:#f0f7ff;
+}
+
+.opcja-wyboru input {
+    margin-right:10px;
+}
+
+.opcja-wyboru:has(input:checked) {
+    border-color:#0066cc;
+    background:#e8f2ff;
+    box-shadow:0 0 0 2px rgba(0,102,204,.15);
+}
+
+.opcja-wyboru span {
+    font-size:16px;
+}
+
 .akordeon {
     margin:15px 0;
     border:1px solid #ccc;
