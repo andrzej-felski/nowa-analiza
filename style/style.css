@@ -190,9 +190,9 @@ button {
     display:none;
 }
 
-.akordeon.otwarty 
-.akordeon-tresc {
+.akordeon.otwarty .akordeon-tresc {
     display:block;
+	background:white;
 }
 
 .drozsza {
