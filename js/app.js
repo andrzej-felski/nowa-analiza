@@ -18,6 +18,7 @@ async function start(){
     dane.firmy = await wczytajCSV("firmy.csv");
     dane.konkurencja = await wczytajCSV("konkurencja.csv");
     dane.uslugi.internet = await wczytajCSV("internet.csv");
+	dane.uslugi.internet_mobilny = await wczytajCSV("internet_mobilny.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -89,13 +90,17 @@ function pobierzOpcje(pole) {
                     value: f.id_firmy,
                     text: f.nazwa_firmy
                 }));
-        case "usluga":
-            return [
-                {
-                    value: "internet",
-                    text: "Internet światłowodowy"
-                }
-            ];
+		case "usluga":
+			return [
+				{
+					value: "internet",
+					text: "Internet światłowodowy"
+				},
+				{
+					value: "internet_mobilny",
+					text: "Internet mobilny"
+				}
+			];
 		case "okres":
 			return [...new Set(
 				pobierzOferty()
@@ -127,16 +132,39 @@ function pobierzOpcje(pole) {
 						o.okres_umowy == wybor.okres &&
 						o.nazwa_oferty == wybor.oferta
 					)
-					.map(o =>
-						`${o.predkosc_pobierania}/${o.predkosc_wysylania}`
+					.map(pobierzKluczPakietu)
 					)
 			)]
 			.map(pakiet => ({
 				value: pakiet,
-				text: pakiet.replace("/", " / ") + " Mb/s"
+				text: pokazNazwePakietu(pakiet)
 			}));
         default:
             return [];
+    }
+}
+
+function pobierzKluczPakietu(oferta){
+    switch (wybor.usluga) {
+        case "internet":
+            return `${oferta.predkosc_pobierania}/${oferta.predkosc_wysylania}`;
+        case "internet_mobilny":
+            return String(oferta.pakiet_gb);
+        default:
+            return "";
+    }
+}
+
+function pokazNazwePakietu(pakiet){
+    switch (wybor.usluga) {
+        case "internet":
+            return pakiet.replace("/", " / ") + " Mb/s";
+		case "internet_mobilny":
+			return Number(pakiet) === 9999
+				? "Bez limitu"
+				: `${pakiet} GB`;
+        default:
+            return pakiet;
     }
 }
 
@@ -151,12 +179,12 @@ function pobierzOfertyKonkurencji(oferta){
    let wszystkie = pobierzOferty().filter(o =>
         konkurenci.includes(o.id_firmy)
     );
-    let poGrupiePredkosci = wszystkie.filter(o =>
-        o.grupa_porownawcza == oferta.grupa_porownawcza
-    );
-    let poGrupieOkresu = poGrupiePredkosci.filter(o =>
-        o.grupa_okresu == oferta.grupa_okresu
-    );
+	let poGrupiePorownawczej = wszystkie.filter(o =>
+		o.grupa_porownawcza == oferta.grupa_porownawcza
+	);
+	let poGrupieOkresu = poGrupiePorownawczej.filter(o =>
+		o.grupa_okresu == oferta.grupa_okresu
+	);
     return poGrupieOkresu;
 }
 
@@ -178,16 +206,32 @@ function szukaj(){
     let firma = wybor.firma;
 	let oferta = wybor.oferta;
 	let pakiet = wybor.pakiet;
-	let [download, upload] = pakiet.split("/");
     let okres = wybor.okres;
-    let wybrana =
-    pobierzOferty().find(o =>
-        o.id_firmy == firma &&
-        o.okres_umowy == okres &&
-		o.nazwa_oferty == oferta &&
-		o.predkosc_pobierania == download &&
-		o.predkosc_wysylania == upload
-    );
+	let wybrana = pobierzOferty().find(o => {
+		if (
+			o.id_firmy != firma ||
+			o.okres_umowy != okres ||
+			o.nazwa_oferty != oferta
+		){
+			return false;
+		}
+		switch (wybor.usluga) {
+			case "internet":
+				let [download, upload] = pakiet.split("/");
+				return (
+					o.predkosc_pobierania == download &&
+					o.predkosc_wysylania == upload
+				);
+			case "internet_mobilny":
+				return Number(o.pakiet_gb) === Number(pakiet);
+			default:
+				return false;
+		}
+	});
+	if(!wybrana){
+		alert("Nie znaleziono oferty");
+		return;
+	}
     pokazWynik(
         wybrana,
         pobierzOfertyKonkurencji(wybrana)
@@ -283,25 +327,24 @@ function aktualizujDostepnoscPol() {
     document
         .querySelectorAll(".wybor")
         .forEach(element => {
-			let pole = element.dataset.pole;
-			let aktywne = true;
-			if (pole == "usluga" && !wybor.firma) {
-				aktywne = false;
-			}
-			if (pole == "okres" && !wybor.usluga) {
-				aktywne = false;
-			}
-			if (pole == "oferta" && !wybor.okres) {
-				aktywne = false;
-			}
-
-			if (pole == "pakiet" && !wybor.oferta) {
-				aktywne = false;
-			}
-			element.classList.toggle(
-				"nieaktywne",
-				!aktywne
-			);
+            let pole = element.dataset.pole;
+            let aktywne = true;
+            if (pole == "usluga" && !wybor.firma) {
+                aktywne = false;
+            }
+            if (pole == "okres" && !wybor.usluga) {
+                aktywne = false;
+            }
+            if (pole == "oferta" && !wybor.okres) {
+                aktywne = false;
+            }
+            if (pole == "pakiet" && (!wybor.oferta || !wybor.okres)) {
+                aktywne = false;
+            }
+            element.classList.toggle(
+                "nieaktywne",
+                !aktywne
+            );
         });
 }
 
