@@ -83,7 +83,7 @@ function pobierzOpcje(pole) {
             return [
                 {
                     value: "internet",
-                    text: "Internet"
+                    text: "Internet światłowodowy"
                 }
             ];
 		case "okres":
