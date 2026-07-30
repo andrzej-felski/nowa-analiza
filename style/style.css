@@ -195,6 +195,18 @@ button {
 	background:white;
 }
 
+.akordeon-tresc table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.akordeon-tresc th,
+.akordeon-tresc td {
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    text-align: center;
+}
+
 .drozsza {
     background:#dff5df;
 }
