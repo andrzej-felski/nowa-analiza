@@ -46,21 +46,23 @@ function pokazWynik(oferta, konkurenci){
         policzSredniaCene(b)
     );
     let html = "";
-    html += generujAkordeon(
-        oferta,
-        sredniaNaszej,
-        true
-    );
+	html += generujAkordeon(
+		oferta,
+		sredniaNaszej,
+		true,
+		oferta
+	);
     html += `
         <h2>Konkurencja</h2>
     `;
-    konkurenci.forEach(k=>{
-        html += generujAkordeon(
-            k,
-            sredniaNaszej,
-            false
-        );
-    });
+	konkurenci.forEach(k=>{
+		html += generujAkordeon(
+			k,
+			sredniaNaszej,
+			false,
+			oferta
+		);
+	});
     document.getElementById("wynik")
         .innerHTML = html;
     aktywujAkordeony();
@@ -121,6 +123,7 @@ function generujNaglowek(oferta, sredniaBazowa, nasza){
             ${pokazParametrNaglowka(oferta)}
         </div>
         <div class="naglowek-prawa">
+			Średnia cena:
             <strong>
                 ${srednia.toFixed(2)} zł/mies.
             </strong>
@@ -156,7 +159,7 @@ function pokazParametrNaglowka(oferta){
     }
 }
 
-function generujTresc(oferta){
+function generujTresc(oferta, nasza, ofertaBazowa){
     let harmonogram = pobierzHarmonogram(oferta);
     let tabela = "";
     harmonogram.forEach(o=>{
@@ -190,15 +193,26 @@ function generujTresc(oferta){
         </div>
         <div class="tresc-prawa">
             <h4>Opłaty</h4>
-            <table>
-                ${tabela}
-            </table>
+			${
+				nasza
+				?
+				`
+				<table>
+					${tabela}
+				</table>
+				`
+				:
+				generujTabelePorownania(
+					ofertaBazowa,
+					oferta
+				)
+			}
         </div>
     </div>
     `;
 }
 
-function generujAkordeon(oferta, sredniaBazowa, nasza){
+function generujAkordeon(oferta, sredniaBazowa, nasza, ofertaBazowa){
     return `
     <div class="akordeon">
         ${generujNaglowek(
@@ -206,7 +220,11 @@ function generujAkordeon(oferta, sredniaBazowa, nasza){
             sredniaBazowa,
             nasza
         )}
-        ${generujTresc(oferta)}
+        ${generujTresc(
+            oferta,
+            nasza,
+            ofertaBazowa
+        )}
     </div>
     `;
 }
@@ -241,4 +259,105 @@ function pokazInformacje(oferta){
         `;
     }
     return html;
+}
+
+function pobierzZakresyPorownania(nasza, konkurencja){
+    let punkty = new Set();
+    [
+        ...pobierzHarmonogram(nasza),
+        ...pobierzHarmonogram(konkurencja)
+    ].forEach(okres=>{
+        punkty.add(okres.od);
+        punkty.add(okres.do + 1);
+    });
+    let lista = [...punkty]
+        .sort((a,b)=>a-b);
+    let wynik = [];
+    for(let i=0;i<lista.length-1;i++){
+        wynik.push({
+            od: lista[i],
+            do: lista[i+1]-1
+        });
+    }
+    return wynik;
+}
+
+function pobierzCeneWMiesiacu(oferta, miesiac){
+    let harmonogram =
+        pobierzHarmonogram(oferta);
+    let znaleziony =
+        harmonogram.find(o =>
+            miesiac >= o.od &&
+            miesiac <= o.do
+        );
+    return znaleziony
+        ? znaleziony.cena
+        : null;
+}
+
+function generujTabelePorownania(nasza, konkurencja){
+    let zakresy =
+        pobierzZakresyPorownania(
+            nasza,
+            konkurencja
+        );
+    let html = "";
+    zakresy.forEach(zakres=>{
+        let cenaNasza =
+            pobierzCeneWMiesiacu(
+                nasza,
+                zakres.od
+            );
+        let cenaKonkurencji =
+            pobierzCeneWMiesiacu(
+                konkurencja,
+                zakres.od
+            );
+        let znak = "";
+        if(cenaNasza < cenaKonkurencji){
+            znak = "<";
+        }
+        if(cenaNasza > cenaKonkurencji){
+            znak = ">";
+        }
+        html += `
+        <tr>
+            <td>
+                ${pokazZakresOkresow(
+                    zakres.od,
+                    zakres.do
+                )}
+            </td>
+            <td class="${
+                cenaNasza < cenaKonkurencji
+                ? "tansza"
+                : ""
+            }">
+                ${cenaNasza.toFixed(2)} zł
+            </td>
+
+            <td class="${
+                cenaKonkurencji < cenaNasza
+                ? "tansza"
+                : ""
+            }">
+                ${cenaKonkurencji.toFixed(2)} zł
+            </td>
+        </tr>
+        `;
+    });
+    return `
+        <table class="porownanie">
+            <thead>
+                <tr>
+                    <th>Okres</th>
+                    <th>Nasza oferta</th>
+                    <th>Konkurencja</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${html}
+            </tbody>
+        </table>
+    `;
 }
