@@ -314,11 +314,11 @@ function generujTabelePorownania(nasza, konkurencja){
                 zakres.od
             );
         let znak = "";
-        if(cenaNasza < cenaKonkurencji){
-            znak = "<";
-        }
-        if(cenaNasza > cenaKonkurencji){
+        if(cenaKonkurencji > cenaNasza){
             znak = ">";
+        }
+        if(cenaKonkurencji < cenaNasza){
+            znak = "<";
         }
         html += `
         <tr>
@@ -328,21 +328,21 @@ function generujTabelePorownania(nasza, konkurencja){
                     zakres.do
                 )}
             </td>
-            <td class="${
-                cenaNasza < cenaKonkurencji
-                ? "tansza"
-                : ""
-            }">
-                ${pokazCene(cenaNasza)}
+			<td class="${
+				cenaKonkurencji > cenaNasza
+				? "drozsza"
+				: cenaKonkurencji < cenaNasza
+				? "tansza"
+				: ""
+			}">
+				${pokazCene(cenaKonkurencji)}
+			</td>
+			<td class="znak">
 				${znak}
-            </td>
-            <td class="${
-                cenaKonkurencji < cenaNasza
-                ? "tansza"
-                : ""
-            }">
-                ${pokazCene(cenaKonkurencji)}
-            </td>
+			</td>
+			<td>
+				${pokazCene(cenaNasza)}
+			</td>
         </tr>
         `;
     });
@@ -350,9 +350,14 @@ function generujTabelePorownania(nasza, konkurencja){
         <table class="porownanie">
             <thead>
                 <tr>
-                    <th>Okres</th>
-                    <th>Nasza oferta</th>
-                    <th>Konkurencja</th>
+                    <th></th>
+                    <th>
+                        ${pobierzNazweFirmy(konkurencja.id_firmy)}
+                    </th>
+                    <th></th>
+                    <th>
+                        ${pobierzNazweFirmy(nasza.id_firmy)}
+                    </th>
                 </tr>
             </thead>
             <tbody>
