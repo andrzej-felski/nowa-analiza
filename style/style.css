@@ -185,16 +185,38 @@ button {
     padding:15px;
     background:#eee;
     cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.strzalka {
+    margin-left:auto;
+    font-size:24px;
+    transition:.3s;
+}
+
+.akordeon.otwarty .strzalka {
+    transform:rotate(180deg);
 }
 
 .akordeon-tresc {
-    padding:20px;
-    display:none;
+    padding:0 20px;
+    display:flex;
+    background:white;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:
+        max-height .4s ease,
+        opacity .3s ease,
+        padding .4s ease;
 }
 
 .akordeon.otwarty .akordeon-tresc {
-    display:flex;
-	background:white;
+    max-height:1000px;
+    opacity:1;
+    padding:20px;
 }
 
 .tresc-lewa {
@@ -207,6 +229,7 @@ button {
     flex:1;
 	border-left:solid 1px black;
     padding:0 20px 0 20px;
+	margin: 0 auto;
 }
 
 .tresc-prawa table {
