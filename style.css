@@ -146,6 +146,7 @@ button {
     transition:.2s;
 }
 
+.wybor:hover,
 .opcja-wyboru:hover {
     border-color:#0066cc;
     background:#f0f7ff;
