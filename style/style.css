@@ -194,14 +194,19 @@ button {
     display:flex;
     gap:40px;
     padding:20px;
+	background:white;
 }
 
 .tresc-lewa {
     flex:1;
+	justify-content:center;
+	text-align:center;
 }
 
 .tresc-prawa {
     flex:1;
+	justify-content:center;
+	text-align:center;
 }
 
 .tresc-prawa table {
