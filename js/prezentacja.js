@@ -53,7 +53,7 @@ function pokazWynik(oferta, konkurenci){
 		oferta
 	);
     html += `
-        <h2>Konkurencja</h2>
+        <h2 style="text-align:center;color:#fff;">Konkurencja</h2>
     `;
 	konkurenci.forEach(k=>{
 		html += generujAkordeon(
@@ -123,7 +123,10 @@ function generujNaglowek(oferta, sredniaBazowa, nasza){
             ${pokazParametrNaglowka(oferta)}
         </div>
         <div class="naglowek-prawa">
-			Średnia cena:  <strong> ${srednia.toFixed(2)} zł/mies. </strong>
+			Średnia cena: 
+			<strong>
+                ${srednia.toFixed(2)} zł/mies.
+            </strong>
             ${
                 roznica
                 ? `<span>${roznica}</span>`
