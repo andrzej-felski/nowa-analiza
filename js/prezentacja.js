@@ -43,16 +43,27 @@ function pokazParametryOferty(oferta){
 					${oferta.liczba_kanalow}
 				</p>
 			`;
+		case "abonament_komorkowy":
+			return `
+				<p>
+					<strong>Pakiet:</strong>
+					${pokazNazwePakietuAbonamentu(oferta)}
+				</p>
+			`;
         default:
             return "";
     }
 }
 
 function pokazPakietGB(oferta){
-    if (Number(oferta.pakiet_gb) === 9999) {
-        return "Bez limitu";
+    switch (Number(oferta.pakiet_gb)) {
+        case 0:
+            return "";
+        case 9999:
+            return "Bez limitu";
+        default:
+            return `${oferta.pakiet_gb} GB`;
     }
-    return `${oferta.pakiet_gb} GB`;
 }
 
 function pokazDlugoscUmowy(oferta){
@@ -189,6 +200,12 @@ function pokazParametrNaglowka(oferta){
 					${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
 				</span>
 			`;
+		case "abonament_komorkowy":
+			return `
+				<span>
+					${pokazNazwePakietuAbonamentu(oferta)}
+				</span>
+			`;
         default:
             return "";
     }
@@ -253,6 +270,8 @@ function pokazNazweUslugi(usluga){
             return "Internet mobilny";
 		case "telewizja":
 			return "Telewizja";
+		case "abonament_komorkowy":
+			return "Abonament komórkowy";
         default:
             return usluga;
     }
