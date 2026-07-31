@@ -36,6 +36,17 @@ function pokazParametryOferty(oferta){
 					${pokazPakietGB(oferta)}
 				</p>
 			`;
+		case "telewizja":
+			return `
+				<p>
+					<strong>Pakiet:</strong>
+					${oferta.nazwa_pakietu}
+				</p>
+				<p>
+					<strong>Liczba kanałów:</strong>
+					${oferta.liczba_kanalow}
+				</p>
+			`;
         default:
             return "";
     }
@@ -176,6 +187,12 @@ function pokazParametrNaglowka(oferta){
 					${pokazPakietGB(oferta)}
 				</span>
 			`;
+		case "telewizja":
+			return `
+				<span>
+					${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
+				</span>
+			`;
         default:
             return "";
     }
@@ -238,6 +255,8 @@ function pokazNazweUslugi(usluga){
             return "Internet światłowodowy";
         case "internet_mobilny":
             return "Internet mobilny";
+		case "telewizja":
+			return "Telewizja";
         default:
             return usluga;
     }
