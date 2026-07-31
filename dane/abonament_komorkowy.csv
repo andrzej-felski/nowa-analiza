@@ -1,14 +1,14 @@
-﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;pakiet_gb;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;pakiet_gb;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
 1;CHOPIN;24;24;FON MOBIL;FON S;11;11;;cena z rabatem za e-fakturę;1;24;32.57;;;
 2;CHOPIN;24;24;FON MOBIL;FON M;21;21;;cena z rabatem za e-fakturę;1;24;40.57;;;
 3;CHOPIN;24;24;FON MOBIL;FON L;31;31;;cena z rabatem za e-fakturę;1;24;47.57;;;
 4;CHOPIN;24;24;FON MOBIL;FON XL;100;100;;cena z rabatem za e-fakturę;1;24;62.57;;;
-5;CHOPIN;24;24;FON MOBIL;FON EURO;7;7;6 GB w Polsce i 1 GB w roamingu;cena z rabatem za e-fakturę;1;24;62.48;;;
+5;CHOPIN;24;24;FON MOBIL;FON EURO;7;7;1 GB w roamingu;cena z rabatem za e-fakturę;1;24;62.48;;;
 6;MC2;24;24;FON Mobil;FON Senior;0;7;;cena z rabatem za e-fakturę;1;24;32.48;;;
 7;MC2;24;24;FON Mobil;FON NORMALNY+;21;21;;cena z rabatem za e-fakturę;1;24;36.57;;;
 8;MC2;24;24;FON Mobil;FON NORMALNY+;31;31;;cena z rabatem za e-fakturę;1;24;42.57;;;
 9;MC2;24;24;FON Mobil;FON NORMALNY;100;100;;cena z rabatem za e-fakturę;1;24;62.57;;;
-10;MC2;24;24;FON Mobil;FON EURO;7;7;6 GB w Polsce i 1 GB w roamingu;cena z rabatem za e-fakturę;1;24;62.48;;;
+10;MC2;24;24;FON Mobil;FON EURO;7;7;1 GB w roamingu;cena z rabatem za e-fakturę;1;24;62.48;;;
 11;MC1_OLSZTYN;24;24;Promocja 4 miesiące za 1 zł;Abonament komórkowy;10;11;;cena z rabatem za e-fakturę;1;4;1.00;5;24;24.98
 12;MC1_OLSZTYN;24;24;Promocja 4 miesiące za 1 zł;Abonament komórkowy;30;31;;cena z rabatem za e-fakturę;1;4;1.00;5;24;34.98
 13;MC1_OLSZTYN;24;24;Promocja 4 miesiące za 1 zł;Abonament komórkowy;60;31;;cena z rabatem za e-fakturę;1;4;1.00;5;24;44.98
