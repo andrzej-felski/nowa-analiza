@@ -1,4 +1,4 @@
-﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;liczba_kanalow;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;liczba_kanalow;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
 1;CHOPIN;12;12;Super TV;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;12;73.56
 2;CHOPIN;12;12;Super TV;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;111.57;2;12;116.56
 3;CHOPIN;12;12;Super TV;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;137.57;2;12;142.56
@@ -93,3 +93,116 @@
 92;ELTRONIK;24;24;Telewizja;DOM PLUS;100;129;;;1;24;57.00;;;
 93;ELTRONIK;24;24;Telewizja;DOM LUX;145;129;;;1;24;75.00;;;
 94;ELTRONIK;24;24;Telewizja;DOM VIP;156;129;;;1;24;135.00;;;
+95;PLAY;24;24;Dla nowych;Start;71;57;;cena z rabatami;1;24;40.00;;;
+96;PLAY;24;24;Dla nowych;MAX;224;236;;cena z rabatami;1;6;10.00;7;24;65.00
+97;PLAY;24;24;Dla nowych;Telewizja Nowej Generacji;100;129;45 punktów na streaming;cena z rabatami;1;6;10.00;7;24;65.00
+98;PLAY;24;24;Dla nowych;Telewizja Nowej Generacji;100;129;60 punktów na streaming;cena z rabatami;1;6;10.00;7;24;85.00
+99;PLAY;24;24;Dla obecnych;Start;71;57;;cena z rabatami;1;24;30.00;;;
+100;PLAY;24;24;Dla obecnych;MAX;224;236;;cena z rabatami;1;6;0.00;7;24;55.00
+101;PLAY;24;24;Dla obecnych;Telewizja Nowej Generacji;100;129;45 punktów na streaming;cena z rabatami;1;6;0.00;7;24;55.00
+102;PLAY;24;24;Dla obecnych;Telewizja Nowej Generacji;100;129;60 punktów na streaming;cena z rabatami;1;6;0.00;7;24;75.00
+103;PLUS;24;24;Telewizja;S;60;57;;cena z rabatami;1;1;0.00;2;24;30.00
+104;PLUS;24;24;Telewizja;M;85;57;;cena z rabatami;1;1;0.00;2;24;40.00
+105;PLUS;24;24;Telewizja;L;136;129;;cena z rabatami;1;1;0.00;2;24;70.00
+106;PLUS;24;24;Telewizja;L+;138;129;Amazon Prime, AppleTV, Sky Showtime;cena z rabatami;1;1;0.00;2;24;110.00
+107;VECTRA;23;24;Telewizja;Pakiet Stalowy;37;57;;cena z rabatami;1;1;0.00;2;23;24.99
+108;VECTRA;23;24;Telewizja;Pakiet Srebrny;73;57;;cena z rabatami;1;1;0.00;2;23;39.99
+109;VECTRA;23;24;Telewizja;Pakiet Złoty;129;129;;cena z rabatami;1;1;0.00;2;23;59.99
+110;VECTRA;23;24;Telewizja;Pakiet Platynowy;168;184;;cena z rabatami;1;1;0.00;2;23;69.99
+111;VECTRA;23;24;Telewizja;Pakiet Super Film & Sport;190;184;HBO;cena z rabatami;1;1;0.00;2;23;109.99
+112;VECTRA;23;24;Telewizja;Pakiet Stalowy;37;57;nagrywarka;cena z rabatami;1;1;0.00;2;23;39.99
+113;VECTRA;23;24;Telewizja;Pakiet Srebrny;73;57;nagrywarka;cena z rabatami;1;1;0.00;2;23;54.99
+114;VECTRA;23;24;Telewizja;Pakiet Złoty;129;129;nagrywarka;cena z rabatami;1;1;0.00;2;23;74.99
+115;VECTRA;23;24;Telewizja;Pakiet Platynowy;168;184;nagrywarka;cena z rabatami;1;1;0.00;2;23;84.99
+116;VECTRA;23;24;Telewizja;Pakiet Super Film & Sport;190;184;nagrywarka;cena z rabatami;1;1;0.00;2;23;124.99
+117;VECTRA;999;999;Telewizja;Pakiet Stalowy;37;57;;cena z rabatami;1;999;24.99;;;
+118;VECTRA;999;999;Telewizja;Pakiet Srebrny;73;57;;cena z rabatami;1;999;39.99;;;
+119;VECTRA;999;999;Telewizja;Pakiet Złoty;129;129;;cena z rabatami;1;999;59.99;;;
+120;VECTRA;999;999;Telewizja;Pakiet Platynowy;168;184;;cena z rabatami;1;999;69.99;;;
+121;VECTRA;999;999;Telewizja;Pakiet Super Film & Sport;190;184;;cena z rabatami;1;999;109.99;;;
+122;RFC;24;24;Telewizja;LUZ HD;123;129;;cena z rabatami;1;24;46.00;;;
+123;RFC;24;24;Telewizja;KOMFORT+ HD;180;184;;cena z rabatami;1;24;59.00;;;
+124;RFC;24;24;Telewizja;PRESTIŻ HD;212;236;;cena z rabatami;1;24;86.00;;;
+125;RFC;24;24;Telewizja;MAX HD;248;256;;cena z rabatami;1;24;119.00;;;
+126;JPK;12;12;Telewizja;Blok;160;184;;;1;12;70.00;;;
+127;JPK;12;12;Telewizja;Dom;150;129;;;1;12;74.99;;;
+128;JPK;12;12;IPTV;Luz HD;119;129;;;1;12;31.00;;;
+129;JPK;12;12;IPTV;Komfort+ HD;172;184;;;1;12;60.00;;;
+130;JPK;12;12;IPTV;Prestiż HD;204;184;;;1;12;87.00;;;
+131;JPK;12;12;IPTV;Max HD;240;236;;;1;12;100.00;;;
+132;JPK;24;24;Telewizja;Blok;160;184;;;1;24;65.00;;;
+133;JPK;24;24;Telewizja;Dom;150;129;;;1;24;69.99;;;
+134;JPK;24;24;IPTV;Luz HD;119;129;;;1;24;27.00;;;
+135;JPK;24;24;IPTV;Komfort+ HD;172;184;;;1;24;54.00;;;
+136;JPK;24;24;IPTV;Prestiż HD;204;184;;;1;24;82.00;;;
+137;JPK;24;24;IPTV;Max HD;240;236;;;1;24;96.00;;;
+138;JPK;36;36;Telewizja;Blok;160;184;;;1;36;59.00;;;
+139;JPK;36;36;Telewizja;Dom;150;129;;;1;36;64.99;;;
+140;JPK;36;36;IPTV;Luz HD;119;129;;;1;36;22.00;;;
+141;JPK;36;36;IPTV;Komfort+ HD;172;184;;;1;36;49.00;;;
+142;JPK;36;36;IPTV;Prestiż HD;204;184;;;1;36;79.00;;;
+143;JPK;36;36;IPTV;Max HD;240;236;;;1;36;89.00;;;
+144;GECKONET;24;24;Telewizja;Pakiet Kiss;70;57;;;1;24;19.90;;;
+145;GECKONET;24;24;Telewizja;Pakiet Smile;124;129;;;1;24;39.90;;;
+146;GECKONET;24;24;Telewizja;Pakiet Hug;182;184;;;1;24;59.90;;;
+147;LIMES;23;24;Telewizja;Pakiet Start;48;57;;;1;23;37.00;;;
+148;LIMES;23;24;Telewizja;Pakiet Mikro;84;57;;;1;23;57.00;;;
+149;LIMES;23;24;Telewizja;Pakiet Oszczędny HD;140;129;;;1;23;87.00;;;
+150;LIMES;23;24;Telewizja;Pakiet Wielotematyczny HD;178;184;;;1;23;107.00;;;
+151;TELKAB;23;24;Telewizja;Cyfrowy Start HD;56;57;;;1;23;24.00;;;
+152;TELKAB;23;24;Telewizja;Cyfrowy 1 HD;125;129;;;1;23;56.00;;;
+153;TELKAB;23;24;Telewizja;Cyfrowy 2 HD;174;184;;;1;23;72.00;;;
+154;VOLTA;12;12;Telewizja;Pakiet MINI;74;57;;;1;12;45.00;;;
+155;VOLTA;12;12;Telewizja;Pakiet PODSTAWOWY;140;129;;;1;12;65.00;;;
+156;VOLTA;12;12;Telewizja;Pakiet PEŁNY;168;184;;;1;12;75.00;;;
+157;VOLTA;24;24;Telewizja;Pakiet MINI;74;57;;;1;24;35.00;;;
+158;VOLTA;24;24;Telewizja;Pakiet PODSTAWOWY;140;129;;;1;24;55.00;;;
+159;VOLTA;24;24;Telewizja;Pakiet PEŁNY;168;184;;;1;24;65.00;;;
+160;VOLTA;999;999;Telewizja;Pakiet MINI;74;57;;;1;999;55.00;;;
+161;VOLTA;999;999;Telewizja;Pakiet PODSTAWOWY;140;129;;;1;999;89.00;;;
+162;VOLTA;999;999;Telewizja;Pakiet PEŁNY;168;184;;;1;999;115.00;;;
+163;MATCOM;24;24;Telewizja;Pakiet Smart;152;129;;;1;24;52.90;;;
+164;MATCOM;24;24;Telewizja;Pakiet Optimum;195;184;;;1;24;68.90;;;
+165;MATCOM;24;24;Telewizja;Pakiet Platinum;230;236;;;1;24;101.90;;;
+166;INTELLY;12;12;Telewizja;Pakiet Oszczędny;89;57;;;1;12;38.90;;;
+167;INTELLY;12;12;Telewizja;Pakiet Wygodny;138;129;;;1;12;59.90;;;
+168;INTELLY;12;12;Telewizja;Pakiet Bogaty;192;184;;;1;12;84.90;;;
+169;INTELLY;24;24;Telewizja;Pakiet Oszczędny;89;57;;;1;24;33.90;;;
+170;INTELLY;24;24;Telewizja;Pakiet Wygodny;138;129;;;1;24;54.90;;;
+171;INTELLY;24;24;Telewizja;Pakiet Bogaty;192;184;;;1;24;79.90;;;
+172;BUDIMPEX;12;12;Telewizja;Pakiet SMART;152;129;;;1;12;70.00;;;
+173;BUDIMPEX;12;12;Telewizja;Pakiet Optimum;196;184;;;1;12;85.00;;;
+174;BUDIMPEX;12;12;Telewizja;Pakiet Platinum;231;236;;;1;12;114.00;;;
+175;BUDIMPEX;24;24;Telewizja;Pakiet SMART;152;129;;;1;24;55.00;;;
+176;BUDIMPEX;24;24;Telewizja;Pakiet Optimum;196;184;;;1;24;70.00;;;
+177;BUDIMPEX;24;24;Telewizja;Pakiet Platinum;231;236;;;1;24;99.00;;;
+178;BUDIMPEX;999;999;Telewizja;Pakiet SMART;152;129;;;1;999;100.00;;;
+179;BUDIMPEX;999;999;Telewizja;Pakiet Optimum;196;184;;;1;999;115.00;;;
+180;BUDIMPEX;999;999;Telewizja;Pakiet Platinum;231;236;;;1;999;134.00;;;
+181;MPCNET;12;12;Telewizja;Socjalny+ HD;74;57;;;1;12;19.90;;;
+182;MPCNET;12;12;Telewizja;Ekonomiczny+ HD;128;129;;;1;12;42.90;;;
+183;MPCNET;12;12;Telewizja;Startowy+ HD;160;184;;;1;12;64.00;;;
+184;MPCNET;12;12;Telewizja;Optymalny+ HD;189;184;;;1;12;85.00;;;
+185;MPCNET;12;12;Telewizja;Bogaty+ HD;207;184;;;1;12;101.00;;;
+186;MPCNET;24;24;Telewizja;Socjalny+ HD;74;57;;;1;24;19.90;;;
+187;MPCNET;24;24;Telewizja;Ekonomiczny+ HD;128;129;;;1;24;42.90;;;
+188;MPCNET;24;24;Telewizja;Startowy+ HD;160;184;;;1;24;64.00;;;
+189;MPCNET;24;24;Telewizja;Optymalny+ HD;189;184;;;1;24;85.00;;;
+190;MPCNET;24;24;Telewizja;Bogaty+ HD;207;184;;;1;24;101.00;;;
+191;VLMEDIA;24;24;Telewizja;OSZCZĘDNY;62;57;;;1;24;44.0;;;
+192;VLMEDIA;24;24;Telewizja;LUZ HD;119;129;;;1;24;44.00;;;
+193;VLMEDIA;24;24;Telewizja;KOMFORT+ HD;174;184;;;1;24;59.00;;;
+194;VLMEDIA;24;24;Telewizja;PRESTIŻ HD;206;184;;;1;24;79.00;;;
+195;VLMEDIA;24;24;Telewizja;MAX HD;242;236;;;1;24;99.00;;;
+196;WAVE;24;24;Telewizja;Pakiet Smart;130;129;;;1;24;69.00;;;
+197;WAVE;24;24;Telewizja;Pakiet Optimum;172;184;;;1;24;89.00;;;
+198;WAVE;24;24;Telewizja;Pakiet Platinum;206;184;;;1;24;119.00;;;
+199;HISPEED;24;24;Telewizja;Pakiet Podstawowy;62;57;;;1;24;29.00;;;
+200;PRO_INTERNET;24;24;Telewizja;Pakiet PRIMUM;57;57;;;1;24;59.00;;;
+201;PRO_INTERNET;24;24;Telewizja;Pakiet MEDIUM;126;129;;;1;24;99.00;;;
+202;PRO_INTERNET;24;24;Telewizja;Pakiet OPTIMUM;142;129;;;1;24;119.00;;;
+203;GORZOWSKA_TELEWIZJA_PRZEWODOWA;1;999;Telewizja;Pakiet Podstawowy A;66;57;;;1;999;37.00;;;
+204;GORZOWSKA_TELEWIZJA_PRZEWODOWA;1;999;Telewizja;Pakiet Rozszerzony B;122;129;;;1;999;55.00;;;
+205;AIR-NET;1;24;Smart TV;Podstawowy;79;57;;;1;24;34.90;;;
+206;AIR-NET;1;24;Smart TV;Korzystny;136;129;;;1;24;56.90;;;
+207;AIR-NET;1;24;Smart TV;Bogaty;179;184;;;1;24;66.90;;;
