@@ -1,0 +1,95 @@
+﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;liczba_kanalow;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+1;CHOPIN;12;12;Super TV;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;12;73.56
+2;CHOPIN;12;12;Super TV;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;111.57;2;12;116.56
+3;CHOPIN;12;12;Super TV;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;137.57;2;12;142.56
+4;CHOPIN;12;12;Super TV;XXL Box;256;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;228.57;2;12;233.56
+5;CHOPIN;24;24;Blue Box;Blue Box;57;57;SMART TV - 57 kanałów;cena z rabatem za e-fakturę;1;24;60.08;;;
+6;CHOPIN;24;24;Super TV;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;24;73.56
+7;CHOPIN;24;24;Super TV;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;101.57;2;24;106.56
+8;CHOPIN;24;24;Super TV;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;127.57;2;24;132.56
+9;CHOPIN;24;24;Super TV;XXL Box;256;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;218.57;2;24;223.56
+10;CHOPIN;12;12;Trzymaj z nami;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;12;73.56
+11;CHOPIN;12;12;Trzymaj z nami;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;105.57;2;12;110.56
+12;CHOPIN;12;12;Trzymaj z nami;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;131.57;2;12;136.56
+13;CHOPIN;12;12;Trzymaj z nami;XXL Box;256;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;217.57;2;12;222.56
+14;CHOPIN;24;24;Trzymaj z nami;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;24;73.56
+15;CHOPIN;24;24;Trzymaj z nami;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;95.57;2;24;100.56
+16;CHOPIN;24;24;Trzymaj z nami;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;121.57;2;24;126.56
+17;CHOPIN;24;24;Trzymaj z nami;XXL Box;256;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;207.57;2;24;212.56
+18;CHOPIN;12;12;STOP EXTRA TV;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;53.69;;;
+19;CHOPIN;12;12;STOP EXTRA TV;M Box;184;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;73.69;;;
+20;CHOPIN;12;12;STOP EXTRA TV;L Box;236;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;12;93.69;;;
+21;PELMAR;12;12;Super TV;Start Box;128;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;12;73.56
+22;PELMAR;12;12;Super TV;M Box;183;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;111.57;2;12;116.56
+23;PELMAR;12;12;Super TV;L Box;235;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;137.57;2;12;142.56
+24;PELMAR;12;12;Super TV;XXL Box;255;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;228.57;2;12;233.56
+25;PELMAR;24;24;Blue Box;Blue Box;57;57;SMART TV - 57 kanałów;cena z rabatem za e-fakturę;1;24;60.08;;;
+26;PELMAR;24;24;Super TV;Start Box;128;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;24;73.56
+27;PELMAR;24;24;Super TV;M Box;183;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;101.57;2;24;106.56
+28;PELMAR;24;24;Super TV;L Box;235;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;127.57;2;24;132.56
+29;PELMAR;24;24;Super TV;XXL Box;255;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;218.57;2;24;223.56
+30;PELMAR;12;12;Trzymaj z nami;Start Box;128;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;12;73.56
+31;PELMAR;12;12;Trzymaj z nami;M Box;183;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;105.57;2;12;110.56
+32;PELMAR;12;12;Trzymaj z nami;L Box;235;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;131.57;2;12;136.56
+33;PELMAR;12;12;Trzymaj z nami;XXL Box;255;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;217.57;2;12;222.56
+34;PELMAR;24;24;Trzymaj z nami;Start Box;128;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;68.57;2;24;73.56
+35;PELMAR;24;24;Trzymaj z nami;M Box;183;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;95.57;2;24;100.56
+36;PELMAR;24;24;Trzymaj z nami;L Box;235;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;121.57;2;24;126.56
+37;PELMAR;24;24;Trzymaj z nami;XXL Box;255;256;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;207.57;2;24;212.56
+38;PELMAR;12;12;STOP EXTRA TV;Start Box;128;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;53.69;;;
+39;PELMAR;12;12;STOP EXTRA TV;M Box;183;184;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;73.69;;;
+40;PELMAR;12;12;STOP EXTRA TV;L Box;235;236;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;12;93.69;;;
+41;MC2;12;12;Mega TV;START Box;65;57;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;89.57;2;12;94.56
+42;MC2;12;12;Mega TV;MINI Box;96;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;96.57;2;12;101.56
+43;MC2;12;12;Mega TV;SUPER Box;134;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;107.57;2;12;112.56
+44;MC2;12;12;Mega TV;MAX Box;152;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;127.57;2;12;132.56
+45;MC2;24;24;Mega TV;Blue Box;54;57;SMART TV - 57 kanałów;cena z rabatem za e-fakturę;1;24;60.08;;;
+46;MC2;24;24;Mega TV;START Box;65;57;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;79.57;2;24;84.56
+47;MC2;24;24;Mega TV;MINI Box;96;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;86.57;2;24;91.56
+48;MC2;24;24;Mega TV;SUPER Box;134;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;97.57;2;24;102.56
+49;MC2;24;24;Mega TV;MAX Box;152;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;117.57;2;24;122.56
+50;MC2;12;12;Trzymaj z nami;START Box;65;57;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;89.57;2;12;94.56
+51;MC2;12;12;Trzymaj z nami;MINI Box;96;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;94.57;2;12;99.56
+52;MC2;12;12;Trzymaj z nami;SUPER Box;134;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;102.57;2;12;107.56
+53;MC2;12;12;Trzymaj z nami;MAX Box;152;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;122.57;2;12;127.56
+54;MC2;24;24;Trzymaj z nami;START Box;65;57;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;79.57;2;24;84.56
+55;MC2;24;24;Trzymaj z nami;MINI Box;96;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;1;84.57;2;24;89.56
+56;MC2;24;24;Trzymaj z nami;SUPER Box;134;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;92.57;2;24;97.56
+57;MC2;24;24;Trzymaj z nami;MAX Box;152;129;SMART L - 136 kanałów;cena z rabatem za e-fakturę;1;1;112.57;2;24;117.56
+58;MC2;12;12;STOP EXTRA TV;START Box;65;57;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;47.70;;;
+59;MC2;12;12;STOP EXTRA TV;SUPER Box;134;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;12;57.70;;;
+60;MC1_OLSZTYN;12;12;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;12;47.98;;;
+61;MC1_OLSZTYN;12;12;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;12;67.98;;;
+62;MC1_OLSZTYN;12;12;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;12;77.98;;;
+63;MC1_OLSZTYN;24;24;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;24;40.98;;;
+64;MC1_OLSZTYN;24;24;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;24;60.98;;;
+65;MC1_OLSZTYN;24;24;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;24;70.98;;;
+66;MC1_STARGARD;12;12;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;12;47.98;;;
+67;MC1_STARGARD;12;12;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;12;67.98;;;
+68;MC1_STARGARD;12;12;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;12;77.98;;;
+69;MC1_STARGARD;24;24;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;24;40.98;;;
+70;MC1_STARGARD;24;24;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;24;60.98;;;
+71;MC1_STARGARD;24;24;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;24;70.98;;;
+72;MC1_OSTRODA;12;12;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;12;47.98;;;
+73;MC1_OSTRODA;12;12;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;12;67.98;;;
+74;MC1_OSTRODA;12;12;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;12;77.98;;;
+75;MC1_OSTRODA;24;24;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;24;40.98;;;
+76;MC1_OSTRODA;24;24;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;24;60.98;;;
+77;MC1_OSTRODA;24;24;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;24;70.98;;;
+78;MC1_LOWICZ;12;12;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;12;47.98;;;
+79;MC1_LOWICZ;12;12;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;12;67.98;;;
+80;MC1_LOWICZ;12;12;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;12;77.98;;;
+81;MC1_LOWICZ;24;24;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;24;40.98;;;
+82;MC1_LOWICZ;24;24;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;24;60.98;;;
+83;MC1_LOWICZ;24;24;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;24;70.98;;;
+84;MC1_KWIDZYN;12;12;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;12;47.98;;;
+85;MC1_KWIDZYN;12;12;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;12;67.98;;;
+86;MC1_KWIDZYN;12;12;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;12;77.98;;;
+87;MC1_KWIDZYN;24;24;Nowa telewizja;START Box;66;57;;cena z rabatem za e-fakturę;1;24;40.98;;;
+88;MC1_KWIDZYN;24;24;Nowa telewizja;SUPER Box;132;129;;cena z rabatem za e-fakturę;1;24;60.98;;;
+89;MC1_KWIDZYN;24;24;Nowa telewizja;MAX Box;152;129;;cena z rabatem za e-fakturę;1;24;70.98;;;
+90;JIM-SAT;999;999;Telewizja;Pakiet A;29;57;;cena z rabatem za e-fakturę;1;999;9.00;;;
+91;JIM-SAT;999;999;Telewizja;Pakiet E;106;129;;cena z rabatem za e-fakturę;1;999;54.00;;;
+92;ELTRONIK;24;24;Telewizja;DOM PLUS;100;129;;;1;24;57.00;;;
+93;ELTRONIK;24;24;Telewizja;DOM LUX;145;129;;;1;24;75.00;;;
+94;ELTRONIK;24;24;Telewizja;DOM VIP;156;129;;;1;24;135.00;;;
