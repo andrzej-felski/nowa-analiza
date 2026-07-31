@@ -19,6 +19,7 @@ async function start(){
     dane.konkurencja = await wczytajCSV("konkurencja.csv");
     dane.uslugi.internet = await wczytajCSV("internet.csv");
 	dane.uslugi.internet_mobilny = await wczytajCSV("internet_mobilny.csv");
+	dane.uslugi.telewizja = await wczytajCSV("telewizja.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -99,6 +100,10 @@ function pobierzOpcje(pole) {
 				{
 					value: "internet_mobilny",
 					text: "Internet mobilny"
+				},
+				{
+					value: "telewizja",
+					text: "Telewizja"
 				}
 			]
 			.filter(usluga =>
@@ -155,6 +160,8 @@ function pobierzKluczPakietu(oferta){
             return `${oferta.predkosc_pobierania}/${oferta.predkosc_wysylania}`;
         case "internet_mobilny":
             return String(oferta.pakiet_gb);
+        case "telewizja":
+            return `${oferta.nazwa_pakietu}-${oferta.liczba_kanalow}`;
         default:
             return "";
     }
@@ -168,6 +175,8 @@ function pokazNazwePakietu(pakiet){
 			return Number(pakiet) === 9999
 				? "Bez limitu"
 				: `${pakiet} GB`;
+		case "telewizja":
+            return pakiet.replace("-", " - ") + " kanałów";
         default:
             return pakiet;
     }
@@ -229,6 +238,8 @@ function szukaj(){
 				);
 			case "internet_mobilny":
 				return Number(o.pakiet_gb) === Number(pakiet);
+			    case "telewizja":
+					return o.nazwa_pakietu === pakiet;
 			default:
 				return false;
 		}
