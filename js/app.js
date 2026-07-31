@@ -160,8 +160,8 @@ function pobierzKluczPakietu(oferta){
             return `${oferta.predkosc_pobierania}/${oferta.predkosc_wysylania}`;
         case "internet_mobilny":
             return String(oferta.pakiet_gb);
-        case "telewizja":
-            return `${oferta.nazwa_pakietu}-${oferta.liczba_kanalow}`;
+		case "telewizja":
+			return String(oferta.liczba_kanalow);
         default:
             return "";
     }
@@ -238,8 +238,8 @@ function szukaj(){
 				);
 			case "internet_mobilny":
 				return Number(o.pakiet_gb) === Number(pakiet);
-			    case "telewizja":
-					return o.nazwa_pakietu === pakiet;
+			case "telewizja":
+				return o.nazwa_pakietu === pakiet;
 			default:
 				return false;
 		}
