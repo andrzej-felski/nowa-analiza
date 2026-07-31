@@ -135,6 +135,18 @@ function pobierzOpcje(pole) {
 				text: oferta
 			}));
 		case "pakiet":
+			if (wybor.usluga === "telewizja") {
+				return pobierzOferty()
+					.filter(o =>
+						o.id_firmy == wybor.firma &&
+						o.okres_umowy == wybor.okres &&
+						o.nazwa_oferty == wybor.oferta
+					)
+					.map(o => ({
+						value: o.liczba_kanalow,
+						text: `${o.nazwa_pakietu} - ${o.liczba_kanalow} kanałów`
+					}));
+			}
 			return [...new Set(
 				pobierzOferty()
 					.filter(o =>
@@ -143,8 +155,7 @@ function pobierzOpcje(pole) {
 						o.nazwa_oferty == wybor.oferta
 					)
 					.map(pobierzKluczPakietu)
-					)
-			]
+			)]
 			.map(pakiet => ({
 				value: pakiet,
 				text: pokazNazwePakietu(pakiet)
