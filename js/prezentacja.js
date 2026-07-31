@@ -39,10 +39,6 @@ function pokazParametryOferty(oferta){
 		case "telewizja":
 			return `
 				<p>
-					<strong>Pakiet:</strong>
-					${oferta.nazwa_pakietu}
-				</p>
-				<p>
 					<strong>Liczba kanałów:</strong>
 					${oferta.liczba_kanalow}
 				</p>
