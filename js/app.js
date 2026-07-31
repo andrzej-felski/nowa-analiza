@@ -239,7 +239,7 @@ function szukaj(){
 			case "internet_mobilny":
 				return Number(o.pakiet_gb) === Number(pakiet);
 			case "telewizja":
-				return o.nazwa_pakietu === pakiet;
+				return Number(o.liczba_kanalow) === Number(pakiet);
 			default:
 				return false;
 		}
