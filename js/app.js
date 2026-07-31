@@ -20,6 +20,7 @@ async function start(){
     dane.uslugi.internet = await wczytajCSV("internet.csv");
 	dane.uslugi.internet_mobilny = await wczytajCSV("internet_mobilny.csv");
 	dane.uslugi.telewizja = await wczytajCSV("telewizja.csv");
+	dane.uslugi.abonament_komorkowy = await wczytajCSV("abonament_komorkowy.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -104,6 +105,10 @@ function pobierzOpcje(pole) {
 				{
 					value: "telewizja",
 					text: "Telewizja"
+				},
+				{
+					value: "abonament_komorkowy",
+					text: "Abonament komórkowy"
 				}
 			]
 			.filter(usluga =>
@@ -135,34 +140,33 @@ function pobierzOpcje(pole) {
 				text: oferta
 			}));
 		case "pakiet":
-			if (wybor.usluga === "telewizja") {
-				return pobierzOferty()
-					.filter(o =>
-						o.id_firmy == wybor.firma &&
-						o.okres_umowy == wybor.okres &&
-						o.nazwa_oferty == wybor.oferta
-					)
-					.map(o => ({
+			let oferty = pobierzOferty().filter(o =>
+				o.id_firmy == wybor.firma &&
+				o.okres_umowy == wybor.okres &&
+				o.nazwa_oferty == wybor.oferta
+			);
+
+			switch (wybor.usluga) {
+				case "telewizja":
+					return oferty.map(o => ({
 						value: o.liczba_kanalow,
 						text: `${o.nazwa_pakietu} - ${o.liczba_kanalow} kanałów`
 					}));
+
+				case "abonament_komorkowy":
+					return oferty.map(o => ({
+						value: o.pakiet_gb,
+						text: pokazNazwePakietuAbonamentu(o)
+					}));
+
+				default:
+					return [...new Set(oferty.map(pobierzKluczPakietu))]
+						.map(pakiet => ({
+							value: pakiet,
+							text: pokazNazwePakietu(pakiet)
+						}));
 			}
-			return [...new Set(
-				pobierzOferty()
-					.filter(o =>
-						o.id_firmy == wybor.firma &&
-						o.okres_umowy == wybor.okres &&
-						o.nazwa_oferty == wybor.oferta
-					)
-					.map(pobierzKluczPakietu)
-			)]
-			.map(pakiet => ({
-				value: pakiet,
-				text: pokazNazwePakietu(pakiet)
-			}));
-        default:
-            return [];
-    }
+	}
 }
 
 function pobierzKluczPakietu(oferta){
@@ -173,6 +177,8 @@ function pobierzKluczPakietu(oferta){
             return String(oferta.pakiet_gb);
 		case "telewizja":
 			return String(oferta.liczba_kanalow);
+        case "abonament_komorkowy":
+            return String(oferta.pakiet_gb);
         default:
             return "";
     }
@@ -182,14 +188,27 @@ function pokazNazwePakietu(pakiet){
     switch (wybor.usluga) {
         case "internet":
             return pakiet.replace("/", " / ") + " Mb/s";
-		case "internet_mobilny":
-			return Number(pakiet) === 9999
-				? "Bez limitu"
-				: `${pakiet} GB`;
-		case "telewizja":
+
+        case "internet_mobilny":
+            return Number(pakiet) === 9999
+                ? "Bez limitu"
+                : `${pakiet} GB`;
+        case "telewizja":
             return pakiet.replace("-", " - ") + " kanałów";
         default:
             return pakiet;
+    }
+}
+
+function pokazNazwePakietuAbonamentu(oferta) {
+    let tekst = oferta.nazwa_pakietu;
+    switch (Number(oferta.pakiet_gb)) {
+        case 0:
+            return tekst;
+        case 9999:
+            return `${tekst} - Bez limitu`;
+        default:
+            return `${tekst} - ${oferta.pakiet_gb} GB`;
     }
 }
 
@@ -251,6 +270,8 @@ function szukaj(){
 				return Number(o.pakiet_gb) === Number(pakiet);
 			case "telewizja":
 				return Number(o.liczba_kanalow) === Number(pakiet);
+			case "abonament_komorkowy":
+				return Number(o.pakiet_gb) === Number(pakiet);
 			default:
 				return false;
 		}
