@@ -1,0 +1,125 @@
+﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;pakiet_minut;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+1;CHOPIN;24;24;FON DOMOWY;FON Senior;0;0;;dostępny dla klientów posiadających legitymację emeryta / rencisty, cena z rabatem za e-fakturę;1;3;13.81;4;24;17.63
+2;CHOPIN;24;24;FON DOMOWY;FON Startowy;50;50;;cena z rabatem za e-fakturę;1;3;13.81;4;24;22.67
+3;CHOPIN;24;24;FON DOMOWY;FON 150;150;150;;cena z rabatem za e-fakturę;1;3;13.81;4;24;29.80
+4;CHOPIN;24;24;FON DOMOWY;FON 500;500;500;;cena z rabatem za e-fakturę;1;3;13.81;4;24;52.48
+5;CHOPIN;24;24;FON DOMOWY;FON 2000;2000;2000;;cena z rabatem za e-fakturę;1;3;13.81;4;24;72.48
+6;PELMAR;24;24;FON DOMOWY;FON Senior;0;0;;dostępny dla klientów posiadających legitymację emeryta / rencisty, cena z rabatem za e-fakturę;1;3;13.81;4;24;17.63
+7;PELMAR;24;24;FON DOMOWY;FON Startowy;50;50;;cena z rabatem za e-fakturę;1;3;13.81;4;24;22.67
+8;PELMAR;24;24;FON DOMOWY;FON 150;150;150;;cena z rabatem za e-fakturę;1;3;13.81;4;24;29.80
+9;PELMAR;24;24;FON DOMOWY;FON 500;500;500;;cena z rabatem za e-fakturę;1;3;13.81;4;24;52.48
+10;PELMAR;24;24;FON DOMOWY;FON 2000;2000;2000;;cena z rabatem za e-fakturę;1;3;13.81;4;24;72.48
+11;MC2;24;24;FON DOMOWY;FON Senior;0;0;;dostępny dla klientów posiadających legitymację emeryta / rencisty, cena z rabatem za e-fakturę;1;3;13.81;4;24;17.63
+12;MC2;24;24;FON DOMOWY;FON Startowy;50;50;;cena z rabatem za e-fakturę;1;3;13.81;4;24;22.67
+13;MC2;24;24;FON DOMOWY;FON 150;150;150;;cena z rabatem za e-fakturę;1;3;13.81;4;24;29.80
+14;MC2;24;24;FON DOMOWY;FON 500;500;500;;cena z rabatem za e-fakturę;1;3;13.81;4;24;52.48
+15;MC2;24;24;FON DOMOWY;FON 2000;2000;2000;;cena z rabatem za e-fakturę;1;3;13.81;4;24;72.48
+16;MC1_OLSZTYN;12;12;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;1;0.00;2;12;24.98
+17;MC1_OLSZTYN;12;12;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;1;0.00;2;12;34.98
+18;MC1_OLSZTYN;12;12;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+19;MC1_OLSZTYN;12;12;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+20;MC1_OLSZTYN;12;12;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;54.98
+21;MC1_OLSZTYN;24;24;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;3;0.00;4;24;24.98
+22;MC1_OLSZTYN;24;24;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;3;0.00;4;24;34.98
+23;MC1_OLSZTYN;24;24;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+24;MC1_OLSZTYN;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+25;MC1_OLSZTYN;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
+26;MC1_STARGARD;12;12;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;1;0.00;2;12;24.98
+27;MC1_STARGARD;12;12;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;1;0.00;2;12;34.98
+28;MC1_STARGARD;12;12;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+29;MC1_STARGARD;12;12;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+30;MC1_STARGARD;12;12;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;54.98
+31;MC1_STARGARD;24;24;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;3;0.00;4;24;24.98
+32;MC1_STARGARD;24;24;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;3;0.00;4;24;34.98
+33;MC1_STARGARD;24;24;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+34;MC1_STARGARD;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+35;MC1_STARGARD;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
+36;MC1_OSTRODA;12;12;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;1;0.00;2;12;24.98
+37;MC1_OSTRODA;12;12;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;1;0.00;2;12;34.98
+38;MC1_OSTRODA;12;12;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+39;MC1_OSTRODA;12;12;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+40;MC1_OSTRODA;12;12;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;54.98
+41;MC1_OSTRODA;24;24;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;3;0.00;4;24;24.98
+42;MC1_OSTRODA;24;24;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;3;0.00;4;24;34.98
+43;MC1_OSTRODA;24;24;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+44;MC1_OSTRODA;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+45;MC1_OSTRODA;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
+46;MC1_LOWICZ;12;12;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;1;0.00;2;12;24.98
+47;MC1_LOWICZ;12;12;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;1;0.00;2;12;34.98
+48;MC1_LOWICZ;12;12;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+49;MC1_LOWICZ;12;12;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+50;MC1_LOWICZ;12;12;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;54.98
+51;MC1_LOWICZ;24;24;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;3;0.00;4;24;24.98
+52;MC1_LOWICZ;24;24;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;3;0.00;4;24;34.98
+53;MC1_LOWICZ;24;24;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+54;MC1_LOWICZ;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+55;MC1_LOWICZ;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
+56;MC1_KWIDZYN;12;12;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;1;0.00;2;12;24.98
+57;MC1_KWIDZYN;12;12;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;1;0.00;2;12;34.98
+58;MC1_KWIDZYN;12;12;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+59;MC1_KWIDZYN;12;12;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;44.98
+60;MC1_KWIDZYN;12;12;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;1;0.00;2;12;54.98
+61;MC1_KWIDZYN;24;24;Plany DOM;Standardowy 50;50;50;;cena z rabatem za e-fakturę;1;3;0.00;4;24;24.98
+62;MC1_KWIDZYN;24;24;Plany DOM;Standardowy 200;200;150;;cena z rabatem za e-fakturę;1;3;0.00;4;24;34.98
+63;MC1_KWIDZYN;24;24;Plany DOM;Rodzinny 400;400;500;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+64;MC1_KWIDZYN;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
+65;MC1_KWIDZYN;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
+66;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena z rabatem za e-fakturę;1;999;45.00;;;
+67;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena dla klientów posiadających telewizję, cena z rabatem za e-fakturę;1;999;25.00;;;
+68;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena dla klientów posiadających internet, cena z rabatem za e-fakturę;1;999;18.40;;;
+69;ELTRONIK;24;24;Telefon stacjonarny;SENIOR;90;50;;dostępny dla klientów posiadających legitymację emeryta / rencisty;1;24;13.00;;;
+70;ELTRONIK;24;24;Telefon stacjonarny;OSZCZĘDNY;90;50;;;1;24;10.00;;;
+71;ELTRONIK;24;24;Telefon stacjonarny;TANIE ROZMOWY;270;150;;;1;24;16.00;;;
+72;ELTRONIK;24;24;Telefon stacjonarny;OPTYMALNY;1120;500;;;1;24;31.00;;;
+73;ELTRONIK;24;24;Telefon stacjonarny;DARMOWE ROZMOWY;2420;2000;;;1;24;51.00;;;
+74;NETIA;24;24;Telefon stacjonarny;Bez limitu;9999;2000;;cena z rabatami;1;24;30.00;;;
+75;VECTRA;23;24;Telefon stacjonarny;Nielimitowane połączenia;9999;2000;;cena z rabatami;1;1;0.00;2;23;15.00
+76;JMDI;24;24;Telefon stacjonarny;Telefon 50;50;50;;darmowe minuty tylko na telefony stacjonarne, cena z rabatami;1;24;10.00;;;
+77;JMDI;24;24;Telefon stacjonarny;Telefon 50 Plus;50;50;;cena z rabatami;1;24;15.00;;;
+78;JMDI;24;24;Telefon stacjonarny;Telefon 300;300;150;;darmowe minuty tylko na telefony stacjonarne, cena z rabatami;1;24;20.00;;;
+79;JMDI;24;24;Telefon stacjonarny;Telefon 300 Plus;300;150;;cena z rabatami;1;24;30.00;;;
+80;JMDI;24;24;Telefon stacjonarny;Telefon 1500;1500;2000;;darmowe minuty tylko na telefony stacjonarne, cena z rabatami;1;24;35.00;;;
+81;JMDI;24;24;Telefon stacjonarny;Telefon 1500 Plus;1500;2000;;cena z rabatami;1;24;50.00;;;
+82;PLASTCOM;12;12;Telefon stacjonarny;Abonament telefoniczny;10;0;;darmowe minuty na połączenia lokalne;1;12;24.40;;;
+83;PLASTCOM;24;24;Telefon stacjonarny;Abonament telefoniczny;10;0;;darmowe minuty na połączenia lokalne;1;24;14.00;;;
+84;PLASTCOM;999;999;Telefon stacjonarny;Abonament telefoniczny;10;0;;darmowe minuty na połączenia lokalne;1;999;36.60;;;
+85;TYGRYS;999;999;Telefon stacjonarny;Start;60;50;;;1;999;15.00;;;
+86;TYGRYS;999;999;Telefon stacjonarny;Premium;350;500;;;1;999;40.00;;;
+87;TYGRYS;999;999;Telefon stacjonarny;Max;9999;2000;;;1;999;60.00;;;
+88;LIMES;23;24;Telefon stacjonarny;Taryfa modna;50;50;;;1;23;10.00;;;
+89;LIMES;23;24;Telefon stacjonarny;Taryfa dopasowana;150;150;;;1;23;29.00;;;
+90;LIMES;23;24;Telefon stacjonarny;Taryfa wygodna;250;150;;;1;23;40.00;;;
+91;LIMES;23;24;Telefon stacjonarny;Taryda nowoczesna;1000;500;;;1;23;59.00;;;
+92;TELKAB;23;24;Telefon stacjonarny;Plan Mój Numer;0;0;;;1;23;25.00;;;
+93;TELKAB;23;24;Telefon stacjonarny;Plan 150;150;150;;;1;23;40.00;;;
+94;TELKAB;23;24;Telefon stacjonarny;Plan 500;500;500;;;1;23;60.00;;;
+95;VOLTA;999;999;Telefon stacjonarny;Abonament telefoniczny;0;0;;;1;999;12.00;;;
+96;INTELLY;12;12;Telefon stacjonarny;Plan START;0;0;;;1;12;9.90;;;
+97;INTELLY;12;12;Telefon stacjonarny;Plan 60;60;50;;;1;12;15.90;;;
+98;INTELLY;12;12;Telefon stacjonarny;Plan 100;100;50;;;1;12;18.90;;;
+99;INTELLY;12;12;Telefon stacjonarny;Plan 120;120;150;;;1;12;24.90;;;
+100;INTELLY;12;12;Telefon stacjonarny;Plan 400;400;500;;;1;12;29.90;;;
+101;INTELLY;12;12;Telefon stacjonarny;Plan 3000;3000;2000;;;1;12;45.90;;;
+102;INTELLY;24;24;Telefon stacjonarny;Plan START;0;0;;;1;24;9.90;;;
+103;INTELLY;24;24;Telefon stacjonarny;Plan 60;60;50;;;1;24;15.90;;;
+104;INTELLY;24;24;Telefon stacjonarny;Plan 100;100;50;;;1;24;18.90;;;
+105;INTELLY;24;24;Telefon stacjonarny;Plan 120;120;150;;;1;24;24.90;;;
+106;INTELLY;24;24;Telefon stacjonarny;Plan 400;400;500;;;1;24;29.90;;;
+107;INTELLY;24;24;Telefon stacjonarny;Plan 3000;3000;2000;;;1;24;45.90;;;
+108;IWKD;24;24;Telefon stacjonarny;SOCJALNY;0;0;;;1;24;25.00;;;
+109;IWKD;24;24;Telefon stacjonarny;DOMOWY;300;150;;;1;24;30.00;;;
+110;IWKD;24;24;Telefon stacjonarny;MAX;9999;2000;;;1;24;84.00;;;
+111;MPCNET;12;21;VoIP;100 ALL;100;50;;;1;12;25.00;;;
+112;MPCNET;12;12;VoIP;VoIP 500 ALL;500;500;;;1;12;50.00;;;
+113;MPCNET;12;12;VoIP;VoIP 1000 ALL;1000;500;;;1;12;100.00;;;
+114;WAVE;24;24;Telefon stacjonarny;Minimalny;60;50;;;1;24;19.00;;;
+115;WAVE;24;24;Telefon stacjonarny;Optymalny;500;500;;;1;24;29.00;;;
+116;WAVE;24;24;Telefon stacjonarny;Bez Limitu;9999;2000;;;1;24;49.00;;;
+117;MBIT;24;24;VoIP;mGrosik;50;50;;;1;24;9.00;;;
+118;MBIT;24;24;VoIP;mStandard;150;150;;;1;24;29.00;;;
+119;MBIT;24;24;VoIP;mPlotek;300;150;;;1;24;39.00;;;
+120;PRO_INTERNET;24;24;Telefon TCP;dla Klientów bez internetu;0;0;;;1;24;19.90;;;
+121;PRO_INTERNET;24;24;Telefon TCP;dla Klientów z internetem;0;0;;cena dla klientów posiadających internet;1;24;14.90;;;
+122;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;999;Telefon stacjonarny;Telefonia GTP;300;150;;300 minut na stacjonarne, 20 minut na komórki, 60 minut na połączenia międzynarodowe;1;999;38.00;;;
+123;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;999;Telefon stacjonarny;Telefonia GTP;300;150;;cena dla klientów posiadających 1 inna usługę, 300 minut na stacjonarne, 20 minut na komórki, 60 minut na połączenia międzynarodowe;1;999;28.00;;;
+124;GORZOWSKA_TELEWIZJA_PRZEWODOWA;999;999;Telefon stacjonarny;Telefonia GTP;300;150;;cena dla klientów posiadających 2 inne usługi, 300 minut na stacjonarne, 20 minut na komórki, 60 minut na połączenia międzynarodowe;1;999;25.00;;;
