@@ -46,8 +46,7 @@ function pokazParametryOferty(oferta){
 		case "abonament_komorkowy":
 			return `
 				<p>
-					<strong>Pakiet:</strong>
-					${oferta.nazwa_pakietu}
+					<strong>Pakiet danych:</strong>
 					${pokazPakietGB(oferta) ? " - " + pokazPakietGB(oferta) : ""}
 				</p>
 			`;
