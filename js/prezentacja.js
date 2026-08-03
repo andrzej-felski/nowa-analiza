@@ -47,7 +47,8 @@ function pokazParametryOferty(oferta){
 			return `
 				<p>
 					<strong>Pakiet:</strong>
-					${pokazNazwePakietuAbonamentu(oferta)}
+					${oferta.nazwa_pakietu}
+					${pokazPakietGB(oferta) ? " - " + pokazPakietGB(oferta) : ""}
 				</p>
 			`;
         default:
@@ -203,7 +204,8 @@ function pokazParametrNaglowka(oferta){
 		case "abonament_komorkowy":
 			return `
 				<span>
-					${pokazNazwePakietuAbonamentu(oferta)}
+					${oferta.nazwa_pakietu}
+					${pokazPakietGB(oferta) ? " - " + pokazPakietGB(oferta) : ""}
 				</span>
 			`;
         default:
