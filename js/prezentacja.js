@@ -33,7 +33,7 @@ function pokazParametryOferty(oferta){
 			return `
 				<p>
 					<strong>Pakiet danych:</strong>
-					${pokazPakietGB(oferta)}
+					${pokazPakiet(oferta)}
 				</p>
 			`;
 		case "telewizja":
@@ -47,7 +47,17 @@ function pokazParametryOferty(oferta){
 			return `
 				<p>
 					<strong>Pakiet danych:</strong>
-					${pokazPakietGB(oferta)}
+					${pokazPakiet(oferta)}
+				</p>
+			`;
+		case "telefon_stacjonarny":
+			return `
+				<p>
+					<strong>Pakiet darmowych minut:</strong>
+					${oferta.nazwa_pakietu}
+					${pokazPakiet(oferta)
+						? " - " + pokazPakiet(oferta)
+						: ""}
 				</p>
 			`;
         default:
@@ -55,13 +65,24 @@ function pokazParametryOferty(oferta){
     }
 }
 
-function pokazPakietGB(oferta){
-    switch (Number(oferta.pakiet_gb)) {
-        case 9999:
-            return "Bez limitu";
+function pokazPakiet(oferta) {
+    let wartosc;
+    switch (wybor.usluga) {
+        case "telefon_stacjonarny":
+            wartosc = Number(oferta.pakiet_minut);
+            break;
         default:
-            return `${oferta.pakiet_gb} GB`;
+            wartosc = Number(oferta.pakiet_gb);
     }
+    if (wartosc === 0) {
+        return "";
+    }
+    if (wartosc === 9999) {
+        return "Bez limitu";
+    }
+    return wybor.usluga === "telefon_stacjonarny"
+        ? `${wartosc} min`
+        : `${wartosc} GB`;
 }
 
 function pokazDlugoscUmowy(oferta){
@@ -189,7 +210,7 @@ function pokazParametrNaglowka(oferta){
 		case "internet_mobilny":
 			return `
 				<span>
-					${pokazPakietGB(oferta)}
+					${pokazPakiet(oferta)}
 				</span>
 			`;
 		case "telewizja":
@@ -202,7 +223,16 @@ function pokazParametrNaglowka(oferta){
 			return `
 				<span>
 					${oferta.nazwa_pakietu}
-					${pokazPakietGB(oferta) ? " - " + pokazPakietGB(oferta) : ""}
+					${pokazPakiet(oferta) ? " - " + pokazPakiet(oferta) : ""}
+				</span>
+			`;
+		case "telefon_stacjonarny":
+			return `
+				<span>
+					${oferta.nazwa_pakietu}
+					${pokazPakiet(oferta)
+						? " - " + pokazPakiet(oferta)
+						: ""}
 				</span>
 			`;
         default:
@@ -271,6 +301,8 @@ function pokazNazweUslugi(usluga){
 			return "Telewizja";
 		case "abonament_komorkowy":
 			return "Abonament komórkowy";
+		case "telefon_stacjonarny":
+			return "Telefon stacjonarny";
         default:
             return usluga;
     }
