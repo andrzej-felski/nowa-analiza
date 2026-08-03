@@ -54,10 +54,7 @@ function pokazParametryOferty(oferta){
 			return `
 				<p>
 					<strong>Pakiet darmowych minut:</strong>
-					${oferta.nazwa_pakietu}
-					${pokazPakiet(oferta)
-						? " - " + pokazPakiet(oferta)
-						: ""}
+					${pokazPakiet(oferta)}
 				</p>
 			`;
         default:
