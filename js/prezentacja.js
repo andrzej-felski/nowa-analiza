@@ -47,7 +47,7 @@ function pokazParametryOferty(oferta){
 			return `
 				<p>
 					<strong>Pakiet danych:</strong>
-					${pokazPakietGB(oferta) ? " - " + pokazPakietGB(oferta) : ""}
+					${pokazPakietGB(oferta)}
 				</p>
 			`;
         default:
