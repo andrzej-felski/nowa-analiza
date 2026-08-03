@@ -1,4 +1,4 @@
-﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;pakiet_minut;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;pakiet_minut;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
 1;CHOPIN;24;24;FON DOMOWY;FON Senior;0;0;;dostępny dla klientów posiadających legitymację emeryta / rencisty, cena z rabatem za e-fakturę;1;3;13.81;4;24;17.63
 2;CHOPIN;24;24;FON DOMOWY;FON Startowy;50;50;;cena z rabatem za e-fakturę;1;3;13.81;4;24;22.67
 3;CHOPIN;24;24;FON DOMOWY;FON 150;150;150;;cena z rabatem za e-fakturę;1;3;13.81;4;24;29.80
@@ -65,8 +65,8 @@
 64;MC1_KWIDZYN;24;24;Plany DOM;Bez Limitu;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;44.98
 65;MC1_KWIDZYN;24;24;Plany DOM;Bez Limitu - Świat;9999;2000;;cena z rabatem za e-fakturę;1;3;0.00;4;24;54.98
 66;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena z rabatem za e-fakturę;1;999;45.00;;;
-67;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena dla klientów posiadających telewizję, cena z rabatem za e-fakturę;1;999;25.00;;;
-68;JIM-SAT;999;999;Familijny;Halo 60;60;50;;cena dla klientów posiadających internet, cena z rabatem za e-fakturę;1;999;18.40;;;
+67;JIM-SAT;999;999;Familijny;Halo 60 (z telewizją);60;50;;cena dla klientów posiadających telewizję, cena z rabatem za e-fakturę;1;999;25.00;;;
+68;JIM-SAT;999;999;Familijny;Halo 60 (z internetem);60;50;;cena dla klientów posiadających internet, cena z rabatem za e-fakturę;1;999;18.40;;;
 69;ELTRONIK;24;24;Telefon stacjonarny;SENIOR;90;50;;dostępny dla klientów posiadających legitymację emeryta / rencisty;1;24;13.00;;;
 70;ELTRONIK;24;24;Telefon stacjonarny;OSZCZĘDNY;90;50;;;1;24;10.00;;;
 71;ELTRONIK;24;24;Telefon stacjonarny;TANIE ROZMOWY;270;150;;;1;24;16.00;;;
