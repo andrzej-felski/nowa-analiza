@@ -71,9 +71,6 @@ function pokazPakiet(oferta) {
         default:
             wartosc = Number(oferta.pakiet_gb);
     }
-    if (wartosc === 0) {
-        return "";
-    }
     if (wartosc === 9999) {
         return "Bez limitu";
     }
