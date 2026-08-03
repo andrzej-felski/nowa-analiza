@@ -57,8 +57,6 @@ function pokazParametryOferty(oferta){
 
 function pokazPakietGB(oferta){
     switch (Number(oferta.pakiet_gb)) {
-        case 0:
-            return "";
         case 9999:
             return "Bez limitu";
         default:
