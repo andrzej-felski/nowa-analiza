@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 30px;
-    background:#4a4a4a;
+	background: radial-gradient(circle, #848484 0%, #4A4A4A 100%);
 	max-width:1200px;
 	margin: 0 auto;
 }
@@ -298,11 +298,11 @@ button:hover {
 }
 
 .akordeon-naglowek.konkurencja-drozsza {
-    background:#F0FFF0;
+	background: radial-gradient(circle, #F0FFF0 0%, #CFFFCF 100%);
 }
 
 .akordeon-naglowek.konkurencja-tansza {
-    background:#FFDADA;
+	background: radial-gradient(circle, #FFDADA 0%, #FFC0C0 100%);
 }
 
 .brak-konkurencji {
