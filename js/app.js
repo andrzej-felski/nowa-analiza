@@ -21,6 +21,7 @@ async function start(){
 	dane.uslugi.internet_mobilny = await wczytajCSV("internet_mobilny.csv");
 	dane.uslugi.telewizja = await wczytajCSV("telewizja.csv");
 	dane.uslugi.abonament_komorkowy = await wczytajCSV("abonament_komorkowy.csv");
+	dane.uslugi.telefon_stacjonarny = await wczytajCSV("telefon_stacjonarny.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -109,7 +110,11 @@ function pobierzOpcje(pole) {
 				{
 					value: "abonament_komorkowy",
 					text: "Abonament komórkowy"
-				}
+				},
+				{
+					value: "telefon_stacjonarny",
+					text: "Telefon stacjonarny"
+				},
 			]
 			.filter(usluga =>
 				dane.uslugi[usluga.value].some(o =>
@@ -153,7 +158,7 @@ function pobierzOpcje(pole) {
 					}));
 				case "abonament_komorkowy":
 					return oferty.map(o => {
-						let pakiet = pokazPakietGB(o);
+						let pakiet = pokazPakiet(o);
 						return {
 							value: o.pakiet_gb,
 							text: pakiet
@@ -161,6 +166,14 @@ function pobierzOpcje(pole) {
 								: o.nazwa_pakietu
 						};
 					});
+				case "telefon_stacjonarny":
+					return oferty.map(o => ({
+						value: o.pakiet_minut,
+						text: o.nazwa_pakietu +
+							(pokazPakiet(o)
+								? ` - ${pokazPakiet(o)}`
+								: "")
+					}));
 				default:
 					return [...new Set(oferty.map(pobierzKluczPakietu))]
 						.map(pakiet => ({
@@ -181,6 +194,8 @@ function pobierzKluczPakietu(oferta){
 			return String(oferta.liczba_kanalow);
         case "abonament_komorkowy":
             return String(oferta.pakiet_gb);
+		case "telefon_stacjonarny":
+			return String(oferta.pakiet_minut);
         default:
             return "";
     }
@@ -202,6 +217,10 @@ function pokazNazwePakietu(oferta) {
             return Number(oferta.pakiet_gb) === 9999
                 ? `${oferta.nazwa_pakietu} - Bez limitu`
                 : `${oferta.nazwa_pakietu} - ${oferta.pakiet_gb} GB`;
+			case "telefon_stacjonarny":
+				return Number(pakiet) === 9999
+					? "Bez limitu"
+					: `${pakiet} min`;
     }
 }
 
@@ -265,6 +284,8 @@ function szukaj(){
 				return Number(o.liczba_kanalow) === Number(pakiet);
 			case "abonament_komorkowy":
 				return Number(o.pakiet_gb) === Number(pakiet);
+			case "telefon_stacjonarny":
+				return Number(o.pakiet_minut) === Number(pakiet);
 			default:
 				return false;
 		}
