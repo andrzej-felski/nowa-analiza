@@ -145,20 +145,22 @@ function pobierzOpcje(pole) {
 				o.okres_umowy == wybor.okres &&
 				o.nazwa_oferty == wybor.oferta
 			);
-
 			switch (wybor.usluga) {
 				case "telewizja":
 					return oferty.map(o => ({
 						value: o.liczba_kanalow,
 						text: `${o.nazwa_pakietu} - ${o.liczba_kanalow} kanałów`
 					}));
-
 				case "abonament_komorkowy":
-					return oferty.map(o => ({
-						value: o.pakiet_gb,
-						text: pokazNazwePakietuAbonamentu(o)
-					}));
-
+					return oferty.map(o => {
+						let pakiet = pokazPakietGB(o);
+						return {
+							value: o.pakiet_gb,
+							text: pakiet
+								? `${o.nazwa_pakietu} - ${pakiet}`
+								: o.nazwa_pakietu
+						};
+					});
 				default:
 					return [...new Set(oferty.map(pobierzKluczPakietu))]
 						.map(pakiet => ({
@@ -184,31 +186,22 @@ function pobierzKluczPakietu(oferta){
     }
 }
 
-function pokazNazwePakietu(pakiet){
+function pokazNazwePakietu(oferta) {
     switch (wybor.usluga) {
         case "internet":
-            return pakiet.replace("/", " / ") + " Mb/s";
-
+            return `${oferta.predkosc_pobierania} / ${oferta.predkosc_wysylania} Mb/s`;
         case "internet_mobilny":
-            return Number(pakiet) === 9999
+            return Number(oferta.pakiet_gb) === 9999
                 ? "Bez limitu"
-                : `${pakiet} GB`;
+                : `${oferta.pakiet_gb} GB`;
         case "telewizja":
-            return pakiet.replace("-", " - ") + " kanałów";
-        default:
-            return pakiet;
-    }
-}
-
-function pokazNazwePakietuAbonamentu(oferta) {
-    let tekst = oferta.nazwa_pakietu;
-    switch (Number(oferta.pakiet_gb)) {
-        case 0:
-            return tekst;
-        case 9999:
-            return `${tekst} - Bez limitu`;
-        default:
-            return `${tekst} - ${oferta.pakiet_gb} GB`;
+            return `${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów`;
+        case "abonament_komorkowy":
+            if (Number(oferta.pakiet_gb) === 0)
+                return oferta.nazwa_pakietu;
+            return Number(oferta.pakiet_gb) === 9999
+                ? `${oferta.nazwa_pakietu} - Bez limitu`
+                : `${oferta.nazwa_pakietu} - ${oferta.pakiet_gb} GB`;
     }
 }
 
