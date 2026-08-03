@@ -176,10 +176,14 @@ function pobierzOpcje(pole) {
 					}));
 				default:
 					return [...new Set(oferty.map(pobierzKluczPakietu))]
-						.map(pakiet => ({
-							value: pakiet,
-							text: pokazNazwePakietu(pakiet)
-						}));
+						.map(pakiet => {
+							const oferta = oferty.find(o => pobierzKluczPakietu(o) === pakiet);
+
+							return {
+								value: pakiet,
+								text: pokazNazwePakietu(oferta)
+							};
+						});
 			}
 	}
 }
@@ -218,9 +222,9 @@ function pokazNazwePakietu(oferta) {
                 ? `${oferta.nazwa_pakietu} - Bez limitu`
                 : `${oferta.nazwa_pakietu} - ${oferta.pakiet_gb} GB`;
 			case "telefon_stacjonarny":
-				return Number(pakiet) === 9999
+				return Number(oferta.pakiet_minut) === 9999
 					? "Bez limitu"
-					: `${pakiet} min`;
+					: `${oferta.pakiet_minut} min`;
     }
 }
 
