@@ -450,19 +450,19 @@ function generujTabelePorownania(nasza, konkurencja){
                     zakres.do
                 )}
             </td>
-			<td class="${
-				cenaKonkurencji > cenaNasza
-				? "drozsza"
-				: cenaKonkurencji < cenaNasza
-				? "tansza"
-				: ""
-			}">
+			<td>
 				${pokazCene(cenaKonkurencji)}
 			</td>
 			<td class="znak">
 				${znak}
 			</td>
-			<td>
+			<td class="${
+				cenaNasza < cenaKonkurencji
+				? "tansza"
+				: cenaNasza > cenaKonkurencji
+				? "drozsza"
+				: ""
+			}">
 				${pokazCene(cenaNasza)}
 			</td>
         </tr>
