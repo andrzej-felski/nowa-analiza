@@ -416,7 +416,7 @@ function generujTabelePorownania(nasza, konkurencja){
             konkurencja
         );
     let html = "";
-    zakresy.forEach(zakres=>{
+    zakresy.forEach(zakres => {
         let cenaNasza =
             pobierzCeneWMiesiacu(
                 nasza,
@@ -427,21 +427,33 @@ function generujTabelePorownania(nasza, konkurencja){
                 konkurencja,
                 zakres.od
             );
-		let znak = "";
-		if (
-			cenaKonkurencji !== null &&
-			cenaNasza !== null
-		) {
-			if(cenaKonkurencji > cenaNasza){
-				znak = ">";
-			}
-			if(cenaKonkurencji < cenaNasza){
-				znak = "<";
-			}
-			if(cenaKonkurencji === cenaNasza){
-				znak = "=";
-			}
-		}
+        let znak = "";
+        if (
+            cenaKonkurencji !== null &&
+            cenaNasza !== null
+        ) {
+            if(cenaKonkurencji > cenaNasza){
+                znak = ">";
+            }
+            if(cenaKonkurencji < cenaNasza){
+                znak = "<";
+            }
+            if(cenaKonkurencji === cenaNasza){
+                znak = "=";
+            }
+        }
+        let klasaNasza = "";
+        if (
+            cenaNasza !== null &&
+            cenaKonkurencji !== null
+        ) {
+            if(cenaNasza < cenaKonkurencji){
+                klasaNasza = "tansza";
+            }
+            if(cenaNasza > cenaKonkurencji){
+                klasaNasza = "drozsza";
+            }
+        }
         html += `
         <tr>
             <td>
@@ -450,61 +462,50 @@ function generujTabelePorownania(nasza, konkurencja){
                     zakres.do
                 )}
             </td>
-			<td>
-				${pokazCene(cenaKonkurencji)}
-			</td>
-			<td class="znak">
-				${znak}
-			</td>
-			<td class="${
-				cenaNasza < cenaKonkurencji
-				? "tansza"
-				: cenaNasza > cenaKonkurencji
-				? "drozsza"
-				: ""
-			}">
-				${pokazCene(cenaNasza)}
-			</td>
+            <td>
+                ${pokazCene(cenaKonkurencji)}
+            </td>
+            <td class="znak">
+                ${znak}
+            </td>
+            <td class="${klasaNasza}">
+                ${pokazCene(cenaNasza)}
+            </td>
         </tr>
         `;
     });
-	let sredniaNasza = policzSredniaCene(nasza);
-	let sredniaKonkurencji = policzSredniaCene(konkurencja);
-	let roznicaSrednia = "";
-	if (sredniaKonkurencji > sredniaNasza) {
-		roznicaSrednia = ">";
-	}
-	if (sredniaKonkurencji < sredniaNasza) {
-		roznicaSrednia = "<";
-	}
-	html += `
-	<tr class="wiersz-srednia">
-		<td>
-			Średnia cena
-		</td>
-		<td>
-			${pokazCene(sredniaKonkurencji)}
-		</td>
-		<td class="znak">
-			${roznicaSrednia}
-		</td>
-		<td class="${
-			sredniaNasza < sredniaKonkurencji
-			? "tansza"
-			: sredniaNasza > sredniaKonkurencji
-			? "drozsza"
-			: ""
-		}">
-			${pokazCene(sredniaNasza)}
-		</td>
-		<td class="znak">
-			${roznicaSrednia}
-		</td>
-		<td>
-			${pokazCene(sredniaNasza)}
-		</td>
-	</tr>
-	`;
+    let sredniaNasza = policzSredniaCene(nasza);
+    let sredniaKonkurencji = policzSredniaCene(konkurencja);
+    let roznicaSrednia = "";
+    if(sredniaKonkurencji > sredniaNasza){
+        roznicaSrednia = ">";
+    }
+    if(sredniaKonkurencji < sredniaNasza){
+        roznicaSrednia = "<";
+    }
+    let klasaSredniaNasza = "";
+    if(sredniaNasza < sredniaKonkurencji){
+        klasaSredniaNasza = "tansza";
+    }
+    if(sredniaNasza > sredniaKonkurencji){
+        klasaSredniaNasza = "drozsza";
+    }
+    html += `
+    <tr class="wiersz-srednia">
+        <td>
+            Średnia cena
+        </td>
+        <td>
+            ${pokazCene(sredniaKonkurencji)}
+        </td>
+        <td class="znak">
+            ${roznicaSrednia}
+        </td>
+        <td class="${klasaSredniaNasza}">
+            ${pokazCene(sredniaNasza)}
+        </td>
+    </tr>
+    `;
     return `
         <table class="porownanie">
             <thead>
