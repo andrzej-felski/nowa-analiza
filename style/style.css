@@ -443,6 +443,7 @@ th:last-child {
 	
     .tresc-lewa,
     .tresc-prawa {
+		width:100%;
         padding:20px 0;
     }
 }
