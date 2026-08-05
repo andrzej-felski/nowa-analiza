@@ -120,7 +120,7 @@ function pokazWynik(oferta, konkurenci){
 		oferta
 	);
     html += `
-        <h2 style="text-align:center;color:#fff;">Konkurencja</h2>
+        <h2 style="text-align:center;color:#fff;">Oferty konkurencji</h2>
     `;
 	if (konkurenci.length > 0) {
 		konkurenci.forEach(k=>{
