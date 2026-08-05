@@ -57,6 +57,21 @@ function pokazParametryOferty(oferta){
 					${pokazPakiet(oferta)}
 				</p>
 			`;
+		case "pakiety":
+			return `
+                <p>
+                    <strong>Prędkość pobierania:</strong>
+                    ${oferta.predkosc_pobierania} Mb/s
+                </p>
+                <p>
+                    <strong>Prędkość wysyłania:</strong>
+                    ${oferta.predkosc_wysylania} Mb/s
+                </p>
+				<p>
+					<strong>Liczba kanałów:</strong>
+					${oferta.liczba_kanalow}
+				</p>
+			`;
         default:
             return "";
     }
@@ -229,6 +244,13 @@ function pokazParametrNaglowka(oferta){
 						: ""}
 				</span>
 			`;
+		case "pakiety":
+			return `
+				<span>
+					${oferta.predkosc_pobierania} / ${oferta.predkosc_wysylania} Mb/s
+					+ ${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
+				</span>
+			`;
         default:
             return "";
     }
@@ -297,6 +319,8 @@ function pokazNazweUslugi(usluga){
 			return "Abonament komórkowy";
 		case "telefon_stacjonarny":
 			return "Telefon stacjonarny";
+		case "pakiety":
+			return "Pakiety";
         default:
             return usluga;
     }
