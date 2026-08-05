@@ -1,0 +1,46 @@
+﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;nazwa_pakietu;liczba_kanalow;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2
+1;CHOPIN;12;12;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;12;8.57;;;
+2;CHOPIN;12;12;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;12;38.57;;;
+3;CHOPIN;12;12;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;12;53.57;;;
+4;CHOPIN;24;24;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;24;3.57;;;
+5;CHOPIN;24;24;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;24;33.57;;;
+6;CHOPIN;24;24;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;24;48.57;;;
+7;CHOPIN;999;999;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;999;18.57;;;
+8;CHOPIN;999;999;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;999;43.57;;;
+9;CHOPIN;999;999;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;999;58.57;;;
+10;PELMAR;12;12;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;12;8.57;;;
+11;PELMAR;12;12;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;12;38.57;;;
+12;PELMAR;12;12;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;12;53.57;;;
+13;PELMAR;24;24;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;24;3.57;;;
+14;PELMAR;24;24;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;24;33.57;;;
+15;PELMAR;24;24;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;24;48.57;;;
+16;PELMAR;999;999;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;999;18.57;;;
+17;PELMAR;999;999;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;999;43.57;;;
+18;PELMAR;999;999;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;999;58.57;;;
+19;MC2;12;12;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;12;8.57;;;
+20;MC2;12;12;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;12;38.57;;;
+21;MC2;12;12;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;12;53.57;;;
+22;MC2;24;24;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;24;3.57;;;
+23;MC2;24;24;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;24;33.57;;;
+24;MC2;24;24;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;24;48.57;;;
+25;MC2;999;999;Open TV;SMART S;33;33;;cena z rabatem za e-fakturę;1;999;18.57;;;
+26;MC2;999;999;Open TV;SMART M;84;84;;cena z rabatem za e-fakturę;1;999;43.57;;;
+27;MC2;999;999;Open TV;SMART L;136;136;;cena z rabatem za e-fakturę;1;999;58.57;;;
+28;ELTRONIK;24;24;IPTV;DOM PLUS;100;84;;;1;24;57.00;;;
+29;ELTRONIK;24;24;IPTV;DOM LUX;146;136;;;1;24;75.00;;;
+30;ELTRONIK;24;24;IPTV;DOM VIP;152;136;;;1;24;135.00;;;
+31;ORANGE;24;24;Telewizja internetowa;Orange TV GO;230;136;;cena z rabatami;1;24;4.99;;;
+32;T-MOBILE;24;24;Telewizja internetowa;Magenta TV M;150;136;;wymaga zakupu internetu, cena z rabatami;1;24;50.00;;;
+33;T-MOBILE;24;24;Telewizja internetowa;Magenta TV L;194;136;;wymaga zakupu internetu, cena z rabatami;1;24;80.00;;;
+34;PLAY;24;24;Telewizja internetowa;Plat NOW;66;84;;w cenie abonamentu internetowego;1;24;0.00;;;
+35;PLUS;24;24;Polsat BOX GO;Sport;25;33;;cena z rabatami;1;24;40.00;;;
+36;PLUS;24;24;Polsat BOX GO;Premium;101;84;;cena z rabatami;1;24;30.00;;;
+37;NETIA;24;24;Telewizja internetowa;Pakiet S;27;33;;w cenie abonamentu internetowego;1;24;0.00;;;
+38;NETIA;24;24;Telewizja internetowa;Pakiet M;49;33;;w cenie abonamentu internetowego;1;24;0.00;;;
+39;NETIA;24;24;Telewizja internetowa;Pakiet L;100;84;;w cenie abonamentu internetowego;1;24;0.00;;;
+40;VECTRA;11;12;Telewizja internetowa;Pakiet Start;42;33;HBO;cena z rabatami;1;1;0.00;2;11;19.99
+41;VECTRA;11;12;Telewizja internetowa;Pakier Standard;79;84;HBO;cena z rabatami;1;1;0.00;2;11;29.99
+42;VECTRA;11;12;Telewizja internetowa;Pakiet Max;123;136;HBO;cena z rabatami;1;1;0.00;2;11;44.99
+43;VECTRA;999;999;Telewizja internetowa;Pakiet Start;42;33;;cena z rabatami;1;999;24.99;;;
+44;VECTRA;999;999;Telewizja internetowa;Pakier Standard;79;84;;cena z rabatami;1;999;34.99;;;
+45;VECTRA;999;999;Telewizja internetowa;Pakiet Max;123;136;;cena z rabatami;1;999;44.99;;;
