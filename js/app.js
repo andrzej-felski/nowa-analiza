@@ -411,7 +411,7 @@ function szukaj(){
 		}
 		switch (wybor.usluga) {
 			case "internet":
-				let [download, upload] = pakiet.split("/");
+				let [download, upload] = pakiet.split("/").map(x => x.trim());
 				return (
 					o.predkosc_pobierania == download &&
 					o.predkosc_wysylania == upload
@@ -543,7 +543,7 @@ document
             .getElementById("wybranyPakiet")
             .textContent =
                 wyborPakietu.internet.download +
-                "/" +
+                " / " +
                 wyborPakietu.internet.upload +
                 " Mb/s + " +
                 wyborPakietu.telewizja.nazwa_pakietu;
