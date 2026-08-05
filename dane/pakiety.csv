@@ -1,4 +1,4 @@
-﻿id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;predkosc_wysylania;grupa_porownawcza_internet;nazwa_pakietu;liczba_kanalow;grupa_porownawcza;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2;okres_od_3;okres_do_3;cena_3
+id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;predkosc_wysylania;grupa_porownawcza_internet;nazwa_pakietu;liczba_kanalow;grupa_porownawcza_telewizja;dodatki;uwagi;okres_od_1;okres_do_1;cena_1;okres_od_2;okres_do_2;cena_2;okres_od_3;okres_do_3;cena_3
 1;CHOPIN;24;24;Oferta letnia;300;15;300;Start Box;129;129;SMART M - 84 kanały;cena z rabatem za e-fakturę;1;24;74.99;;;;;;
 2;CHOPIN;24;24;Oferta letnia (z CANAL+ Seriale i Filmy);300;15;300;Start Box;129;129;SMART M - 84 kanały, CANAL+ Seriale i Filmy;cena z rabatem za e-fakturę;1;24;84.99;;;;;;
 3;CHOPIN;24;24;Oferta letnia (z CANAL+ Super Sport);300;15;300;Start Box;129;129;SMART M - 84 kanały, CANAL+ Super Sport;cena z rabatem za e-fakturę;1;24;124.99;;;;;;
