@@ -309,7 +309,7 @@ button.zamknij {
 .akordeon.otwarty .akordeon-tresc {
     max-height:1000px;
     opacity:1;
-    padding:25px;
+    padding:0 25px 25px 25px;
 }
 
 .tresc-lewa,
