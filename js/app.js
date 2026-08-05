@@ -115,7 +115,7 @@ function zbudujListeInternetu() {
                 <input
                     type="radio"
                     name="internetPakiet"
-                    value="${predkosc.download} / ${predkosc.upload}">
+                    value="${predkosc.download}/${predkosc.upload}">
                 <span>
                     ${predkosc.download} / ${predkosc.upload} Mb/s
                 </span>
@@ -411,7 +411,7 @@ function szukaj(){
 		}
 		switch (wybor.usluga) {
 			case "internet":
-				let [download, upload] = pakiet.split(" / ");
+				let [download, upload] = pakiet.split("/");
 				return (
 					o.predkosc_pobierania == download &&
 					o.predkosc_wysylania == upload
