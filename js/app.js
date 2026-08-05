@@ -471,8 +471,8 @@ function pobierzNazweFirmy(idFirmy) {
 const nazwyPol = {
     firma: "firmę",
     usluga: "usługę",
-    okres: "okres",
-    oferta: "długość umowy",
+    okres: "długość umowy",
+    oferta: "ofertę",
     pakiet: "pakiet"
 };
 
