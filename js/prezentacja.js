@@ -482,14 +482,20 @@ function generujTabelePorownania(nasza, konkurencja){
 		<td>
 			Średnia cena
 		</td>
+		<td>
+			${pokazCene(sredniaKonkurencji)}
+		</td>
+		<td class="znak">
+			${roznicaSrednia}
+		</td>
 		<td class="${
-			sredniaKonkurencji > sredniaNasza
-			? "drozsza"
-			: sredniaKonkurencji < sredniaNasza
+			sredniaNasza < sredniaKonkurencji
 			? "tansza"
+			: sredniaNasza > sredniaKonkurencji
+			? "drozsza"
 			: ""
 		}">
-			${pokazCene(sredniaKonkurencji)}
+			${pokazCene(sredniaNasza)}
 		</td>
 		<td class="znak">
 			${roznicaSrednia}
