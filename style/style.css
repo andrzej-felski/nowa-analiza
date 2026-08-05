@@ -9,15 +9,18 @@ body {
         sans-serif;
     margin:0;
     padding:30px;
+    min-height:100vh;
     background:
         linear-gradient(
             135deg,
-            #3d3d3d,
-            #5a5a5a
+            #3f3f3f 0%,
+            #555 50%,
+            #3f3f3f 100%
         );
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
     color:#333;
-    max-width:1200px;
-    margin:auto;
 }
 
 h1 {
