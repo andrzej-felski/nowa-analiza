@@ -325,7 +325,7 @@ function pobierzOpcje(pole) {
 function pobierzKluczPakietu(oferta){
     switch (wybor.usluga) {
         case "internet":
-            return `${oferta.predkosc_pobierania}/${oferta.predkosc_wysylania}`;
+            return `${oferta.predkosc_pobierania} / ${oferta.predkosc_wysylania}`;
         case "internet_mobilny":
             return String(oferta.pakiet_gb);
 		case "telewizja":
@@ -411,7 +411,7 @@ function szukaj(){
 		}
 		switch (wybor.usluga) {
 			case "internet":
-				let [download, upload] = pakiet.split("/");
+				let [download, upload] = pakiet.split(" / ");
 				return (
 					o.predkosc_pobierania == download &&
 					o.predkosc_wysylania == upload
