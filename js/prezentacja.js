@@ -72,6 +72,13 @@ function pokazParametryOferty(oferta){
 					${oferta.liczba_kanalow}
 				</p>
 			`;
+		case "telewizja_internetowa":
+			return `
+				<p>
+					<strong>Liczba kanałów:</strong>
+					${oferta.liczba_kanalow}
+				</p>
+			`;
         default:
             return "";
     }
@@ -223,6 +230,7 @@ function pokazParametrNaglowka(oferta){
 				</span>
 			`;
 		case "telewizja":
+		case "telewizja_internetowa":
 			return `
 				<span>
 					${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
@@ -321,6 +329,8 @@ function pokazNazweUslugi(usluga){
 			return "Telefon stacjonarny";
 		case "pakiety":
 			return "Pakiety";
+		case "telewizja_internetowa":
+			return "Telewizja internetowa";
         default:
             return usluga;
     }
