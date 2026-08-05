@@ -282,7 +282,7 @@ function pokazKanaly(liczba) {
 function generujTresc(oferta, nasza, ofertaBazowa){
     let harmonogram = pobierzHarmonogram(oferta);
     let tabela = "";
-    harmonogram.forEach(o=>{
+    harmonogram.forEach(o => {
         tabela += `
             <tr>
                 <td>
@@ -293,18 +293,18 @@ function generujTresc(oferta, nasza, ofertaBazowa){
                 </td>
             </tr>
         `;
-		const sredniaCena = policzSredniaCene(oferta);
-		tabela += `
-			<tr class="wiersz-srednia">
-				<td>
-					Średnia cena
-				</td>
-				<td>
-					${sredniaCena.toFixed(2)} zł
-				</td>
-			</tr>
-		`;
     });
+    const sredniaCena = policzSredniaCene(oferta);
+    tabela += `
+        <tr class="wiersz-srednia">
+            <td>
+                Średnia cena
+            </td>
+            <td>
+                ${sredniaCena.toFixed(2)} zł
+            </td>
+        </tr>
+    `;
     return `
     <div class="akordeon-tresc">
         <div class="tresc-lewa">
@@ -313,29 +313,29 @@ function generujTresc(oferta, nasza, ofertaBazowa){
                 <strong>Umowa:</strong>
                 ${pokazOkres(oferta.okres_umowy)}
             </p>
-			<p>
-				<strong>Usługa:</strong>
-				${pokazNazweUslugi(wybor.usluga)}
-			</p>
+            <p>
+                <strong>Usługa:</strong>
+                ${pokazNazweUslugi(wybor.usluga)}
+            </p>
             ${pokazParametryOferty(oferta)}
             ${pokazInformacje(oferta)}
         </div>
         <div class="tresc-prawa">
             <h4>Opłaty</h4>
-			${
-				nasza
-				?
-				`
-				<table>
-					${tabela}
-				</table>
-				`
-				:
-				generujTabelePorownania(
-					ofertaBazowa,
-					oferta
-				)
-			}
+            ${
+                nasza
+                ?
+                `
+                <table>
+                    ${tabela}
+                </table>
+                `
+                :
+                generujTabelePorownania(
+                    ofertaBazowa,
+                    oferta
+                )
+            }
         </div>
     </div>
     `;
