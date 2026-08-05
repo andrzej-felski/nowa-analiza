@@ -454,10 +454,15 @@ const nazwyPol = {
 };
 
 function otworzWybor(pole){
-    if (pole === "pakiet" && wybor.usluga === "pakiety") {
-        otworzWyborPakietu();
-        return;
-    }
+	if (
+		pole === "pakiet" &&
+		wybor.usluga === "pakiety"
+	) {
+		wyborPakietu.internet = null;
+		wyborPakietu.telewizja = null;
+		otworzWyborPakietu();
+		return;
+	}
     let opcje = pobierzOpcje(pole);
     if(opcje.length === 0){
         alert("Brak dostępnych opcji");
@@ -602,6 +607,21 @@ function aktualizujDostepnoscPol() {
 function zamknijModal() {
     document
         .getElementById("oknoWyboru")
+        .classList.add("ukryte");
+    document
+        .getElementById("listaWyboru")
+        .classList.remove("ukryte");
+    document
+        .getElementById("wyborPakietu")
+        .classList.add("ukryte");
+    document
+        .getElementById("listaInternetu")
+        .innerHTML = "";
+    document
+        .getElementById("listaTelewizji")
+        .innerHTML = "";
+    document
+        .getElementById("sekcjaTelewizji")
         .classList.add("ukryte");
 }
 
