@@ -1,134 +1,138 @@
+* {
+    box-sizing:border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+    margin:0;
+    padding:30px;
     background:#4a4a4a;
-	max-width:1200px;
-	margin: 0 auto;
+    color:#333;
+    max-width:1920px;
+    margin:auto;
 }
 
 h1 {
-    color:#333;
+    text-align:center;
+    color:white;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+h2 {
+    margin-top:30px;
 }
 
 .panel {
-    background:white;
-    padding:5px;
-    width: auto;
-    max-width: none;
-    border-radius:8px;
-}
-
-label {
-    display:block;
-    margin-top:15px;
-}
-
-select {
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-}
-
-button {
-    background:#557C99;
-    color:white;
-    display:block;
-    width:auto;
-    margin:10px auto;
-    padding:12px 50px;
-    border:0;
-	border-radius:8px;
-    cursor:pointer;
-	transition:.2s;
-}
-
-button:hover {
-	background:#375062;
-}
-
-.oferta {
-    background:#E0F3FF;
-    margin-top:20px;
-    padding:20px;
-    border-radius:8px;
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .belka-wyboru {
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
-    padding:15px;
-    top:0;
     justify-content:center;
+    gap:15px;
+    padding:10px;
 }
 
 .wybor {
-    background:white;
-    border:1px solid #ccc;
-    padding:10px 15px;
-    min-width:120px;
-    width:auto;
+    background:#fff;
+    border:1px solid #d5dce2;
+    border-radius:12px;
+    padding:15px 20px;
+    min-width:150px;
     cursor:pointer;
-    border-radius:5px;
-	transition:.2s;
+    text-align:center;
+    transition:.25s;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.wybor:hover {
+    transform:translateY(-3px);
+    border-color:#557C99;
+    box-shadow:0 8px 18px rgba(85,124,153,.25);
 }
 
 .wybor span {
     display:block;
-    font-size:12px;
     color:#777;
+    font-size:13px;
 }
 
 .wybor strong {
     display:block;
-    margin-top:5px;
+    margin-top:6px;
+    color:#375062;
+    font-size:16px;
 }
 
 .nieaktywne {
     background:#eee;
     color:#999;
     cursor:not-allowed;
-    opacity:0.6;
+    opacity:.6;
+    transform:none!important;
+    box-shadow:none;
+}
+
+button {
+    background:#557C99;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:14px 45px;
+    font-size:16px;
+    cursor:pointer;
+    display:block;
+    margin:25px auto 10px;
+    transition:.25s;
+    box-shadow:0 5px 15px rgba(85,124,153,.3);
+}
+
+button:hover {
+    background:#375062;
+    transform:translateY(-2px);
 }
 
 .modal {
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.4);
+    inset:0;
+    background:rgba(0,0,0,.55);
     display:flex;
     justify-content:center;
     align-items:center;
-	z-index:9999;
+    z-index:9999;
 }
 
 .modal-tresc {
     background:white;
-    padding:25px;
-    width:400px;
-	position: relative;
-	border-radius:8px;
+    width:420px;
+    max-width:90%;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+    position:relative;
 }
 
 .zamknij {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    width: auto;
-    background: none;
-    color: #557C99;
-    font-size: 28px;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+    position:absolute;
+    right:15px;
+    top:10px;
+    background:none;
+    color:#557C99;
+    font-size:30px;
+    padding:0;
 }
 
 .zamknij:hover {
-    color: #375062;
-	background:none;
+    background:none;
+    color:#375062;
 }
 
 .ukryte {
@@ -136,77 +140,88 @@ button:hover {
 }
 
 #tytulWyboru {
-    text-align: center;
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .opcja-wyboru {
     display:flex;
     align-items:center;
-    border:1px solid #ccc;
-    border-radius:8px;
-    padding:12px 15px;
+    gap:12px;
+    padding:15px;
     margin:10px 0;
-    cursor:pointer;
     background:white;
+    border-radius:12px;
+    border:1px solid #ddd;
+    cursor:pointer;
     transition:.2s;
 }
 
-.wybor:not(.nieaktywne):hover,
 .opcja-wyboru:hover {
-    border-color:#557C99;
     background:#EBF2F7;
-}
-
-.opcja-wyboru input {
-    margin-right:10px;
-}
-
-.opcja-wyboru input[type="radio"]:checked {
-    accent-color:#557C99;
+    border-color:#557C99;
 }
 
 .opcja-wyboru:has(input:checked) {
-    border-color:#557C99;
     background:#EBF2F7;
-    box-shadow:0 0 0 2px rgba(0,102,204,.15);
+    border-color:#557C99;
+    box-shadow:0 0 0 3px rgba(85,124,153,.15);
 }
 
-.opcja-wyboru span {
-    font-size:16px;
+.opcja-wyboru input {
+    accent-color:#557C99;
 }
 
 #listaWyboru {
-    max-height:400px;
-    overflow-y:auto;
+    max-height:450px;
+    overflow:auto;
+}
+
+.oferta {
+    background:#E0F3FF;
+    border-radius:16px;
+    padding:25px;
+    margin-top:25px;
 }
 
 .akordeon {
-    margin:15px 0;
-    border:1px solid #ccc;
-    border-radius:8px;
+    margin:18px 0;
+    border-radius:16px;
     overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
 }
 
 .akordeon-naglowek {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px;
-    background:#eee;
+    gap:20px;
+    padding:20px;
+    background:#f3f6f8;
     cursor:pointer;
+    transition:.25s;
+}
+
+.akordeon-naglowek:hover {
+    background:#EBF2F7;
 }
 
 .naglowek-lewa {
     display:flex;
-    align-items:center;
-    gap:20px;
+    flex-direction:column;
+    gap:5px;
+}
+
+.naglowek-lewa strong {
+    color:#375062;
+    font-size:18px;
 }
 
 .naglowek-prawa {
     display:flex;
-    align-items:center;
-    gap:20px;
-    text-align:right;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:5px;
 }
 
 .strzalka {
@@ -218,98 +233,113 @@ button:hover {
 }
 
 .akordeon-tresc {
-    padding:0 20px;
-    display:flex;
     background:white;
+    display:flex;
     max-height:0;
     overflow:hidden;
     opacity:0;
-    transition:
-        max-height .4s ease,
-        opacity .3s ease,
-        padding .4s ease;
+    transition:.4s ease;
 }
 
 .akordeon.otwarty .akordeon-tresc {
     max-height:1000px;
     opacity:1;
-    padding:20px;
+    padding:25px;
+}
+
+.tresc-lewa,
+.tresc-prawa {
+    flex:1;
+    padding:0 25px;
 }
 
 .tresc-lewa {
-    flex:1;
-	border-right:solid 1px black;
-	padding:0 20px 0 20px;
+    border-right:1px solid #ddd;
 }
 
 .tresc-prawa {
-    flex:1;
-	border-left:solid 1px black;
-    padding:0 20px 0 20px;
-	display: flex;
-	flex-direction: column;
-    align-items: center;
+    display:flex;
+    justify-content:center;
 }
 
-.tresc-prawa table {
-    border-collapse: collapse;
+table {
+    border-collapse:collapse;
+    width:100%;
 }
 
-.tresc-prawa td {
-    border:1px solid #ccc;
-    padding:8px 20px;
+td,
+th {
+    padding:10px;
+    border:1px solid #ddd;
     text-align:center;
+}
+
+th {
+    background:#f5f7f9;
 }
 
 .porownanie {
-    width:100%;
-    border-collapse:collapse;
-    table-layout:fixed;
+    border-radius:12px;
+    overflow:hidden;
 }
 
-.porownanie th,
-.porownanie td {
-    border:1px solid #ccc;
-    padding:8px;
-    text-align:center;
+.porownanie .drozsza {
+    background:#ffdada;
+    color:#9b0000;
+    font-weight:bold;
 }
 
-.porownanie th {
-    background:#f5f5f5;
+.porownanie .tansza {
+    background:#dff7df;
+    color:#006b00;
+    font-weight:bold;
 }
 
-.porownanie th:nth-child(1),
-.porownanie td:nth-child(1) {
-    width:25%;
-}
-
-.porownanie th:nth-child(2),
-.porownanie td:nth-child(2),
-.porownanie th:nth-child(4),
-.porownanie td:nth-child(4) {
-    width:30%;
-    max-width:250px;
-    overflow-wrap:break-word;
-    word-wrap:break-word;
-}
-
-.porownanie th:nth-child(3),
-.porownanie td:nth-child(3) {
-    width:10%;
+.wiersz-srednia {
+    font-weight:bold;
 }
 
 .akordeon-naglowek.konkurencja-drozsza {
-    background:#F0FFF0;
+    background:#e8ffe8;
 }
 
 .akordeon-naglowek.konkurencja-tansza {
-    background:#FFDADA;
+    background:#ffe4e4;
 }
 
 .brak-konkurencji {
-    text-align: center;
-    color: #fff;
-    padding: 30px;
-    font-size: 18px;
-    opacity: 0.8;
+    text-align:center;
+    color:white;
+    padding:40px;
+    font-size:18px;
+}
+
+@media(max-width:700px){
+    body {
+        padding:15px;
+    }
+
+    .akordeon-naglowek {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .naglowek-prawa {
+        align-items:flex-start;
+    }
+
+    .akordeon-tresc {
+        flex-direction:column;
+    }
+	
+    .tresc-lewa {
+        border-right:none;
+        border-bottom:1px solid #ddd;
+        padding-bottom:20px;
+    }
+	
+    .tresc-lewa,
+    .tresc-prawa {
+        padding:20px 0;
+    }
 }
