@@ -425,7 +425,11 @@ function szukaj(){
 			case "telefon_stacjonarny":
 				return Number(o.pakiet_minut) === Number(pakiet);
 			case "pakiety":
-				return o.id_oferty == pakiet;
+				return (
+					o.predkosc_pobierania == pakiet.internet.download &&
+					o.predkosc_wysylania == pakiet.internet.upload &&
+					o.id_oferty == pakiet.telewizja.id_oferty
+				);
 			default:
 				return false;
 		}
