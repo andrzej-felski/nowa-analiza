@@ -243,10 +243,6 @@ button:hover {
     transition:.25s;
 }
 
-.akordeon-naglowek:hover {
-    background:#EBF2F7;
-}
-
 .naglowek-lewa {
     display:flex;
     flex-direction:column;
