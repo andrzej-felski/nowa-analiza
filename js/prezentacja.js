@@ -233,7 +233,7 @@ function pokazParametrNaglowka(oferta){
 		case "telewizja_internetowa":
 			return `
 				<span>
-					${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
+					${oferta.nazwa_pakietu} - ${pokazKanaly(oferta.liczba_kanalow)}
 				</span>
 			`;
 		case "abonament_komorkowy":
@@ -256,12 +256,27 @@ function pokazParametrNaglowka(oferta){
 			return `
 				<span>
 					${oferta.predkosc_pobierania} / ${oferta.predkosc_wysylania} Mb/s
-					+ ${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów
+					+ ${oferta.nazwa_pakietu} - ${pokazKanaly(oferta.liczba_kanalow)}
 				</span>
 			`;
         default:
             return "";
     }
+}
+
+function pokazKanaly(liczba) {
+    liczba = Number(liczba);
+    const mod10 = liczba % 10;
+    const mod100 = liczba % 100;
+    let forma;
+    if (liczba === 1) {
+        forma = "kanał";
+    } else if (mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)) {
+        forma = "kanały";
+    } else {
+        forma = "kanałów";
+    }
+    return `${liczba} ${forma}`;
 }
 
 function generujTresc(oferta, nasza, ofertaBazowa){
