@@ -160,10 +160,10 @@ function zbudujListeTelewizji(download, upload) {
                     type="radio"
                     name="telewizjaPakiet"
                     value="${oferta.id_oferty}">
-                <span>
-                    ${oferta.nazwa_pakietu}
-                    - ${pokazKanaly(oferta.liczba_kanalow)}
-                </span>
+				<span>
+					${oferta.nazwa_pakietu}
+					- ${pokazKanaly(oferta.liczba_kanalow)}
+				</span>
             </label>
         `;
     });
@@ -294,7 +294,7 @@ function pobierzOpcje(pole) {
 				case "telewizja_internetowa":
 					return oferty.map(o => ({
 						value: o.liczba_kanalow,
-						text: `${o.nazwa_pakietu} - ${o.liczba_kanalow} kanałów`
+						text: `${o.nazwa_pakietu} - ${pokazKanaly(o.liczba_kanalow)}`
 					}));
 				case "abonament_komorkowy":
 					return oferty.map(o => {
@@ -571,8 +571,7 @@ document
 			" Mb/s + " +
 			wyborPakietu.telewizja.nazwa_pakietu +
 			" - " +
-			wyborPakietu.telewizja.liczba_kanalow +
-			" kanałów";
+			pokazKanaly(wyborPakietu.telewizja.liczba_kanalow);
         zamknijModal();
         aktualizujDostepnoscPol();
         return;
