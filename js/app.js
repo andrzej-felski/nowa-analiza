@@ -115,7 +115,7 @@ function zbudujListeInternetu() {
                 <input
                     type="radio"
                     name="internetPakiet"
-                    value="${predkosc.download}/${predkosc.upload}">
+                    value="${predkosc.download} / ${predkosc.upload}">
                 <span>
                     ${predkosc.download} / ${predkosc.upload} Mb/s
                 </span>
