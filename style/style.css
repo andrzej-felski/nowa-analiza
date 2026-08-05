@@ -350,14 +350,14 @@ table {
 
 .porownanie th:nth-child(1),
 .porownanie td:nth-child(1) {
-    width: 130px;
+    width: 90px;
 }
 
 .porownanie th:nth-child(2),
 .porownanie td:nth-child(2),
 .porownanie th:nth-child(4),
 .porownanie td:nth-child(4) {
-    width: 90px;
+    width: 110px;
 }
 
 .porownanie th:nth-child(3),
