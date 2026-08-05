@@ -370,16 +370,25 @@ function pobierzKonkurencje(idFirmy){
 
 function pobierzOfertyKonkurencji(oferta){
     let konkurenci = pobierzKonkurencje(oferta.id_firmy);
-   let wszystkie = pobierzOferty().filter(o =>
+    let wszystkie = pobierzOferty().filter(o =>
         konkurenci.includes(o.id_firmy)
     );
-	let poGrupiePorownawczej = wszystkie.filter(o =>
-		o.grupa_porownawcza == oferta.grupa_porownawcza
-	);
-	let poGrupieOkresu = poGrupiePorownawczej.filter(o =>
-		o.grupa_okresu == oferta.grupa_okresu
-	);
-    return poGrupieOkresu;
+    if (wybor.usluga === "pakiety") {
+        return wszystkie.filter(o =>
+            o.grupa_porownawcza_internet ==
+                oferta.grupa_porownawcza_internet
+            &&
+            o.grupa_porownawcza_telewizja ==
+                oferta.grupa_porownawcza_telewizja
+            &&
+            o.grupa_okresu ==
+                oferta.grupa_okresu
+        );
+    }
+    return wszystkie.filter(o =>
+        o.grupa_porownawcza == oferta.grupa_porownawcza &&
+        o.grupa_okresu == oferta.grupa_okresu
+    );
 }
 
 document
