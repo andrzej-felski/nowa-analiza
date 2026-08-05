@@ -334,6 +334,8 @@ button.zamknij {
 
 .tresc-prawa table,
 .porownanie {
+	width: 100%;
+    table-layout: fixed;
     border-collapse:separate;
     border-spacing:0;
     border-radius:12px;
@@ -346,11 +348,34 @@ table {
     width:100%;
 }
 
+.porownanie th:nth-child(1),
+.porownanie td:nth-child(1) {
+    width: 130px;
+}
+
+.porownanie th:nth-child(2),
+.porownanie td:nth-child(2),
+.porownanie th:nth-child(4),
+.porownanie td:nth-child(4) {
+    width: 90px;
+}
+
+.porownanie th:nth-child(3),
+.porownanie td:nth-child(3) {
+    width: 30px;
+}
+
 td,
 th {
     padding:10px;
     border-right:1px solid #ddd;
     border-bottom:1px solid #ddd;
+}
+
+.porownanie td,
+.porownanie th {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .porownanie th {
