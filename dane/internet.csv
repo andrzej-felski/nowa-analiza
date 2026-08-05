@@ -6,19 +6,27 @@ id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;pre
 5;CHOPIN;24;24;Oferta Osiedlowa;300;15;300;;cena z rabatem za e-fakturę;1;24;23.70;;;
 6;CHOPIN;24;24;Oferta Osiedlowa;650;30;650;;cena z rabatem za e-fakturę;1;24;33.70;;;
 7;CHOPIN;24;24;Oferta Osiedlowa;800;40;800;;cena z rabatem za e-fakturę;1;24;43.70;;;
-8;CHOPIN;12;12;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;12;69.57;;;
+8;CHOPIN;12;12;Super Net;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;12;69.57;;;
 9;CHOPIN;12;12;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
 10;CHOPIN;12;12;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
 11;CHOPIN;12;12;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
-12;CHOPIN;24;24;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
+12;CHOPIN;24;24;Super Net;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;64.57;;;
 13;CHOPIN;24;24;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
 14;CHOPIN;24;24;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
 15;CHOPIN;24;24;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
-16;CHOPIN;12;12;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+16;CHOPIN;12;12;Trzymaj z nami;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;12;64.57;;;
 17;CHOPIN;12;12;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
 18;CHOPIN;12;12;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
 19;CHOPIN;12;12;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
-20;CHOPIN;24;24;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+20;CHOPIN;24;24;Trzymaj z nami;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;59.57;;;
 21;CHOPIN;24;24;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
 22;CHOPIN;24;24;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
 23;CHOPIN;24;24;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;24;119.57;;;
@@ -31,19 +39,27 @@ id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;pre
 30;PELMAR;24;24;Oferta Osiedlowa;300;15;300;;cena z rabatem za e-fakturę;1;24;23.70;;;
 31;PELMAR;24;24;Oferta Osiedlowa;650;30;650;;cena z rabatem za e-fakturę;1;24;33.70;;;
 32;PELMAR;24;24;Oferta Osiedlowa;800;40;800;;cena z rabatem za e-fakturę;1;24;43.70;;;
-33;PELMAR;12;12;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;12;69.57;;;
+33;PELMAR;12;12;Super Net;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;12;69.57;;;
 34;PELMAR;12;12;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
 35;PELMAR;12;12;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
 36;PELMAR;12;12;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
-37;PELMAR;24;24;Super Net;120;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
+37;PELMAR;24;24;Super Net;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;64.57;;;
 38;PELMAR;24;24;Super Net;300;15;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
 39;PELMAR;24;24;Super Net;650;30;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
 40;PELMAR;24;24;Super Net;800;40;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
-41;PELMAR;12;12;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
+41;PELMAR;12;12;Trzymaj z nami;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;12;64.57;;;
 42;PELMAR;12;12;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
 43;PELMAR;12;12;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
 44;PELMAR;12;12;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
-45;PELMAR;24;24;Trzymaj z nami;120;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+45;PELMAR;24;24;Trzymaj z nami;120;10;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;59.57;;;
 46;PELMAR;24;24;Trzymaj z nami;300;15;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
 47;PELMAR;24;24;Trzymaj z nami;650;30;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
 48;PELMAR;24;24;Trzymaj z nami;800;40;800;;cena z rabatem za e-fakturę;1;24;119.57;;;
@@ -61,17 +77,23 @@ id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;pre
 60;MC2;12;12;Mega Net;300;25;300;;cena z rabatem za e-fakturę;1;1;12.58;2;12;90.57
 61;MC2;12;12;Mega Net;650;50;650;;cena z rabatem za e-fakturę;1;1;12.58;2;12;95.57
 62;MC2;12;12;Mega Net;900;60;800;;cena z rabatem za e-fakturę;1;1;12.58;2;12;126.57
-63;MC2;24;24;Mega Net;60;6;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
+63;MC2;24;24;Mega Net;60;6;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;59.57;;;
 64;MC2;24;24;Mega Net;150;10;120;;cena z rabatem za e-fakturę;1;24;64.57;;;
 65;MC2;24;24;Mega Net;300;25;300;;cena z rabatem za e-fakturę;1;1;12.58;2;24;80.57
 66;MC2;24;24;Mega Net;650;50;650;;cena z rabatem za e-fakturę;1;1;12.58;2;24;85.57
 67;MC2;24;24;Mega Net;900;60;800;;cena z rabatem za e-fakturę;1;1;12.58;2;24;116.57
-68;MC2;12;12;Trzymaj z nami;60;6;120;;cena z rabatem za e-fakturę;1;12;54.57;;;
+68;MC2;12;12;Trzymaj z nami;60;6;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;12;54.57;;;
 69;MC2;12;12;Trzymaj z nami;150;10;120;;cena z rabatem za e-fakturę;1;12;64.57;;;
 70;MC2;12;12;Trzymaj z nami;300;25;300;;cena z rabatem za e-fakturę;1;12;88.57;;;
 71;MC2;12;12;Trzymaj z nami;650;50;650;;cena z rabatem za e-fakturę;1;12;93.57;;;
 72;MC2;12;12;Trzymaj z nami;900;60;800;;cena z rabatem za e-fakturę;1;12;129.57;;;
-73;MC2;24;24;Trzymaj z nami;60;6;120;;cena z rabatem za e-fakturę;1;24;49.57;;;
+73;MC2;24;24;Trzymaj z nami;60;6;120;;"dostępny dla Klientów posiadających 
+legitymację emeryta / rencisty
+, cena z rabatem za e-fakturę";1;24;49.57;;;
 74;MC2;24;24;Trzymaj z nami;150;10;120;;cena z rabatem za e-fakturę;1;24;59.57;;;
 75;MC2;24;24;Trzymaj z nami;300;25;300;;cena z rabatem za e-fakturę;1;24;78.57;;;
 76;MC2;24;24;Trzymaj z nami;650;50;650;;cena z rabatem za e-fakturę;1;24;83.57;;;
@@ -354,27 +376,27 @@ id_oferty;id_firmy;okres_umowy;grupa_okresu;nazwa_oferty;predkosc_pobierania;pre
 353;VOLTA;24;24;HFC;200;30;120;;;1;24;80.00;;;
 354;VOLTA;24;24;HFC;300;40;300;;;1;24;99.00;;;
 355;VOLTA;24;24;HFC;500;50;650;;;1;24;129.00;;;
-356;VOLTA;999;999;LAN/HFC;200;30;120;;;1;999;110.00;;;
-357;VOLTA;999;999;LAN/HFC;300;40;300;;;1;999;129.00;;;
-358;VOLTA;999;999;LAN/HFC;500;50;650;;;1;999;159.00;;;
+356;VOLTA;999;999;LAN/HFC;300;40;120;;;1;999;110.00;;;
+357;VOLTA;999;999;LAN/HFC;500;50;300;;;1;999;129.00;;;
+358;VOLTA;999;999;LAN/HFC;600;60;650;;;1;999;159.00;;;
 359;VOLTA;12;12;Internet światłowodowy;200;30;120;;;1;12;49.00;;;
 360;VOLTA;12;12;Internet światłowodowy;300;40;300;;;1;12;59.00;;;
 361;VOLTA;12;12;Internet światłowodowy;500;50;650;;;1;12;69.00;;;
 362;VOLTA;24;24;HFC;200;30;120;;;1;24;39.00;;;
 363;VOLTA;24;24;HFC;300;40;300;;;1;24;49.00;;;
 364;VOLTA;24;24;HFC;500;50;650;;;1;24;59.00;;;
-365;VOLTA;999;999;LAN/HFC;200;30;120;;;1;999;200.00;;;
-366;VOLTA;999;999;LAN/HFC;300;40;300;;;1;999;69.00;;;
-367;VOLTA;999;999;LAN/HFC;500;50;650;;;1;999;79.00;;;
+365;VOLTA;999;999;LAN/HFC;300;40;120;;;1;999;200.00;;;
+366;VOLTA;999;999;LAN/HFC;500;50;300;;;1;999;69.00;;;
+367;VOLTA;999;999;LAN/HFC;600;60;650;;;1;999;79.00;;;
 368;VOLTA;12;12;Internet światłowodowy;200;30;120;;;1;12;49.00;;;
 369;VOLTA;12;12;Internet światłowodowy;300;40;300;;;1;12;49.00;;;
 370;VOLTA;12;12;Internet światłowodowy;500;50;650;;;1;12;49.00;;;
 371;VOLTA;24;24;HFC;200;30;120;;;1;24;39.00;;;
 372;VOLTA;24;24;HFC;300;40;300;;;1;24;39.00;;;
 373;VOLTA;24;24;HFC;500;50;650;;;1;24;39.00;;;
-374;VOLTA;999;999;LAN/HFC;200;30;120;;;1;999;200.00;;;
-375;VOLTA;999;999;LAN/HFC;300;40;300;;;1;999;200.00;;;
-376;VOLTA;999;999;LAN/HFC;500;50;650;;;1;999;200.00;;;
+374;VOLTA;999;999;LAN/HFC;300;40;120;;;1;999;200.00;;;
+375;VOLTA;999;999;LAN/HFC;500;50;300;;;1;999;200.00;;;
+376;VOLTA;999;999;LAN/HFC;600;60;650;;;1;999;200.00;;;
 377;ABAKS;12;12;Blok;200;100;120;;;1;12;60.00;;;
 378;ABAKS;12;12;Blok;300;150;300;;;1;12;84.00;;;
 379;ABAKS;12;12;Blok;600;300;650;;;1;12;99.00;;;
