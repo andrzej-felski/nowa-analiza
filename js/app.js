@@ -12,6 +12,11 @@ window.wybor = {
     pakiet: null
 };
 
+const wyborPakietu = {
+    internet: null,
+    telewizja: null
+};
+
 let aktualnePole = null;
 
 async function start(){
@@ -22,6 +27,7 @@ async function start(){
 	dane.uslugi.telewizja = await wczytajCSV("telewizja.csv");
 	dane.uslugi.abonament_komorkowy = await wczytajCSV("abonament_komorkowy.csv");
 	dane.uslugi.telefon_stacjonarny = await wczytajCSV("telefon_stacjonarny.csv");
+	dane.uslugi.pakiety = await wczytajCSV("pakiety.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -54,6 +60,130 @@ async function wczytajCSV(plik){
 
 function pobierzOferty() {
     return dane.uslugi[wybor.usluga] || [];
+}
+
+function pobierzPakiety() {
+	return pobierzOferty().filter(o =>
+		o.id_firmy == wybor.firma &&
+		o.okres_umowy == wybor.okres &&
+		o.nazwa_oferty == wybor.oferta
+	);
+}
+
+function pobierzPredkosciPakietow() {
+    return [...new Map(
+        pobierzPakiety().map(o => [
+            o.predkosc_pobierania + "/" + o.predkosc_wysylania,
+            {
+                download: o.predkosc_pobierania,
+                upload: o.predkosc_wysylania
+            }
+        ])
+    ).values()];
+}
+
+function pobierzTelewizjePakietow(download, upload) {
+    return pobierzPakiety().filter(o =>
+        o.predkosc_pobierania == download &&
+        o.predkosc_wysylania == upload
+    );
+}
+
+function otworzWyborPakietu() {
+    const modal = document.getElementById("oknoWyboru");
+    document.getElementById("tytulWyboru").textContent =
+        "Wybierz pakiet";
+    document
+        .getElementById("listaWyboru")
+        .classList.add("ukryte");
+    document
+        .getElementById("wyborPakietu")
+        .classList.remove("ukryte");
+    document
+        .getElementById("sekcjaTelewizji")
+        .classList.add("ukryte");
+    zbudujListeInternetu();
+    modal.classList.remove("ukryte");
+}
+
+function zbudujListeInternetu() {
+    const lista = document.getElementById("listaInternetu");
+    lista.innerHTML = "";
+    pobierzPredkosciPakietow().forEach(predkosc => {
+        lista.innerHTML += `
+            <label class="opcja-wyboru">
+                <input
+                    type="radio"
+                    name="internetPakiet"
+                    value="${predkosc.download}/${predkosc.upload}">
+                <span>
+                    ${predkosc.download} / ${predkosc.upload} Mb/s
+                </span>
+            </label>
+        `;
+    });
+    document
+        .querySelectorAll('input[name="internetPakiet"]')
+        .forEach(radio => {
+            radio.addEventListener("change", function(){
+                const [download, upload] = this.value.split("/");
+                wyborPakietu.internet = {
+                    download,
+                    upload
+                };
+                zbudujListeTelewizji(download, upload);
+            });
+        });
+}
+
+function zbudujListeTelewizji(download, upload) {
+    const lista = document.getElementById("listaTelewizji");
+    lista.innerHTML = "";
+    const telewizje = pobierzTelewizjePakietow(
+        download,
+        upload
+    );
+    if (telewizje.length === 0) {
+        lista.innerHTML = `
+            <p>Brak dostępnych pakietów telewizji dla tej prędkości.</p>
+        `;
+        document
+            .getElementById("sekcjaTelewizji")
+            .classList.remove("ukryte");
+        return;
+    }
+    telewizje.forEach(oferta => {
+        lista.innerHTML += `
+            <label class="opcja-wyboru">
+                <input
+                    type="radio"
+                    name="telewizjaPakiet"
+                    value="${oferta.id_oferty}">
+                <span>
+                    ${oferta.nazwa_pakietu}
+                    - ${oferta.liczba_kanalow} kanałów
+                </span>
+            </label>
+        `;
+    });
+    document
+        .querySelectorAll('input[name="telewizjaPakiet"]')
+        .forEach(radio => {
+            radio.addEventListener("change", function(){
+                const wybranaTelewizja =
+                    telewizje.find(o =>
+                        o.id_oferty == this.value
+                    );
+                wyborPakietu.telewizja = wybranaTelewizja;
+                console.log(
+                    "Wybrana telewizja:",
+                    wyborPakietu.telewizja
+                );
+            });
+        });
+    document
+        .getElementById("sekcjaTelewizji")
+        .classList.remove("ukryte");
 }
 
 function pokazOkres(okres) {
@@ -115,6 +245,10 @@ function pobierzOpcje(pole) {
 					value: "telefon_stacjonarny",
 					text: "Telefon stacjonarny"
 				},
+				{
+					value: "pakiety",
+					text: "Pakiety"
+				}
 			]
 			.filter(usluga =>
 				dane.uslugi[usluga.value].some(o =>
@@ -290,6 +424,8 @@ function szukaj(){
 				return Number(o.pakiet_gb) === Number(pakiet);
 			case "telefon_stacjonarny":
 				return Number(o.pakiet_minut) === Number(pakiet);
+			case "pakiety":
+				return o.id_oferty == pakiet;
 			default:
 				return false;
 		}
@@ -318,6 +454,10 @@ const nazwyPol = {
 };
 
 function otworzWybor(pole){
+    if (pole === "pakiet" && wybor.usluga === "pakiety") {
+        otworzWyborPakietu();
+        return;
+    }
     let opcje = pobierzOpcje(pole);
     if(opcje.length === 0){
         alert("Brak dostępnych opcji");
@@ -366,15 +506,54 @@ function wyczyscPolaPo(pole) {
             wybor[nastepnePole] = null;
             wyczyscPole(pola[nastepnePole]);
         });
+	if (
+		pole === "usluga" ||
+		pole === "oferta" ||
+		pole === "pakiet"
+	) {
+		wyborPakietu.internet = null;
+		wyborPakietu.telewizja = null;
+	}
 }
 
 document
 .getElementById("potwierdzWybor")
 .addEventListener("click", function(){
+    if (
+        aktualnePole === "pakiet" &&
+        wybor.usluga === "pakiety"
+    ){
+        if (
+            !wyborPakietu.internet ||
+            !wyborPakietu.telewizja
+        ){
+            alert("Wybierz internet i telewizję");
+            return;
+        }
+        wybor.pakiet = {
+            internet: wyborPakietu.internet,
+            telewizja: wyborPakietu.telewizja
+        };
+        document
+            .getElementById("wybranyPakiet")
+            .textContent =
+                wyborPakietu.internet.download +
+                "/" +
+                wyborPakietu.internet.upload +
+                " Mb/s + " +
+                wyborPakietu.telewizja.nazwa_pakietu;
+        console.log(
+            "Wybrany pakiet:",
+            wybor.pakiet
+        );
+        zamknijModal();
+        aktualizujDostepnoscPol();
+        return;
+    }
     let zaznaczone =
-    document.querySelector(
-        'input[name="wybor"]:checked'
-    );
+        document.querySelector(
+            'input[name="wybor"]:checked'
+        );
     if(!zaznaczone){
         return;
     }
