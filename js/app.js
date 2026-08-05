@@ -162,7 +162,7 @@ function zbudujListeTelewizji(download, upload) {
                     value="${oferta.id_oferty}">
                 <span>
                     ${oferta.nazwa_pakietu}
-                    - ${oferta.liczba_kanalow} kanałów
+                    - ${pokazKanaly(oferta.liczba_kanalow)}
                 </span>
             </label>
         `;
@@ -356,7 +356,7 @@ function pokazNazwePakietu(oferta) {
                 : `${oferta.pakiet_gb} GB`;
 		case "telewizja":
 		case "telewizja_internetowa":
-			return `${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów`;
+			return `${oferta.nazwa_pakietu} - ${pokazKanaly(oferta.liczba_kanalow)}`;
         case "abonament_komorkowy":
             if (Number(oferta.pakiet_gb) === 0)
                 return oferta.nazwa_pakietu;
