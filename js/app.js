@@ -472,7 +472,7 @@ const nazwyPol = {
     firma: "firmę",
     usluga: "usługę",
     okres: "okres",
-    oferta: "ofertę",
+    oferta: "długość umowy",
     pakiet: "pakiet"
 };
 
