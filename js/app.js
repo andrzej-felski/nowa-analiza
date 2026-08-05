@@ -28,6 +28,7 @@ async function start(){
 	dane.uslugi.abonament_komorkowy = await wczytajCSV("abonament_komorkowy.csv");
 	dane.uslugi.telefon_stacjonarny = await wczytajCSV("telefon_stacjonarny.csv");
 	dane.uslugi.pakiety = await wczytajCSV("pakiety.csv");
+	dane.uslugi.telewizja_internetowa = await wczytajCSV("telewizja_internetowa.csv");
     document
     .querySelectorAll(".wybor")
     .forEach(element => {
@@ -248,7 +249,11 @@ function pobierzOpcje(pole) {
 				{
 					value: "pakiety",
 					text: "Pakiety"
-				}
+				},
+				{
+					value: "telewizja_internetowa",
+					text: "Telewizja internetowa"
+				},
 			]
 			.filter(usluga =>
 				dane.uslugi[usluga.value].some(o =>
@@ -286,6 +291,7 @@ function pobierzOpcje(pole) {
 			);
 			switch (wybor.usluga) {
 				case "telewizja":
+				case "telewizja_internetowa":
 					return oferty.map(o => ({
 						value: o.liczba_kanalow,
 						text: `${o.nazwa_pakietu} - ${o.liczba_kanalow} kanałów`
@@ -329,6 +335,7 @@ function pobierzKluczPakietu(oferta){
         case "internet_mobilny":
             return String(oferta.pakiet_gb);
 		case "telewizja":
+		case "telewizja_internetowa":
 			return String(oferta.liczba_kanalow);
         case "abonament_komorkowy":
             return String(oferta.pakiet_gb);
@@ -347,8 +354,9 @@ function pokazNazwePakietu(oferta) {
             return Number(oferta.pakiet_gb) === 9999
                 ? "Bez limitu"
                 : `${oferta.pakiet_gb} GB`;
-        case "telewizja":
-            return `${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów`;
+		case "telewizja":
+		case "telewizja_internetowa":
+			return `${oferta.nazwa_pakietu} - ${oferta.liczba_kanalow} kanałów`;
         case "abonament_komorkowy":
             if (Number(oferta.pakiet_gb) === 0)
                 return oferta.nazwa_pakietu;
