@@ -428,7 +428,8 @@ function szukaj(){
 				return (
 					o.predkosc_pobierania == pakiet.internet.download &&
 					o.predkosc_wysylania == pakiet.internet.upload &&
-					o.id_oferty == pakiet.telewizja.id_oferty
+					o.nazwa_pakietu == pakiet.telewizja.nazwa_pakietu &&
+					o.liczba_kanalow == pakiet.telewizja.liczba_kanalow
 				);
 			default:
 				return false;
@@ -543,18 +544,17 @@ document
             internet: wyborPakietu.internet,
             telewizja: wyborPakietu.telewizja
         };
-        document
-            .getElementById("wybranyPakiet")
-            .textContent =
-                wyborPakietu.internet.download +
-                " / " +
-                wyborPakietu.internet.upload +
-                " Mb/s + " +
-                wyborPakietu.telewizja.nazwa_pakietu;
-        console.log(
-            "Wybrany pakiet:",
-            wybor.pakiet
-        );
+	document
+		.getElementById("wybranyPakiet")
+		.textContent =
+			wyborPakietu.internet.download +
+			" / " +
+			wyborPakietu.internet.upload +
+			" Mb/s + " +
+			wyborPakietu.telewizja.nazwa_pakietu +
+			" - " +
+			wyborPakietu.telewizja.liczba_kanalow +
+			" kanałów";
         zamknijModal();
         aktualizujDostepnoscPol();
         return;
