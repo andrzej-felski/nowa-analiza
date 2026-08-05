@@ -164,15 +164,31 @@ button:hover {
     position:absolute;
     right:15px;
     top:10px;
-    background:none;
+    width:auto;
+    height:auto;
+    background:transparent;
     color:#557C99;
-    font-size:30px;
+    border:none;
+    outline:none;
+    box-shadow:none;
     padding:0;
+    margin:0;
+    font-size:30px;
+    font-weight:300;
+    line-height:1;
+    cursor:pointer;
+    transition:.2s;
 }
 
 .zamknij:hover {
-    background:none;
+    background:transparent;
     color:#375062;
+    transform:scale(1.15);
+}
+
+button.zamknij {
+    background:transparent;
+    box-shadow:none;
 }
 
 .ukryte {
