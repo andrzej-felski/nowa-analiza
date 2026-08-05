@@ -9,7 +9,12 @@ body {
         sans-serif;
     margin:0;
     padding:30px;
-    background:#4a4a4a;
+    background:
+        linear-gradient(
+            135deg,
+            #3d3d3d,
+            #5a5a5a
+        );
     color:#333;
     max-width:1200px;
     margin:auto;
@@ -27,7 +32,12 @@ h2 {
 }
 
 .panel {
-    background:#fff;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f5f8fa
+        );
     padding:25px;
     border-radius:16px;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
@@ -42,7 +52,12 @@ h2 {
 }
 
 .wybor {
-    background:#fff;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f1f5f8
+        );
     border:1px solid #d5dce2;
     border-radius:12px;
     padding:15px 20px;
@@ -54,6 +69,12 @@ h2 {
 }
 
 .wybor:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #EBF2F7
+        );
     transform:translateY(-3px);
     border-color:#557C99;
     box-shadow:0 8px 18px rgba(85,124,153,.25);
@@ -82,7 +103,12 @@ h2 {
 }
 
 button {
-    background:#557C99;
+    background:
+        linear-gradient(
+            135deg,
+            #557C99,
+            #375062
+        );
     color:white;
     border:none;
     border-radius:12px;
@@ -96,7 +122,12 @@ button {
 }
 
 button:hover {
-    background:#375062;
+    background:
+        linear-gradient(
+            135deg,
+            #375062,
+            #253945
+        );
     transform:translateY(-2px);
 }
 
@@ -111,7 +142,12 @@ button:hover {
 }
 
 .modal-tresc {
-    background:white;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f8fb
+        );
     width:420px;
     max-width:90%;
     padding:30px;
@@ -197,7 +233,12 @@ button:hover {
     align-items:center;
     gap:20px;
     padding:20px;
-    background:#f3f6f8;
+    background:
+        linear-gradient(
+            90deg,
+            #f3f6f8,
+            #ffffff
+        );
     cursor:pointer;
     transition:.25s;
 }
@@ -213,7 +254,14 @@ button:hover {
 }
 
 .naglowek-lewa strong {
-    color:#375062;
+    background:
+        linear-gradient(
+            90deg,
+            #557C99,
+            #375062
+        );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     font-size:18px;
 }
 
@@ -288,6 +336,15 @@ th {
     border-bottom:1px solid #ddd;
 }
 
+.porownanie th {
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc,
+            #e8eef3
+        );
+}
+
 tr:last-child td {
     border-bottom:none;
 }
@@ -319,11 +376,21 @@ th:last-child {
 }
 
 .akordeon-naglowek.konkurencja-drozsza {
-    background:#e8ffe8;
+    background:
+        linear-gradient(
+            90deg,
+            #e8ffe8,
+            #ffffff
+        );
 }
 
 .akordeon-naglowek.konkurencja-tansza {
-    background:#ffe4e4;
+    background:
+        linear-gradient(
+            90deg,
+            #ffe4e4,
+            #ffffff
+        );
 }
 
 .brak-konkurencji {
