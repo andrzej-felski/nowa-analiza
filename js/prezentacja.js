@@ -293,6 +293,17 @@ function generujTresc(oferta, nasza, ofertaBazowa){
                 </td>
             </tr>
         `;
+		const sredniaCena = policzSredniaCene(oferta);
+		tabela += `
+			<tr class="wiersz-srednia">
+				<td>
+					Średnia cena
+				</td>
+				<td>
+					${sredniaCena.toFixed(2)} zł
+				</td>
+			</tr>
+		`;
     });
     return `
     <div class="akordeon-tresc">
