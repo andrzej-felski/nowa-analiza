@@ -436,6 +436,7 @@ function szukaj(){
 			case "internet_mobilny":
 				return Number(o.pakiet_gb) === Number(pakiet);
 			case "telewizja":
+			case "telewizja_internetowa":
 				return Number(o.liczba_kanalow) === Number(pakiet);
 			case "abonament_komorkowy":
 				return Number(o.pakiet_gb) === Number(pakiet);
