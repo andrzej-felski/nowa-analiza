@@ -566,7 +566,7 @@ async function pobierzDateOstatniejZmiany(repo, folder) {
 }
 
 // Renderowanie
-function pokazWynik(oferta, konkurenci){
+async function pokazWynik(oferta, konkurenci){
     let sredniaNasza =
         policzSredniaCene(oferta);
 	konkurenci = [...konkurenci].sort((a,b)=>
