@@ -444,6 +444,22 @@ th:last-child {
         );
 }
 
+.oferty-konkurencji {
+	text-align:center;
+}
+
+.oferty-konkurencji h2 {
+	color:#fff;
+	margin-bottom:10px;
+}
+
+.oferty-konkurencji p {
+	color:#fff;
+	font-weight:600;
+	margin-top:0;
+	margin-bottom:35px;
+}
+
 .brak-konkurencji {
     text-align:center;
     color:white;
