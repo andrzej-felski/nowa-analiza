@@ -561,6 +561,7 @@ function pokazWynik(oferta, konkurenci){
 	);
     html += `
         <h2 style="text-align:center;color:#fff;">Oferty konkurencji</h2>
+		Stan na: <span id="last-update">...</span>
     `;
 	if (konkurenci.length > 0) {
 		konkurenci.forEach(k=>{
