@@ -585,10 +585,10 @@ async function pokazWynik(oferta, konkurenci){
 		"dane"
 	);
 	html += `
-		<h2 style="text-align:center;color:#fff;">Oferty konkurencji</h2>
-		<p style="text-align:center;color:#fff;font-weight:600; margin-bottom:10px">
-			Stan na: ${data}
-		</p>
+		<div class="oferty-konkurencji">
+			<h2>Oferty konkurencji</h2>
+			<p> Stan na: ${data}</p>
+		</div>
 	`;
 	if (konkurenci.length > 0) {
 		konkurenci.forEach(k=>{
