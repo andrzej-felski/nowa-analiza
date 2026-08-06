@@ -8,60 +8,66 @@
 		<link rel="stylesheet" href="style/style.css">
 	</head>
 	<body>
-		<div class="panel">
-			<div class="belka-wyboru">
-				<div class="wybor" data-pole="firma">
-					<span>Firma</span>
-					<strong id="wybranaFirma">Wybierz</strong>
-				</div>
-				<div class="wybor" data-pole="usluga">
-					<span>Usługa</span>
-					<strong id="wybranaUsluga">Wybierz</strong>
-				</div>
-				<div class="wybor" data-pole="okres">
-					<span>Długość umowy</span>
-					<strong id="wybranyOkres">Wybierz</strong>
-				</div>
-				<div class="wybor" data-pole="oferta">
-					<span>Oferta</span>
-					<strong id="wybranaOferta">Wybierz</strong>
-				</div>
-				<div class="wybor" data-pole="pakiet">
-					<span>Pakiet</span>
-					<strong id="wybranyPakiet">Wybierz</strong>
-				</div>
-			</div>
-			<button id="szukaj">
-				Szukaj
-			</button>
-		</div>
-		<div id="oknoWyboru" class="modal ukryte">
-			<div class="modal-tresc">
-				<button id="zamknijModal" class="zamknij">
-					&times;
-				</button>
-				<h3 id="tytulWyboru">
-					Wybierz
-				</h3>
-				<div id="listaWyboru"></div>
-				<div id="wyborPakietu" class="ukryte">
-					<div class="sekcjaPakietu">
-						<h4>Internet</h4>
-						<div id="listaInternetu"></div>
+		<div class= "strona">
+			<div class="panel">
+				<div class="belka-wyboru">
+					<div class="wybor" data-pole="firma">
+						<span>Firma</span>
+						<strong id="wybranaFirma">Wybierz</strong>
 					</div>
-					<div class="sekcjaPakietu ukryte" id="sekcjaTelewizji">
-						<h4>Telewizja</h4>
-						<div id="listaTelewizji"></div>
+					<div class="wybor" data-pole="usluga">
+						<span>Usługa</span>
+						<strong id="wybranaUsluga">Wybierz</strong>
+					</div>
+					<div class="wybor" data-pole="okres">
+						<span>Długość umowy</span>
+						<strong id="wybranyOkres">Wybierz</strong>
+					</div>
+					<div class="wybor" data-pole="oferta">
+						<span>Oferta</span>
+						<strong id="wybranaOferta">Wybierz</strong>
+					</div>
+					<div class="wybor" data-pole="pakiet">
+						<span>Pakiet</span>
+						<strong id="wybranyPakiet">Wybierz</strong>
 					</div>
 				</div>
-				<button id="potwierdzWybor">
-					Potwierdź
+				<button id="szukaj">
+					Szukaj
 				</button>
 			</div>
+			<div id="oknoWyboru" class="modal ukryte">
+				<div class="modal-tresc">
+					<button id="zamknijModal" class="zamknij">
+						&times;
+					</button>
+					<h3 id="tytulWyboru">
+						Wybierz
+					</h3>
+					<div id="listaWyboru"></div>
+					<div id="wyborPakietu" class="ukryte">
+						<div class="sekcjaPakietu">
+							<h4>Internet</h4>
+							<div id="listaInternetu"></div>
+						</div>
+						<div class="sekcjaPakietu ukryte" id="sekcjaTelewizji">
+							<h4>Telewizja</h4>
+							<div id="listaTelewizji"></div>
+						</div>
+					</div>
+					<button id="potwierdzWybor">
+						Potwierdź
+					</button>
+				</div>
+			</div>
+			<div id="wynik"></div>
 		</div>
-		<div id="wynik"></div>
+		<footer id="stopka">
+			&copy; <script>document.currentScript.insertAdjacentHTML('afterend', new Date().getFullYear())</script> | Andrzej Felski @ Chopin Telewizja Kablowa
+		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 		<script src="js/prezentacja.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/aktualizacja.js"></script>
 	</body>
 </html>
