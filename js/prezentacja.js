@@ -559,10 +559,16 @@ function pokazWynik(oferta, konkurenci){
 		true,
 		oferta
 	);
-    html += `
-        <h2 style="text-align:center;color:#fff;">Oferty konkurencji</h2>
-		<p style="text-align:center;color:#fff;text-weight:600;">Stan na: <span id="last-update">...</span></p>
-    `;
+	const data = await pobierzDateOstatniejZmiany(
+		"andrzej-felski/nowa-analiza",
+		"dane"
+	);
+	html += `
+		<h2 style="text-align:center;color:#fff;">Oferty konkurencji</h2>
+		<p style="text-align:center;color:#fff;font-weight:600;">
+			Stan na: ${data}
+		</p>
+	`;
 	if (konkurenci.length > 0) {
 		konkurenci.forEach(k=>{
 			html += generujAkordeon(
